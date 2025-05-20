@@ -1,0 +1,11 @@
+export { default as Auditlogs } from './Auditlogs.svg?react';
+export { default as Balances } from './Balances.svg?react';
+export { default as Button } from './Button.svg?react';
+export { default as Customers } from './Customers.svg?react';
+export { default as Paymentplans } from './Paymentplans.svg?react';
+export { default as Payouts } from './Payouts.svg?react';
+export { default as Referrals } from './Referrals.svg?react';
+export { default as Settings } from './Settings.svg?react';
+export { default as Subscriptions } from './Subscriptions.svg?react';
+export { default as Transactions } from './transactions.svg?react';
+export { default as Dropdown } from './Dropdown.svg?react';
