@@ -1,40 +1,84 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import * as Icons from "../../assets/icons/Navbar/index";
+import { useState } from "react";
+import NavbarLink from "./NavbarLink";
+import { otherLinks, paymentLinks } from "./NavbarLinks";
 
 export const Navbar = () => {
+  const [dropDown, setDropDown] = useState({
+    isPaymentsOpen: true,
+    isCommerceOpen: false,
+  });
+
   return (
     <div className="navbar">
       <h1 className="montserrat-appname">Payd</h1>
-      <div className="navbar-catagory">
-        <h2>Payments</h2>
-        <Icons.Dropdown />
-      </div>
       <div>
-        <Link to={"/payments/transactions"} className="navbar_Links">
-          <Icons.Transactions />
-          <h3>Transactions</h3>
-        </Link>
-        <Link to={"/payments/customers"} className="navbar_Links">
-          <Icons.Customers />
-          <h3>Customers</h3>
-        </Link>
-        <Link to={"/payments/payouts"} className="navbar_Links">
-          <Icons.Payouts />
-          <h3>Payouts</h3>
-        </Link>
-        <Link to={"/payments/balances"} className="navbar_Links">
-          <Icons.Balances />
-          <h3>Balances</h3>
-        </Link>
-        <Link to={"/payments/subscription"} className="navbar_Links">
-          <Icons.Subscriptions />
-          <h3>Subscriptions</h3>
-        </Link>
-        <Link to={"/payments/paymentplans"} className="navbar_Links">
-          <Icons.Paymentplans />
-          <h3>Payment Plans</h3>
-        </Link>
+        <div
+          className="navbar-catagory"
+          style={{ marginTop: "35px" }}
+          onClick={() =>
+            setDropDown((prev) => ({
+              ...prev,
+              isPaymentsOpen: !prev.isPaymentsOpen,
+            }))
+          }
+        >
+          <h2 className="navbar-catagory-name">Payments</h2>
+          <Icons.Dropdown
+            className={`navbarSvgdropdown ${
+              dropDown.isPaymentsOpen ? "" : "rotate"
+            } `}
+          />
+        </div>
+        <div
+          className={`navbar-links-container slide ${
+            dropDown.isPaymentsOpen ? "open" : "closed"
+          }`}
+        >
+          <div className="links_Container">
+            {paymentLinks.map(({ to, Icon, label }) => (
+              <NavbarLink key={to} to={to} IconComponent={Icon} label={label} />
+            ))}
+          </div>
+        </div>
+        <hr className="line" />
+        <div
+          className="navbar-catagory"
+          onClick={() =>
+            setDropDown((prev) => ({
+              ...prev,
+              isCommerceOpen: !prev.isCommerceOpen,
+            }))
+          }
+        >
+          <h2 className="navbar-catagory-name">Commerce</h2>
+          <Icons.Dropdown
+            className={`navbarSvgdropdown ${
+              dropDown.isCommerceOpen ? "" : "rotate"
+            } `}
+          />
+        </div>
+        <div
+          className={`navbar-links-container slide ${
+            dropDown.isCommerceOpen ? "open" : "closed"
+          }`}
+        >
+          <div className="links_Container">
+            {paymentLinks.map(({ to, Icon, label }) => (
+              <NavbarLink key={to} to={to} IconComponent={Icon} label={label} />
+            ))}
+          </div>
+        </div>
+        <hr className="line" />
+        <div className="navbar-links-container">
+          <div className="links_Container">
+            {otherLinks.map(({ to, Icon, label }) => (
+              <NavbarLink key={to} to={to} IconComponent={Icon} label={label} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
