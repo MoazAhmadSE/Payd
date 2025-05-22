@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     all: unset;
     display: block;
 }
@@ -14,79 +12,70 @@ h3 {
 .montserrat-appname {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
-    font-optical-sizing: auto;
     color: rgba(72, 74, 79, 1);
-    font-size: 32px;
+    font-size: clamp(24px, 6vw, 32px);
     padding-left: 12px;
-    /* font-size: clamp(25px, 12vmin, 36px); */
-    /* padding-left: 1.5vmin; */
 }
-
 
 .navbar-catagory {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: rgba(130, 130, 130, 1);
-    width: 180px;
+    /* width: 180px; */
     padding-left: 12px;
-    /* padding-left: 1.5vmin; */
 }
 
 .navbar-catagory-name {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-optical-sizing: auto;
     font-size: 16px;
-    /* font-size: clamp(10px, 3vmin, 16px); */
-}
-
-.navbarSvgdropdown.rotate {
-    transform: rotate(180deg);
 }
 
 .navbarSvgdropdown {
     transition: transform 0.3s ease;
 }
 
+.navbarSvgdropdown.rotate {
+    transform: rotate(180deg);
+}
+
 .slide {
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
 }
+
 .slide.open {
-  max-height: 1000px;
+    max-height: 1000px;
 }
+
 .slide.closed {
-  max-height: 0;
+    max-height: 0;
 }
 
 .navbar-links-container {
     padding-left: 12px;
-    /* padding-left: 1.5vmin; */
 }
-.links_Container{
+
+.links_Container {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 30px;
-    /* margin-top: 3vmin; */
-    /* gap: 1.5vmin; */
 }
 
 .navbar_Links {
     display: flex;
     align-items: center;
-    color: Gray;
+    color: gray;
     text-decoration: none;
     gap: 20px;
-    /* gap: 2vmin; */
 }
 
 .navbar_Links_Name {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
-    /* font-size: clamp(12px, 1.6vmin, 14px); */
 }
 
 .line {
@@ -95,5 +84,41 @@ h3 {
     background-color: rgba(221, 231, 241, 1);
     border: none;
     margin-block: 20px;
-    /* margin-block: 2vmin; */
+}
+
+@media (min-width: 1024px) {
+    .montserrat-appname {
+        font-size: clamp(28px, 2vw, 36px);
+        padding-left: 1.5vmin;
+    }
+
+    .navbar-catagory {
+        width: 25vmin;
+        padding-left: 1.5vmin;
+    }
+
+    .navbar-catagory-name {
+        font-size: clamp(16px, 1.2vw, 20px);
+    }
+
+    .navbar-links-container {
+        padding-left: 1.5vmin;
+    }
+
+    .links_Container {
+        margin-top: 3vmin;
+        gap: 1.5vmin;
+    }
+
+    .navbar_Links {
+        gap: 2vmin;
+    }
+
+    .navbar_Links_Name {
+        font-size: clamp(14px, 1vw, 18px);
+    }
+
+    .line {
+        margin-block: 2vmin;
+    }
 }

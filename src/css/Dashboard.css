@@ -1,122 +1,57 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 .dashboard {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.sideBar {
-    padding-inline: 20px;
-    padding-block: 30px;
-    background-color: rgba(252, 252, 252, 255);
-    display: none;
+.left {
+  display: none;
+  background-color: rgba(252, 252, 252, 1);
+  padding: 20px;
 }
 
-.right {}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
 
-@media (min-width: 600px) {
-    .dashboard {
-        display: flex;
-        flex-direction: row;
-    }
+.upper {
+  height: clamp(60px, 10vh, 100px);
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  flex-shrink: 0;
+}
 
-    .sideBar {
-        display: block;
-        flex: 1;
-        padding-inline: 20px;
-        padding-block: 30px;
-        background-color: rgba(252, 252, 252, 255);
-    }
-
-    .right {
-        flex: 4;
-    }
+.lower {
+  flex: 1;
+  overflow-y: auto;
 }
 
 @media (min-width: 1024px) {
-    .dashboard {
-        display: flex;
-        flex-direction: row;
-    }
+  .dashboard {
+    flex-direction: row;
+  }
 
-    .sideBar {
-        flex: 1;
-        padding-inline: 20px;
-        padding-block: 30px;
-        background-color: rgba(252, 252, 252, 255);
-    }
+  .left {
+    display: block;
+    flex: 1;
+  }
 
-    .right {
-        flex: 5;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .upper {
-        height: 63px;
-        display: flex;
-    }
-
-    .topBar {
-        width: 90%;
-        height: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        background-color: aquamarine;
-        margin: auto;
-    }
-
-    .search {
-        flex: 6;
-        display: flex;
-        justify-content: center;
-        background-color: cadetblue;
-    }
-    .button {
-        flex: 2;
-        background-color: rgb(150, 89, 131);
-    }
-    .language {
-        flex: 2;
-        background-color: rgb(110, 160, 95);
-    }
-    .bellIcon {
-        flex: 1;
-        background-color: rgb(125, 95, 160);
-    }
-    .user {
-        flex: 3;
-        background-color: rgb(160, 113, 95);
-    }
-
-    .lower {
-        flex: 1;
-        background-color: rgb(46, 45, 47);
-    }
-}
-
-@media (min-width: 1440px) {
-    .dashboard {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .sideBar {
-        flex: 1;
-        padding-inline: 20px;
-        padding-block: 30px;
-        background-color: rgba(252, 252, 252, 255);
-    }
-
-    .right {
-        flex: 5;
-    }
+  .right {
+    flex: 5;
+    height: 100vh;
+  }
 }
