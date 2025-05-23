@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
     .userContainer {
         flex: 0 0 10%;
         position: relative;

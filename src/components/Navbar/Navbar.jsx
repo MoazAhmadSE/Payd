@@ -5,7 +5,7 @@ import { useState } from "react";
 import NavbarLink from "./NavbarLink";
 import { otherLinks, paymentLinks } from "./NavbarLinks";
 
-export const Navbar = ({setShowNavbar}) => {
+export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
   const [dropDown, setDropDown] = useState({
     isPaymentsOpen: true,
     isCommerceOpen: false,
@@ -18,10 +18,21 @@ export const Navbar = ({setShowNavbar}) => {
         ✕
       </div>
 
+      <div className="TopbarComponents">
+        <hr className="line" style={{ marginBlock: "0px" }} />
+        {Search}
+        <hr className="line" style={{ marginBlock: "0px" }} />
+        <div className="Inner">
+          {Language}
+          {Toggle}
+        </div>
+        <hr className="line" style={{ marginBlock: "0px" }} />
+      </div>
+
       <div>
         <div
           className="navbar-catagory"
-          style={{ marginTop: "35px" }}
+          style={{ marginTop: "30px" }}
           onClick={() =>
             setDropDown((prev) => ({
               ...prev,

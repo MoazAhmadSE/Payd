@@ -25,7 +25,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 30vw;
+    width: 35%;
     max-width: 100%;
     background: white;
     overflow-y: auto;
@@ -39,7 +39,13 @@
     transform: translateX(0);
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 767px) {
+    .sidebar-drawer {
+        width: clamp(30%, 40vmax, 90%);
+    }
+}
+
+@media (max-width: 1023px) {
 
     .sidebar-overlay-wrapper.visible {
         pointer-events: auto;

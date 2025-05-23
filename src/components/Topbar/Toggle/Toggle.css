@@ -1,4 +1,59 @@
-    @media (min-width: 768px) and (max-width: 1023px) {
+.toggleButtonContainer {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .toggleButtonContainer {
+        flex: 0 1 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 0.5rem;
+        min-width: 85px;
+        max-width: 100px;   
+    }
+
+    .toggleBtn {
+        width: 2.2rem;
+        height: 1rem;
+        border: 0;
+        border-radius: 99px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.30s ease;
+    }
+
+    .thumb {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        transform: translateX(0);
+        background-color: rgba(111, 207, 151, 1);
+        transition: left 0.30s ease;
+        left: 0px;
+        /* top: 50%; */
+        transform: translateY(-50%);
+    }
+
+    .toggleBtn.toggled {
+        background-color: rgb(168, 220, 190);
+    }
+
+    .toggleBtn.toggled .thumb {
+        left: calc(2.2rem - 1rem);
+    }
+
+    .toggleButtonText {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-size: 1rem;
+        color: rgba(130, 130, 130, 1);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
     .toggleButtonContainer {
         flex: 0 1 10%;
         display: flex;
