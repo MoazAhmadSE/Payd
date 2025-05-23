@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+    .Menubar {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .Menubar {
+        flex: 0 1 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

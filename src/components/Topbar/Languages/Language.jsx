@@ -31,9 +31,8 @@ export default function Language() {
         }`}
       >
         {languages.map(({ language }) => (
-          <>
+          <div key={language}>
             <div
-              key={language}
               className="language"
               onClick={() =>
                 setDropDown((prev) => ({
@@ -46,7 +45,7 @@ export default function Language() {
               {language}
             </div>
             <hr className="languageDevider" />
-          </>
+          </div>
         ))}
       </div>
     </div>

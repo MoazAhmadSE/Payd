@@ -8,7 +8,7 @@ export default function Notification() {
     <div className="bellIconContainer">
       <div className="box">
         <div className="bellIcon">
-          <Icons.BellIcon />
+          <Icons.BellIcon className="Icon" />
         </div>
         <div className={`${isNotification ? "notification" : ""}`}></div>
       </div>

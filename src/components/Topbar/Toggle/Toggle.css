@@ -1,34 +1,34 @@
-/* @media (min-width: 1024px) and (max-width: 1439px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
     .toggleButtonContainer {
-        flex: 1;
+        flex: 0 1 10%;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0 10px;
-        height: 100%;
+        gap: 0 0.5rem;
+        min-width: 110px;
+        max-width: 250px;
     }
 
     .toggleBtn {
-        background-color: rgba(187, 187, 187, 1);
-        width: 39px;
-        height: 22px;
+        width: 2.2rem;
+        height: 1rem;
         border: 0;
         border-radius: 99px;
         position: relative;
         cursor: pointer;
-        transition: background-color 0.1s ease;
+        transition: background-color 0.30s ease;
     }
 
     .thumb {
         position: absolute;
-        width: 22px;
-        height: 22px;
-        border-radius: 11px;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
         transform: translateX(0);
         background-color: rgba(111, 207, 151, 1);
-        transition: left 0.15s ease;
+        transition: left 0.30s ease;
         left: 0px;
-        top: 50%;
+        /* top: 50%; */
         transform: translateY(-50%);
     }
 
@@ -37,120 +37,119 @@
     }
 
     .toggleBtn.toggled .thumb {
-        left: calc(39px - 22px);
+        left: calc(2.2rem - 1rem);
     }
 
     .toggleButtonText {
         font-family: "Montserrat", sans-serif;
         font-weight: 400;
         font-optical-sizing: auto;
-        font-size: 16px;
+        font-size: 1rem;
         color: rgba(130, 130, 130, 1);
     }
 }
 
-@media (min-width: 1400px) and (max-width: 2559px) {
+@media (min-width: 1024px) and (max-width: 2000px) {
     .toggleButtonContainer {
-        flex: 2;
+        flex: 0 1 10%;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0 10px;
-        height: 100%;
-    }
-
-    .toggleBtn {
-        background-color: rgba(187, 187, 187, 1);
-        width: 39px;
-        height: 22px;
-        border: 0;
-        border-radius: 99px;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.1s ease;
-    }
-
-    .thumb {
-        position: absolute;
-        width: 22px;
-        height: 22px;
-        border-radius: 11px;
-        transform: translateX(0);
-        background-color: rgba(111, 207, 151, 1);
-        transition: left 0.15s ease;
-        left: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .toggleBtn.toggled {
-        background-color: rgb(168, 220, 190);
-    }
-
-    .toggleBtn.toggled .thumb {
-        left: calc(39px - 22px);
-    }
-
-    .toggleButtonText {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-optical-sizing: auto;
-        font-size: 16px;
-        color: rgba(130, 130, 130, 1);
-    }
-} */
-
-/* @media (min-width: 1024px) and (max-width: 2559px) { */
-.toggleButtonContainer {
-    flex: 0 1 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0 1rem;
-    /* width: 10%;
+        gap: 0 1rem;
+        /* width: 10%;
         height: 50px; */
-    min-width: 100px;
-    max-width: 300px;
+        min-width: 100px;
+        max-width: 300px;
+    }
+
+    .toggleBtn {
+        width: 2rem;
+        height: 1rem;
+        border: 0;
+        border-radius: 99px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.1s ease;
+    }
+
+    .thumb {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        transform: translateX(0);
+        background-color: rgba(111, 207, 151, 1);
+        transition: left 0.15s ease;
+        left: 0px;
+        /* top: 50%; */
+        transform: translateY(-50%);
+    }
+
+    .toggleBtn.toggled {
+        background-color: rgb(168, 220, 190);
+    }
+
+    .toggleBtn.toggled .thumb {
+        left: calc(2rem - 1rem);
+    }
+
+    .toggleButtonText {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-size: 1.1rem;
+        color: rgba(130, 130, 130, 1);
+    }
+
 }
 
-.toggleBtn {
-    background-color: rgba(187, 187, 187, 1);
-    width: 2rem;
-    height: 1rem;
-    border: 0;
-    border-radius: 99px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.1s ease;
-}
+@media (min-width: 2001px) {
+    .toggleButtonContainer {
+        flex: 0 1 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 1rem;
+        min-width: 110px;
+        max-width: 250px;
+    }
 
-.thumb {
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    transform: translateX(0);
-    background-color: rgba(111, 207, 151, 1);
-    transition: left 0.15s ease;
-    left: 0px;
-    /* top: 50%; */
-    transform: translateY(-50%);
-}
+    .toggleBtn {
+        width: 3.5rem;
+        height: 1.5rem;
+        border: 0;
+        border-radius: 99px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.30s ease;
+    }
 
-.toggleBtn.toggled {
-    background-color: rgb(168, 220, 190);
-}
+    .thumb {
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        transform: translateX(0);
+        background-color: rgba(111, 207, 151, 1);
+        transition: left 0.30s ease;
+        left: 0px;
+        /* top: 50%; */
+        transform: translateY(-50%);
+    }
 
-.toggleBtn.toggled .thumb {
-    left: calc(2rem - 1rem);
-}
+    .toggleBtn.toggled {
+        background-color: rgb(168, 220, 190);
+    }
 
-.toggleButtonText {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-optical-sizing: auto;
-    font-size: 1.1rem;
-    color: rgba(130, 130, 130, 1);
-}
+    .toggleBtn.toggled .thumb {
+        left: calc(3.5rem - 1.5rem);
+    }
 
-/* } */
+    .toggleButtonText {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-size: 1.3rem;
+        color: rgba(130, 130, 130, 1);
+    }
+}

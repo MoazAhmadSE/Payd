@@ -1,70 +1,4 @@
-/* @media (min-width: 1024px) and (max-width: 1439px) {
-    .bellIconContainer {
-        flex: 1;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-
-    .bellIcon {
-        width: 56px;
-        height: 56px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background-color: rgba(252, 252, 252, 1);
-    }
-
-    .notification {
-        z-index: 10;
-        width: 15px;
-        height: 15px;
-        border-radius: 6px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: rgba(229, 160, 255, 1);
-        transform: translate(-50%);
-    }
-}
-
-@media (min-width: 1400px) and (max-width: 2559px) {
-    .bellIconContainer {
-        flex: 1;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-
-    .bellIcon {
-        width: 56px;
-        height: 56px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background-color: rgba(252, 252, 252, 1);
-    }
-
-    .notification {
-        z-index: 10;
-        width: 15px;
-        height: 15px;
-        border-radius: 6px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: rgba(229, 160, 255, 1);
-        transform: translate(-50%);
-    }
-} */
-
-/* @media (min-width: 1024px) and (max-width: 2559px) { */
+@media (min-width: 768px) and (max-width: 1023px) {
     .bellIconContainer {
         /* flex: 1; */
         flex: 0 1 10%;
@@ -74,10 +8,15 @@
         align-items: center;
     }
 
-    .box{
+    .box {
         position: relative;
     }
-    
+
+    .Icon {
+        width: 25px;
+        height: 25px;
+    }
+
     .bellIcon {
         width: 50px;
         height: 50px;
@@ -99,4 +38,83 @@
         background-color: rgba(229, 160, 255, 1);
         transform: translate(30%, -30%);
     }
-/* } */
+}
+
+@media (min-width: 1024px) and (max-width: 2000px) {
+    .bellIconContainer {
+        /* flex: 1; */
+        flex: 0 1 7%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        position: relative;
+    }
+
+    .bellIcon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgba(252, 252, 252, 1);
+    }
+
+    .notification {
+        position: absolute;
+        z-index: 10;
+        width: 15px;
+        height: 15px;
+        border-radius: 6px;
+        right: 0;
+        top: 0;
+        background-color: rgba(229, 160, 255, 1);
+        transform: translate(30%, -30%);
+    }
+}
+
+@media (min-width: 2001px) {
+    .bellIconContainer {
+        /* flex: 1; */
+        flex: 0 1 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        position: relative;
+    }
+
+    .Icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bellIcon {
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgba(252, 252, 252, 1);
+    }
+
+    .notification {
+        position: absolute;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+        border-radius: 8px;
+        right: 0;
+        top: 0;
+        background-color: rgba(229, 160, 255, 1);
+        transform: translate(30%, -30%);
+    }
+}

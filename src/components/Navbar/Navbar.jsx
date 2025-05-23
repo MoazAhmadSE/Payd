@@ -5,7 +5,7 @@ import { useState } from "react";
 import NavbarLink from "./NavbarLink";
 import { otherLinks, paymentLinks } from "./NavbarLinks";
 
-export const Navbar = () => {
+export const Navbar = ({setShowNavbar}) => {
   const [dropDown, setDropDown] = useState({
     isPaymentsOpen: true,
     isCommerceOpen: false,
@@ -14,6 +14,10 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <h1 className="montserrat-appname">Payd</h1>
+      <div className="navbar-close-btn" onClick={() => setShowNavbar(false)}>
+        ✕
+      </div>
+
       <div>
         <div
           className="navbar-catagory"
