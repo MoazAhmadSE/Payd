@@ -1,0 +1,46 @@
+button {
+    all: unset;
+    display: block;
+}
+
+.chatbarContainer {
+    display: flex;
+    flex: 0 0 25%;
+    min-height: 75%;
+    max-height: 75%;
+    min-width: 25rem;
+    max-width: 25rem;
+    background-color: rgba(249, 249, 249, 1);
+    border-top-left-radius: 75px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chatTabs {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    min-width: 22rem;
+    height: 15%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.messageBox {
+    background-color: wheat;
+}
+
+.tab {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgba(130, 130, 130, 1);
+    opacity: 50%;
+}
+.activetab{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgba(51, 51, 51, 1);
+}

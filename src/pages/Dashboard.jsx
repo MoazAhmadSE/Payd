@@ -1,3 +1,5 @@
+import { Chatbar } from "../components/Main/Chatbar/Chatbar";
+import { MainComp } from "../components/Main/PageSection/MainComp";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Topbar } from "../components/Topbar/Topbar";
 import "../css/Dashboard.css";
@@ -15,18 +17,8 @@ export const Dashboard = () => {
           <Topbar />
         </div>
         <div className="lower">
-          <div className="PageSection">
-            <Outlet/>
-          </div>
-          <div className="Chatbar">
-            <div className="chatbarContainer">
-              <div className="chatTabs">
-                <div className="stats">Stats</div>
-                <div className="messages">Massages</div>
-              </div>
-              <div className="messageBox"></div>
-            </div>
-          </div>
+          <MainComp/>
+          <Chatbar/>
         </div>
       </div>
     </div>

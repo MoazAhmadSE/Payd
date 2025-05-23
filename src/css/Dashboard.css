@@ -41,43 +41,6 @@ body {
   flex-direction: row;
 }
 
-.PageSection {
-  overflow-y: auto;
-  display: flex;
-  flex: 0 1 75%;
-  /* background-color: blanchedalmond; */
-}
-.chatbar {
-  display: flex;
-  flex: 0 0 25%;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(255, 166, 0);
-}
-
-.chatbarContainer{
-  min-height: 75%;
-  max-height: 75%;
-  min-width: 100%;
-  max-width: 100%;
-  /* background-color: rgb(183, 7, 7); */
-  border-top-left-radius: 75px;
-  display: flex;
-  flex-direction: column;
-}
-.chatTabs{
-  /* background-color: aqua; */
-  position: fixed;
-  min-width: 80%;
-  height: 15%;
-  display: flex;
-  align-items: end;
-  justify-content: space-around;
-}
-.messageBox{
-  /* background-color: wheat; */
-}
-
 @media (max-width: 1023px) {
   .dashboard {
     flex-direction: column;
@@ -105,7 +68,6 @@ body {
 
   .right {
     flex: 5;
-    width: 100%;
     height: 100vh;
   }
 }
