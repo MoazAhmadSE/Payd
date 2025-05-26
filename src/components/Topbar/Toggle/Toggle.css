@@ -20,6 +20,7 @@
         border-radius: 99px;
         position: relative;
         cursor: pointer;
+        background-color: rgba(224, 224, 224, 1);
         transition: background-color 0.30s ease;
     }
 
@@ -71,6 +72,7 @@
         border-radius: 99px;
         position: relative;
         cursor: pointer;
+        background-color: rgba(224, 224, 224, 1);
         transition: background-color 0.30s ease;
     }
 
@@ -124,6 +126,7 @@
         border-radius: 99px;
         position: relative;
         cursor: pointer;
+        background-color: rgba(224, 224, 224, 1);
         transition: background-color 0.1s ease;
     }
 
@@ -176,6 +179,7 @@
         border-radius: 99px;
         position: relative;
         cursor: pointer;
+        background-color: rgba(224, 224, 224, 1);
         transition: background-color 0.30s ease;
     }
 

@@ -1,0 +1,152 @@
+@media (max-width: 767px) {
+    .cardContainer {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .cardContainer {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .cardContainer {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 2000px) {
+    .cardContainer {
+        min-height: 200px;
+        padding-inline: 14px;
+        padding-bottom: 16px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 1);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cardNameIcon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        border-radius: 12px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .cardTime {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: rgba(189, 189, 189, 1);
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+
+    .cardName {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: rgba(51, 51, 51, 1);
+        font-size: 1.5rem;
+    }
+
+    .CardMessage {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: rgba(189, 189, 189, 1);
+        font-size: 1.2rem;
+    }
+}
+
+
+
+.cardContainer {
+    min-height: 130px;
+    padding-inline: 14px;
+    padding-bottom: 16px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardContainer:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardTop {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cardNameIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cardTime {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(189, 189, 189, 1);
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+}
+
+.cardButtom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cardNameAndMessage {
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.3rem;
+}
+
+.cardName {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    font-size: 1rem;
+}
+
+.CardMessage {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(189, 189, 189, 1);
+    font-size: 0.7rem;
+}
+
+.CardIcon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,3 +1,24 @@
+@media (max-width: 767px) {
+    .chatbarContainer {
+        height: 95%;
+    }
+
+    .messageBox {
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .chatbarContainer {
+        height: 85%;
+        border-top-left-radius: 75px;
+    }
+
+    .messageBox {
+        height: 80%;
+    }
+}
+
 button {
     all: unset;
     display: block;
@@ -5,42 +26,53 @@ button {
 
 .chatbarContainer {
     display: flex;
-    flex: 0 0 25%;
-    min-height: 75%;
-    max-height: 75%;
-    min-width: 25rem;
-    max-width: 25rem;
+    /* height: 85%; */
+    width: 100%;
     background-color: rgba(249, 249, 249, 1);
-    border-top-left-radius: 75px;
     flex-direction: column;
     align-items: center;
 }
 
 .chatTabs {
-    position: fixed;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: end;
-    min-width: 22rem;
-    height: 15%;
+    width: 80%;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgba(224, 224, 224, 1);
 }
 
 .messageBox {
-    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* height: 80%;
+    width: 80%; */
+    padding-top: 1rem;
+    gap: 1rem;
+    overflow-y: auto;
+    /* background-color: rgb(33, 37, 37); */
+}
+
+.messageBox::-webkit-scrollbar {
+    display: none;
 }
 
 .tab {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem);
     color: rgba(130, 130, 130, 1);
     opacity: 50%;
 }
-.activetab{
+
+.activetab {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: clamp(1rem, 1.5vw, 1.6rem);
     color: rgba(51, 51, 51, 1);
 }

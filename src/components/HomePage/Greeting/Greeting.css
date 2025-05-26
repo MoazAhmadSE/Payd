@@ -1,0 +1,15 @@
+.greeting {
+    display: flex;
+
+}
+
+.greetingImage {
+    margin-right: 0.7rem;
+}
+
+.name {
+    color: rgba(255, 161, 78, 1);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}

@@ -10,12 +10,14 @@ import { Referrals } from "../pages/Referrals";
 import { AuditLogs } from "../pages/AuditLogs";
 import { Settings } from "../pages/Settings";
 import { NotFound } from "../pages/NotFound";
+import HomePage from "../pages/HomePage";
 
 export default function AppRouters() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />}>
-        <Route path="/" element={<Transactions />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/payments/transactions" element={<Transactions />} />
         <Route path="/payments/customers" element={<Customers />} />
         <Route path="/payments/payouts" element={<Payouts />} />
         <Route path="/payments/balances" element={<Balances />} />
