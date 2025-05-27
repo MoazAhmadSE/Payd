@@ -1,5 +1,4 @@
-import { Chatbar } from "../components/Main/Chatbar/Chatbar";
-import { MainComp } from "../components/Main/PageSection/MainComp";
+import { Chatbar } from "../components/Chatbar/Chatbar";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Topbar } from "../components/Topbar/Topbar";
 import "../css/Dashboard.css";
@@ -27,7 +26,7 @@ export const Dashboard = () => {
           </div>
           <div className="lower">
             <div className="main">
-              <MainComp/>
+              <Outlet />
             </div>
             <div className="chat">
               <Chatbar />

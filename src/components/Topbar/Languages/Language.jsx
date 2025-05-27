@@ -1,16 +1,29 @@
 import "./Language.css";
 import languages from "./Languages";
 import * as Icons from "../../../assets/icons/Topbar/index";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Language() {
   const [dropDown, setDropDown] = useState({
     selectedLanguage: "English",
     isLanguageSelecterOpen: false,
-    isUserDropdownOpen: false,
   });
+  const dropdownRef = useRef();
+  const handleClickOutside = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setDropDown((prev) => ({
+        ...prev,
+        isLanguageSelecterOpen: false,
+      }));
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   return (
-    <div className="languageContainer">
+    <div className="languageContainer" ref={dropdownRef}>
       <div
         className={`languageSelector ${
           dropDown.isLanguageSelecterOpen ? "open" : ""

@@ -1,0 +1,15 @@
+.sucessAnimation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+@media (min-width: 2000px) {
+
+    .sucessAnimation {
+        padding-block: 6rem;
+        scale: 1.5;
+    }
+}

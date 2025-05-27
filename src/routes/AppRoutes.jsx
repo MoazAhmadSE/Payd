@@ -6,10 +6,10 @@ import { Payouts } from "../pages/payments/Payouts";
 import { Balances } from "../pages/payments/Balances";
 import { Subscriptions } from "../pages/payments/Subscriptions";
 import { PaymentPlan } from "../pages/Payments/PaymentPlan";
-import { Referrals } from "../pages/Referrals";
-import { AuditLogs } from "../pages/AuditLogs";
-import { Settings } from "../pages/Settings";
-import { NotFound } from "../pages/NotFound";
+import { Referrals } from "../pages/others/Referrals";
+import { AuditLogs } from "../pages/others/AuditLogs";
+import { Settings } from "../pages/others/Settings";
+import { NotFound } from "../pages/others/NotFound";
 import HomePage from "../pages/HomePage";
 
 export default function AppRouters() {

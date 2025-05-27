@@ -1,0 +1,54 @@
+*{
+  all:unset();
+}
+.GraphContiner {
+  width: 100%;
+  padding: 20px;
+  margin-top: 1rem;
+  border: 2px solid rgba(242, 242, 242, 1);
+  border-radius: 40px;
+}
+
+.xaxis,
+.yaxis {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(150, 150, 150, 1);
+}
+
+@media (max-width: 425px) {
+  .GraphContiner {
+    height: 200px;
+    padding: 0;
+    border: 0;
+  }
+}
+@media (min-width: 426px) {
+  .GraphContiner {
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .GraphContiner {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .GraphContiner {
+    height: 300px;
+    padding: 2vw;
+  }
+}
+
+@media (min-width: 2000px) {
+  .GraphContiner {
+    height: 600px;
+  }
+
+  .xaxis,
+  .yaxis {
+    font-size: 1vw;
+  }
+}

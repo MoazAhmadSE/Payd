@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import "./Chatbar.css";
-import Card from "./Card";
+import Card from "./Card/Card";
 import { Messages } from "./messages";
 
 export const Chatbar = () => {

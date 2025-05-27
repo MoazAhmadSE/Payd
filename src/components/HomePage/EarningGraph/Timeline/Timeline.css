@@ -1,0 +1,111 @@
+.timelineContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    position: relative;
+}
+
+.timeline {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.duration {
+    flex: 9;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(130, 130, 130, 1);
+}
+
+.dropdownIcon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(250, 242, 255, 1);
+    transition: transform 0.3s ease;
+}
+
+.dropdownIcon.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    margin-top: 6px;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.innerDropdownMenu {
+    padding-left: 5%;
+    margin-block: 0.5rem;
+    color: rgba(130, 130, 130, 1);
+    cursor: pointer;
+}
+
+.range {
+    padding-left: 6px;
+    padding-block: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.range:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    width: 90%;
+}
+
+.braker {
+    width: 90%;
+    border: 0;
+    margin-block: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(187, 107, 217, 1);
+}
+
+
+@media (min-width: 2000px) {
+    .timelineContainer {
+        width: 9vw;
+        background-color: aqua;
+    }
+
+    .duration {
+        font-size: 1.5rem;
+    }
+
+    .dropdownIcon svg{
+        scale: 2;
+    }
+    .dropdownMenu {
+        font-size: 1.5rem;
+    }
+}
