@@ -122,7 +122,7 @@ h3 {
     /* padding: 6px; */
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .navbar-close-btn {
         display: block;
         position: absolute;
@@ -172,7 +172,7 @@ h3 {
     }
 }
 
-@media (min-width: 1024px) and (max-width: 2001px) {
+@media (min-width: 1024px) and (max-width: 2000px) {
     .montserrat-appname {
         font-size: clamp(25px, 1.9rem, 40px);
         padding-left: 1rem;

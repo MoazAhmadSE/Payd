@@ -12,14 +12,15 @@
   flex-direction: row;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .topbar {
     justify-content: space-between;
+    background-color: aqua;
     padding: 0 5%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .topbar {
     margin: 0 auto;
     padding: 0 2%;

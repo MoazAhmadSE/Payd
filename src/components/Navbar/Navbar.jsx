@@ -18,7 +18,7 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
         ✕
       </div>
 
-      {window.innerWidth < 768 && (
+      {window.innerWidth <= 767 && (
         <div className="TopbarComponents">
           <hr className="line" style={{ marginBlock: "0px" }} />
           {Search}

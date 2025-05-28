@@ -4,7 +4,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .Menubar {
         flex: 0 1 3vmax;
         display: flex;

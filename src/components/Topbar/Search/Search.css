@@ -38,7 +38,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .searchContainer {
         flex: 1 0.8 45%;
         min-width: 180px;
@@ -76,7 +76,7 @@
 }
 
 
-@media (min-width: 1024px) and (max-width: 2001px) {
+@media (min-width: 1024px) and (max-width: 2000px) {
     .searchContainer {
         flex: 1 0.8 44%;
         min-width: 150px;
