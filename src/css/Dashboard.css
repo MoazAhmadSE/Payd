@@ -52,19 +52,19 @@ body {
   overflow-y: scroll;
 }
 
-.main::-webkit-scrollbar{
+.main::-webkit-scrollbar {
   display: none;
 }
 
 .chat {
+  display: block;
   flex: 1;
   height: 100%;
 }
 
-.chatButton {
+.chatButton, .showChat {
   display: none;
 }
-
 
 @media (max-width: 767px) {
 
@@ -121,27 +121,8 @@ body {
   }
 
   .chat {
+    display: block;
     flex: 2;
-    height: 100%;
-  }
-
-  .showChat {
-    display: none;
-  }
-}
-
-@media (max-width: 1023px) {
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .left {
-    display: none;
-  }
-
-  .right {
-    flex: 1;
-    height: 100vh;
   }
 }
 
@@ -166,11 +147,6 @@ body {
 
   .chat {
     flex: 2;
-    height: 100%;
-  }
-
-  .showChat {
-    display: none;
   }
 }
 
@@ -188,10 +164,6 @@ body {
     flex: 5;
     height: 100vh;
   }
-
-  .showChat {
-    display: none;
-  }
 }
 
 @media (min-width: 2001px) {
@@ -208,9 +180,5 @@ body {
   .right {
     flex: 5;
     height: 100vh;
-  }
-
-  .showChat {
-    display: none;
   }
 }

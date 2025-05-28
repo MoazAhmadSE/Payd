@@ -17,7 +17,7 @@ export default function UserInfo() {
 
   return (
     <div className={`userContainer ${showDropdown ? "dropdown" : ""}`}>
-      {windowWidth > 1024 ? (
+      {windowWidth >= 1024 ? (
         <>
           <img src={userImage} className="userImage" alt="User" />
           <div className="userNameandId">

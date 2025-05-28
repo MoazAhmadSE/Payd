@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./Chatbar.css";
 import Card from "./Card/Card";
 import { Messages } from "./messages";

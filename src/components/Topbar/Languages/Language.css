@@ -2,13 +2,13 @@
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .languageContainer {
-        /* flex: 2; */
+        margin-block: 10px;
         flex: 1 1 2;
         min-width: 120px;
         max-width: 157px;
-        height: 5vmax;
+        height: 55%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,7 +18,7 @@
 
     .languageSelector {
         width: 90%;
-        height: 100%;
+        height: 30px;
         border-radius: 50px;
         border: 1px solid rgba(189, 189, 189, 0.2);
         background-color: white;
@@ -91,9 +91,8 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .languageContainer {
-        /* flex: 2; */
         flex: 0 1 20%;
         min-width: 150px;
         max-width: 200px;
@@ -102,7 +101,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
 
     .languageSelector {
@@ -181,9 +180,8 @@
 }
 
 
-@media (min-width: 1024px) and (max-width: 2000px) {
+@media (min-width: 1024px) and (max-width: 2001px) {
     .languageContainer {
-        /* flex: 2; */
         flex: 0 1 15%;
         min-width: 150px;
         max-width: 180px;
@@ -271,7 +269,6 @@
 
 @media (min-width: 2001px) {
     .languageContainer {
-        /* flex: 2; */
         flex: 0 1 20%;
         min-width: 220px;
         max-width: 290px;

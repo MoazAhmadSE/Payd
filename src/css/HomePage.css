@@ -14,6 +14,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -27,22 +28,18 @@
     gap: 1rem;
 }
 
-.sucess,
-.issues {
-    flex: 1;
-}
 
-.sucess {
-    /* background-color: thistle; */
-}
 
-.issues {
-    /* background-color: rebeccapurple; */
-}
-
+/* @media (min-width: 500px) and (max-width: 768px) {
+    .bottomRow{
+        flex-direction: column;
+        width: 70%;
+    }
+} */
 @media (max-width: 1200px) {
     .bottomRow{
         flex-direction: column;
+        /* width: 50%; */
     }
 }
 @media (max-width: 1440px) {

@@ -1,6 +1,5 @@
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .bellIconContainer {
-        /* flex: 1; */
         flex: 0 1 10%;
         height: 100%;
         display: flex;
@@ -40,9 +39,8 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 2000px) {
+@media (min-width: 1024px) and (max-width: 2001px) {
     .bellIconContainer {
-        /* flex: 1; */
         flex: 0 1 7%;
         height: 100%;
         display: flex;
@@ -79,7 +77,6 @@
 
 @media (min-width: 2001px) {
     .bellIconContainer {
-        /* flex: 1; */
         flex: 0 1 10%;
         height: 100%;
         display: flex;
@@ -92,13 +89,13 @@
     }
 
     .Icon {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 
     .bellIcon {
-        width: 75px;
-        height: 75px;
+        width: 60px;
+        height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -19,12 +19,8 @@ export default function HomePage() {
         </div>
 
         <div className="bottomRow">
-          <div className="sucess">
             <SucessRate />
-          </div>
-          <div className="issues">
             <PaymentIssues/>
-          </div>
         </div>
       </div>
     </div>

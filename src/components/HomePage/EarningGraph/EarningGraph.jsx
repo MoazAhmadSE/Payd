@@ -18,12 +18,10 @@ export default function EarningGraph() {
 
   const earnings = getEarningsData(selectedRange);
 
-  // Sort by date ascending
   const sortedEarnings = [...earnings].sort(
     (a, b) => new Date(a.timestamp) - new Date(b.timestamp)
   );
 
-  // Label format depending on selected range
   const formatMap = {
     Today: "h a",
     "This Week": "EEE",
@@ -34,7 +32,6 @@ export default function EarningGraph() {
   };
   const pattern = formatMap[selectedRange] || "Pp";
 
-  // Prepare data for BarChart
   const chartData = sortedEarnings.map((entry) => ({
     name: format(parseISO(entry.timestamp), pattern),
     NGN: entry.NGN,
@@ -51,23 +48,18 @@ export default function EarningGraph() {
         <ResponsiveContainer>
           <BarChart
             data={chartData}
+            margin={{ top: 15, right: 20, left: 1, bottom: 1 }}
           >
-            <CartesianGrid
-              strokeDasharray="10 5"
-              horizontal={true}
-              vertical={false}
-            />
+            <CartesianGrid strokeDasharray="10 5" horizontal vertical={false} />
             <XAxis
               dataKey="name"
               axisLine={false}
+              tickLine={false}
               interval="auto"
               minTickGap={52}
               className="xaxis"
-              />
-            <YAxis
-              axisLine={false}
-              className="yaxis"
             />
+            <YAxis axisLine={false} tickLine={false} className="yaxis" />
             <Tooltip formatter={(value) => `${value.toFixed(2)}`} />
             <Bar
               dataKey="NGN"

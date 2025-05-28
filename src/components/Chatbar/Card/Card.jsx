@@ -1,4 +1,3 @@
-import { useState } from "react";
 import randomColor from "randomcolor";
 import moment from "moment";
 import "./Card.css";

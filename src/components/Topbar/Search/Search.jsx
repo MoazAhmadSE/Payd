@@ -5,10 +5,8 @@ export default function Search() {
   return (
     <>
       <div className="searchContainer">
-        {/* <div className="searchWrapper"> */}
           <Icons.Search className="searchIcon" />
           <input type="text" placeholder="Search" />
-        {/* </div> */}
       </div>
     </>
   );

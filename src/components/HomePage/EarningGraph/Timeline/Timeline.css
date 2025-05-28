@@ -95,7 +95,6 @@
 @media (min-width: 2000px) {
     .timelineContainer {
         width: 9vw;
-        background-color: aqua;
     }
 
     .duration {

@@ -18,16 +18,18 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
         ✕
       </div>
 
-      <div className="TopbarComponents">
-        <hr className="line" style={{ marginBlock: "0px" }} />
-        {Search}
-        <hr className="line" style={{ marginBlock: "0px" }} />
-        <div className="Inner">
-          {Language}
-          {Toggle}
+      {window.innerWidth < 768 && (
+        <div className="TopbarComponents">
+          <hr className="line" style={{ marginBlock: "0px" }} />
+          {Search}
+          <hr className="line" style={{ marginBlock: "0px" }} />
+          <div className="Inner">
+            {Language}
+            {Toggle}
+          </div>
+          <hr className="line" style={{ marginBlock: "0px" }} />
         </div>
-        <hr className="line" style={{ marginBlock: "0px" }} />
-      </div>
+      )}
 
       <div>
         <div

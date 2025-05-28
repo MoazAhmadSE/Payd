@@ -9,11 +9,11 @@ import SidebarLayout from "../Navbar/Slideout/SidebarLayout";
 import { useState, useEffect } from "react";
 
 export const Topbar = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 767);
+  const [isDesktop, setIsDesktop] = useState();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 767);
+      setIsDesktop(window.innerWidth >= 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -27,7 +27,7 @@ export const Topbar = () => {
         Toggle={<Toggle />}
         Language={<Languages />}
       />
-      <div className="AppName">Payd</div>
+      {!isDesktop && <div className="AppName">Payd</div>}
 
       {isDesktop && (
         <>
