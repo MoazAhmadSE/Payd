@@ -3,21 +3,22 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { Topbar } from "../components/Topbar/Topbar";
 import "../css/Dashboard.css";
 import * as Icon from "../assets/icons/Dashboard/index";
-import AppRouters from "../routes/AppRoutes";
 import { Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useUser } from "../context/UserInfo";
+import Loading from "../components/Loading";
 
 export const Dashboard = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isNotification, setIsNotification] = useState(true);
-  const [user, setUser] = useState(null);
+  const { user, loading } = useUser();
+  if (loading) {
+    return <Loading />;
+  }
   const showChat = () => {
     setIsChatOpen(!isChatOpen);
   };
-  useEffect(()=>{
-    
-  },[])
 
   return (
     <>
@@ -27,16 +28,18 @@ export const Dashboard = () => {
         </div>
         <div className="right">
           <div className="upper">
-            <Topbar />
+            <Topbar userData={user} />
           </div>
           <div className="lower">
             <div className="main">
-              <Outlet />
+              <Suspense fallback={<Loading/>}>
+                <Outlet />
+              </Suspense>
             </div>
             <div className="chat">
               <Chatbar />
             </div>
-            <AnimatePresence>
+            <AnimatePresence className="slider">
               {isChatOpen && (
                 <motion.div
                   className="chat showChat"
@@ -53,7 +56,7 @@ export const Dashboard = () => {
         </div>
       </div>
       <div className="chatButton">
-        <div className="chatIcon" onClick={() => showChat()}>
+        <div className="chatIcon" onClick={showChat}>
           <Icon.Message />
         </div>
         <div className={`${isNotification ? "chatNotification" : ""}`}></div>

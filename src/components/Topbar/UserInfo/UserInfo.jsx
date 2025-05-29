@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import "./UserInfo.css";
 import * as Icons from "../../../assets/icons/Topbar/index";
 import userImage from "../../../assets/Images/user1.png";
-import { useUser } from "../../../context/UserInfo";
 
-export default function UserInfo() {
+export default function UserInfo({ userData }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  const { user } = useUser();
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -24,8 +22,8 @@ export default function UserInfo() {
         <>
           <img src={userImage} className="userImage" alt="User" />
           <div className="userNameandId">
-            <div className="userName">{user.name}</div>
-            <div className="UserId">ID: {user.id}</div>
+            <div className="userName">{userData?.name}</div>
+            <div className="UserId">ID: {userData?.id}</div>
           </div>
           <Icons.Dropdown />
         </>
@@ -39,8 +37,8 @@ export default function UserInfo() {
           />
           {showDropdown && (
             <div className="dropdownContent">
-              <div className="userName">{user.name}</div>
-              <div className="UserId">ID: {user.id}</div>
+              <div className="userName">{userData.name}</div>
+              <div className="UserId">ID: {userData.id}</div>
             </div>
           )}
         </>

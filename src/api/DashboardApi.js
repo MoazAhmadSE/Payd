@@ -1,4 +1,11 @@
+import { UserData } from "../utils/DashboardData/UserData";
+import { Messages } from "../utils/DashboardData/messages";
 
 export const fetchDashboardData = () => {
-    "DashboardDataApi" :  
-}
+    return {
+        DashboardDataApi: {
+            user: UserData,
+            messages: Messages,
+        }
+    };
+};

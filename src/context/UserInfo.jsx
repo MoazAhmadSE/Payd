@@ -1,24 +1,33 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { fetchDashboardData } from "../api/DashboardApi";
 
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    name: "Moaz Ahmad",
-    id: "123456",
-    earnedNGN: 3000000,
-    sucessfull: 1500,
-    unsucessfull: 1000,
-    errors: {
-      "Customer errors": 250,
-      "Fraud blocks": 200,
-      "Bank errors": 100,
-      "System errors": 180,
-    },
-  });
+  const [user, setUser] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchDashboardData();
+        setUser(data.DashboardDataApi?.user?.data || null);
+        setMessages(data.DashboardDataApi?.messages?.data || []);
+      } catch (error) {
+        console.error("Error fetching dashboard data:", error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, setUser, messages, loading }}>
       {children}
     </UserContext.Provider>
   );

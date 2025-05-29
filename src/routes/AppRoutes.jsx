@@ -16,7 +16,7 @@ export default function AppRouters() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />}>
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />
         <Route path="/payments/transactions" element={<Transactions />} />
         <Route path="/payments/customers" element={<Customers />} />
         <Route path="/payments/payouts" element={<Payouts />} />

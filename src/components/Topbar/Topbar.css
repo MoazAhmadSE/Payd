@@ -1,10 +1,12 @@
 .AppName {
+  text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: rgba(72, 74, 79, 1);
-  font-size: clamp(24px, 1.7rem, 30px);
-  padding-left: 12px; 
+  font-size: clamp(24px, 6vw, 32px);
+  padding-left: 12px;
 }
+
 .topbar {
   width: 100%;
   height: 90%;
@@ -12,6 +14,7 @@
   flex-direction: row;
   align-items: center;
 }
+
 @media (max-width: 768px) {
   .topbar {
     justify-content: space-between;
@@ -23,7 +26,6 @@
   .topbar {
     margin: 0 auto;
     padding: 0 2%;
-    background-color: wheat;
     gap: 0 1rem;
   }
 }

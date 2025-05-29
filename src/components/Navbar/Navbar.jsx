@@ -22,14 +22,14 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
 
       {window.innerWidth <= 767 && (
         <div className="TopbarComponents">
-          <hr className="line" style={{ marginBlock: "0px" }} />
+          <hr className="line1" style={{ marginBlock: "0px" }} />
           {Search}
-          <hr className="line" style={{ marginBlock: "0px" }} />
+          <hr className="line1" style={{ marginBlock: "0px" }} />
           <div className="Inner">
             {Language}
             {Toggle}
           </div>
-          <hr className="line" style={{ marginBlock: "0px" }} />
+          <hr className="line1" style={{ marginBlock: "0px" }} />
         </div>
       )}
 

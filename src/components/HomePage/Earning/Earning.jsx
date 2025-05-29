@@ -1,9 +1,9 @@
-import { useUser } from "../../../context/UserInfo";
 import "./Earning.css";
 
-export default function Earning(){
-    const { user } = useUser();
-    return(
-        <h2 className="earnings">You earned NGN { user.earnedNGN.toLocaleString('en-US') } this month.</h2>
-    );
+export default function Earning({ totalEarning }) {
+  return (
+    <h2 className="earnings">
+      You earned NGN {totalEarning?.toLocaleString("en-US")} this month.
+    </h2>
+  );
 }

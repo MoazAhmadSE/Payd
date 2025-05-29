@@ -94,17 +94,18 @@ h3 {
     margin-block: 20px;
 }
 
+.line1 {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(221, 231, 241, 1);
+    border: none;
+    margin-block: 20px;
+}
+
 .navbar-close-btn {
     display: none;
     font-size: 15px;
     cursor: pointer;
-}
-
-.navbar-close-btn {
-    display: block;
-    position: absolute;
-    right: 9%;
-    top: 4%;
 }
 
 .TopbarComponents {
@@ -121,6 +122,15 @@ h3 {
     display: flex;
     flex-direction: row;
     /* padding: 6px; */
+}
+
+@media (max-width: 768px) {
+    .navbar-close-btn {
+        display: block;
+        position: absolute;
+        right: 9%;
+        top: 5%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -171,9 +181,17 @@ h3 {
     .line {
         margin-block: 1rem;
     }
+
+    .line1 {
+        margin-block: 1rem;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 2000px) {
+    .TopbarComponents {
+        display: none;
+    }
+
     .montserrat-appname {
         font-size: clamp(25px, 1.9rem, 40px);
         padding-left: 1rem;
@@ -211,6 +229,10 @@ h3 {
     }
 
     .line {
+        margin-block: 1rem;
+    }
+
+    .line1 {
         margin-block: 1rem;
     }
 

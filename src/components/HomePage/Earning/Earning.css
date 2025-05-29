@@ -8,3 +8,8 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+@media (min-width: 1800px) {
+  .earnings{
+    margin-block: 1.5rem;
+  }
+}

@@ -1,11 +1,9 @@
-import { useUser } from "../../../context/UserInfo";
 import "./SucessRate.css";
 import Piechart from "./Piechart/Piechart";
 
-export default function SucessRate() {
-  const { user } = useUser();
+export default function SucessRate({ sucessRatio }) {
   const sucessRate =
-    (user.sucessfull * 100) / (user.sucessfull + user.unsucessfull);
+    (sucessRatio?.sucessfull * 100) / (sucessRatio?.sucessfull + sucessRatio?.unsucessfull);
   return (
     <div className="sucessRateContainer">
       <div className="title">Sucess rate</div>
@@ -14,14 +12,14 @@ export default function SucessRate() {
         <div className="unsucessfullSucessCatagory">
           <div className="countContainer">
             <div className="unsucessfullIcon"></div>
-            <div className="count">{user.unsucessfull}</div>
+            <div className="count">{sucessRatio?.unsucessfull}</div>
           </div>
           <div className="text">Unsucessfull</div>
         </div>
         <div className="sucessfullSucessCatagory">
           <div className="countContainer">
             <div className="sucessfullIcon"></div>
-            <div className="count">{user.sucessfull}</div>
+            <div className="count">{sucessRatio?.sucessfull}</div>
           </div>
           <div className="text">Sucessfull</div>
         </div>

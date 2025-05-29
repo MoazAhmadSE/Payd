@@ -6,8 +6,9 @@ import UserInfo from "./UserInfo/UserInfo";
 import "./Topbar.css";
 import SidebarLayout from "../Navbar/Slideout/SidebarLayout";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export const Topbar = () => {
+export const Topbar = ({ userData }) => {
   const [isDesktop, setIsDesktop] = useState();
 
   useEffect(() => {
@@ -26,7 +27,7 @@ export const Topbar = () => {
         Toggle={<Toggle />}
         Language={<Languages />}
       />
-      {!isDesktop && <div className="AppName">Payd</div>}
+      {!isDesktop && <Link to={"/"} className="AppName">Payd</Link>}
 
       {isDesktop && (
         <>
@@ -37,7 +38,7 @@ export const Topbar = () => {
       )}
 
       <Notification />
-      <UserInfo />
+      <UserInfo userData={userData} />
     </div>
   );
 };

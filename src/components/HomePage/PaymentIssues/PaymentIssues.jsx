@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useUser } from "../../../context/UserInfo";
 import "./PaymentIssues.css";
 import {
   BarChart,
@@ -11,33 +9,31 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function PaymentIssues() {
-  const { user } = useUser();
-
-  const [issue, setIssue] = useState({
+export default function PaymentIssues({ paymentErrors }) {
+  const issue = {
     "Customer errors": {
       color: "rgba(255, 187, 79, 1)",
       symbol: "a",
-      errorCount: user.errors["Customer errors"],
+      errorCount: paymentErrors?.CustomerErrors,
     },
     "Fraud blocks": {
       color: "rgba(255, 218, 147, 1)",
       symbol: "x",
-      errorCount: user.errors["Fraud blocks"],
+      errorCount: paymentErrors?.FraudBlocks,
     },
     "Bank errors": {
       color: "rgba(255, 117, 118, 1)",
       symbol: "o",
-      errorCount: user.errors["Bank errors"],
+      errorCount: paymentErrors?.BankErrors,
     },
     "System errors": {
       color: "rgba(128, 224, 229, 1)",
       symbol: "n",
-      errorCount: user.errors["System errors"],
+      errorCount: paymentErrors?.SystemErrors,
     },
-  });
+  };
 
-  const totalErrors = Object.values(user.errors).reduce(
+  const totalErrors = Object.values(paymentErrors ?? {}).reduce(
     (acc, val) => acc + val,
     0
   );
@@ -53,13 +49,10 @@ export default function PaymentIssues() {
     <div className="paymentIssueContainer">
       <div className="issuetitle">Payment Issues</div>
       <div className="issueChart">
-        <ResponsiveContainer
-          width="100%"
-          height={150}
-        >
+        <ResponsiveContainer width="100%" height={150}>
           <BarChart
             data={issueData}
-            margin={{ top: 11, right: 0, left: -60, bottom: 0 }}
+            margin={{ top: 15, right: 0, left: -60, bottom: 0 }}
           >
             <XAxis
               dataKey="symbol"
