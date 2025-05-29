@@ -1,14 +1,13 @@
-@media (min-width: 1024px) {
-    .Menubar {
-        display: none;
-    }
-}
-
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .Menubar {
         flex: 0 1 3vmax;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+@media (min-width: 1024px) {
+    .Menubar {
+        display: none;
     }
 }

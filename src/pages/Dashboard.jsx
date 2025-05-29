@@ -5,15 +5,20 @@ import "../css/Dashboard.css";
 import * as Icon from "../assets/icons/Dashboard/index";
 import AppRouters from "../routes/AppRoutes";
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Dashboard = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isNotification, setIsNotification] = useState(true);
+  const [user, setUser] = useState(null);
   const showChat = () => {
     setIsChatOpen(!isChatOpen);
   };
+  useEffect(()=>{
+    
+  },[])
+
   return (
     <>
       <div className="dashboard">

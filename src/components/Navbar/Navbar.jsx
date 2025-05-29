@@ -3,7 +3,7 @@ import "./Navbar.css";
 import * as Icons from "../../assets/icons/Navbar/index";
 import { useState } from "react";
 import NavbarLink from "./NavbarLink";
-import { otherLinks, paymentLinks } from "./NavbarLinks";
+import { otherLinks, paymentLinks } from "../../utils/NavbarLinks";
 
 export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
   const [dropDown, setDropDown] = useState({
@@ -13,7 +13,9 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
 
   return (
     <div className="navbar">
-      <h1 className="montserrat-appname">Payd</h1>
+      <Link to={"/"} className="montserrat-appname">
+        Payd
+      </Link>
       <div className="navbar-close-btn" onClick={() => setShowNavbar(false)}>
         ✕
       </div>

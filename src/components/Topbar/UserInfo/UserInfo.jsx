@@ -6,18 +6,21 @@ import { useUser } from "../../../context/UserInfo";
 
 export default function UserInfo() {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isDesktop, setIsDesktop] = useState(false);
   const { user } = useUser();
- 
+
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const update = (e) => setIsDesktop(e.matches);
+
+    update(mediaQuery);
+    mediaQuery.addEventListener("change", update);
+    return () => mediaQuery.removeEventListener("change", update);
   }, []);
 
   return (
     <div className={`userContainer ${showDropdown ? "dropdown" : ""}`}>
-      {windowWidth >= 1024 ? (
+      {isDesktop ? (
         <>
           <img src={userImage} className="userImage" alt="User" />
           <div className="userNameandId">

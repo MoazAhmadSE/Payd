@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Timeline from "./TimeLine/Timeline";
-import { getEarningsData } from "./EarningData";
+import { getEarningsData } from "../../../utils/EarningData";
 import "./EarningGraph.css";
 
 export default function EarningGraph() {

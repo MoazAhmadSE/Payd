@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Chatbar.css";
 import Card from "./Card/Card";
-import { Messages } from "./messages";
+import { Messages } from "../../utils/messages";
 
 export const Chatbar = () => {
   const [active, setActive] = useState({

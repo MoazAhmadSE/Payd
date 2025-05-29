@@ -1,5 +1,5 @@
 
-import * as Icons from "../../assets/icons/Navbar/index";
+import * as Icons from "../assets/icons/Navbar/index";
 
 const paymentLinks = [
   { to: "/payments/transactions", Icon: Icons.Transactions, label: "Transactions" },
