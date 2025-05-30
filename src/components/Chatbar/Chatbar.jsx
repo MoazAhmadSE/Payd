@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./Chatbar.css";
 import Card from "./Card/Card";
-import { useUser } from "../../context/UserInfo";
+// import { useUser } from "../../context/UserInfo";
 import * as Icons from "../../assets/icons/Card/index";
 
-export const Chatbar = () => {
-  const { messages } = useUser();
-  const sotedMessages = messages.sort((a,b) => new Date(b.timeStamp) - new Date(a.timeStamp));
+export const Chatbar = ({ messages }) => {
+  // const { messages } = useUser();
+  const sotedMessages = messages?.sort((a,b) => new Date(b.timeStamp) - new Date(a.timeStamp));
   const stats = [];
 
   const [active, setActive] = useState({

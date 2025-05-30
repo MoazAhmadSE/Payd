@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import "./Notification.css";
 import * as Icons from "../../../assets/icons/Topbar/index";
-import pusher from "../../../utils/PusherClient";
 import NotificationCard from "./NotificationCard/NotificationCard";
 
 export default function Notification() {
@@ -31,16 +30,6 @@ export default function Notification() {
     },
   ]);
 
-  useEffect(() => {
-    const channel = pusher.subscribe("notifications");
-    channel.bind("newNotification", (data) => {
-      setNotification((prev) => [data, ...prev]);
-    });
-    return () => {
-      channel.unbind_all();
-      channel.unsubscribe();
-    };
-  }, []);
 
   const sortedNotification = notification.sort(
     (b, a) => new Date(b.timeStamp) - new Date(a.timeStamp)
