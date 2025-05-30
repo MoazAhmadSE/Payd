@@ -1,0 +1,95 @@
+.notificationCardContainer {
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 90%;
+    margin-block: 0.5rem;
+    cursor: pointer;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.notOpen {
+    border: 1px solid red;
+}
+
+.notificationCardContainer:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notificationCardTop {
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificationCardName {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.notificationCardTime {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(189, 189, 189, 1);
+    display: flex;
+    align-items: center;
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+}
+
+.notificationCardButtom {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(189, 189, 189, 1);
+    font-size: 0.7rem;
+}
+
+@media (min-width: 1441px) and (max-width: 2000px) {
+    .notificationCardContainer {
+        height: 120px;
+    }
+
+    .notificationCardTime {
+        font-size: clamp(0.7rem, 0.7vw, 0.8rem);
+    }
+
+    .notificationCardName {
+        font-size: clamp(0.9rem, 1vw, 1.2rem);
+    }
+
+    .notificationCardButtom {
+        font-size: clamp(0.7rem, 0.7vw, 0.9rem);
+    }
+
+}
+
+@media (min-width: 2001px) {
+    .notificationCardContainer {
+        min-height: 170px;
+    }
+
+    .notificationCardName {
+        font-size: clamp(1.2rem, 1vw, 1.5rem);
+    }
+
+    .notificationCardTime {
+        font-size: clamp(1rem, 0.7vw, 1.5rem);
+    }
+
+
+    .notificationCardButtom {
+        font-size: clamp(1rem, 0.8vw, 1.3rem);
+    }
+}
