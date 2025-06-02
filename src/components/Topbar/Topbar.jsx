@@ -27,7 +27,11 @@ export const Topbar = ({ userData }) => {
         Toggle={<Toggle />}
         Language={<Languages />}
       />
-      {!isDesktop && <Link to={"/"} className="AppName">Payd</Link>}
+      {!isDesktop && (
+        <Link to={"/"} className="AppName">
+          Payd
+        </Link>
+      )}
 
       {isDesktop && (
         <>

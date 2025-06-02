@@ -5,16 +5,13 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await DashboardApi("user");
-        const datam = await DashboardApi("messages");
         setUser(data?.data || null);
-        setMessages(datam?.data || []);
       } catch (error) {
         console.error("Error fetching dashboard data:", error);
       } finally {
@@ -28,7 +25,7 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, setUser, messages, loading }}>
+    <UserContext.Provider value={{ user, setUser, loading }}>
       {children}
     </UserContext.Provider>
   );

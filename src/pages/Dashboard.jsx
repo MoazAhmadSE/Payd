@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useUser } from "../context/UserInfo";
 import Loading from "../components/Loading";
 
-export const Dashboard = () => {
+const Dashboard = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isNotification, setIsNotification] = useState(true);
   const { user, loading } = useUser();
@@ -32,9 +32,7 @@ export const Dashboard = () => {
           </div>
           <div className="lower">
             <div className="main">
-              <Suspense fallback={<Loading/>}>
-                <Outlet />
-              </Suspense>
+              <Outlet />
             </div>
             <div className="chat">
               <Chatbar />
@@ -64,3 +62,5 @@ export const Dashboard = () => {
     </>
   );
 };
+
+export default Dashboard;
