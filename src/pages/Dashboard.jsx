@@ -4,21 +4,54 @@ import { Topbar } from "../components/Topbar/Topbar";
 import "../css/Dashboard.css";
 import * as Icon from "../assets/icons/Dashboard/index";
 import { Outlet } from "react-router-dom";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useUser } from "../context/UserInfo";
 import Loading from "../components/Loading";
+import { useWebSocket } from "../context/WebSocketConnection";
 
 const Dashboard = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isNotification, setIsNotification] = useState(true);
-  const { user, loading } = useUser();
-  if (loading) {
-    return <Loading />;
-  }
+  const [user, setUser] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const socket = useWebSocket();
   const showChat = () => {
     setIsChatOpen(!isChatOpen);
   };
+
+  useEffect(() => {
+    if (!socket) return;
+
+    socket.addEventListener("open", () => {
+      socket.send("userData");
+      socket.send("messages");
+    });
+
+    const handleData = (event) => {
+      const { type, payload } = JSON.parse(event.data);
+      const dataType = {
+        userData: () => {
+          setUser(payload?.data);
+        },
+        messages: () => {
+          setMessages(payload?.data);
+        },
+      };
+      if (dataType[type]) {
+        dataType[type]();
+      } else {
+        console.warn("Unknown type:", event);
+      }
+    };
+
+    socket.addEventListener("message", handleData);
+
+    return () => {
+      socket.removeEventListener("message", handleData);
+    };
+  }, [socket]);
+
+  // if (loading) return <Loading />;
 
   return (
     <>
@@ -35,7 +68,7 @@ const Dashboard = () => {
               <Outlet />
             </div>
             <div className="chat">
-              <Chatbar />
+              <Chatbar messages={messages} />
             </div>
             <AnimatePresence className="slider">
               {isChatOpen && (
@@ -46,7 +79,7 @@ const Dashboard = () => {
                   exit={{ y: "100%", opacity: 0 }}
                   transition={{ type: "spring", stiffness: 70, damping: 15 }}
                 >
-                  <Chatbar />
+                  <Chatbar messages={messages} />
                 </motion.div>
               )}
             </AnimatePresence>

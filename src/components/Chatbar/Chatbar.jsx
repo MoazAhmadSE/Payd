@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Chatbar.css";
 import Card from "./Card/Card";
-import { useUser } from "../../context/UserInfo";
+// import { useUser } from "../../context/UserInfo";
 import * as Icons from "../../assets/icons/Card/index";
 import { DashboardApi } from "../../api/DashboardApi";
 

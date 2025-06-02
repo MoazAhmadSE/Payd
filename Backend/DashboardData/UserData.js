@@ -2,7 +2,7 @@
 export const UserData = {
     "status": "success",
     "data": {
-        name: "Moaz Ahmad",
+        name: "Ahmad Moaz",
         id: "123456"
     }
 }

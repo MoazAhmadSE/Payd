@@ -12,16 +12,16 @@ export default function HomePage() {
   const [homeData, setHomeData] = useState();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchHomePageData();
-        setHomeData(data.HomePageData);
-      } catch (error) {
-        console.error("Error fetching dashboard data:", error);
-      }
-    };
+    // const fetchData = async () => {
+    //   try {
+    //     const data = await fetchHomePageData();
+    //     setHomeData(data.HomePageData);
+    //   } catch (error) {
+    //     console.error("Error fetching dashboard data:", error);
+    //   }
+    // };
 
-    fetchData();
+    // fetchData();
   }, []);
 
   return (
