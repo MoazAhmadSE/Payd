@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { fetchDashboardData } from "../api/DashboardApi";
+import { DashboardApi } from "../api/DashboardApi";
 
 const UserContext = createContext();
 
@@ -11,9 +11,10 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchDashboardData();
-        setUser(data.DashboardDataApi?.user?.data || null);
-        setMessages(data.DashboardDataApi?.messages?.data || []);
+        const data = await DashboardApi("user");
+        const datam = await DashboardApi("messages");
+        setUser(data?.data || null);
+        setMessages(datam?.data || []);
       } catch (error) {
         console.error("Error fetching dashboard data:", error);
       } finally {

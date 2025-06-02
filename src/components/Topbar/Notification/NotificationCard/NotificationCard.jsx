@@ -1,16 +1,17 @@
 import moment from "moment";
 import "./NotificationCard.css";
 
-export default function NotificationCard({ data }) {
+export default function NotificationCard({ data, onClick }) {
   return (
     <>
       <div
-        className={`notificationCardContainer ${!data.isOpen ? "notOpen" : ""}`}
+        className={`notificationCardContainer ${!data[1]?.isOpen ? "notOpen" : ""}`}
+        onClick={() => onClick(data[0])}
       >
         <div className="notificationCardTop">
-          <div className="notificationCardName">{data.title}</div>
+          <div className="notificationCardName">{data[1]?.title}</div>
           <div className="notificationCardTime">
-            {moment(data.timeStamp).calendar(null, {
+            {moment(data[1]?.timeStamp).calendar(moment(), {
               sameDay: "[Today], h:mma",
               lastDay: "[Yesterday], h:mma",
               lastWeek: "ddd, h:mma",
@@ -19,7 +20,7 @@ export default function NotificationCard({ data }) {
           </div>
         </div>
         <div className="notificationCardButtom">
-          {data.message.substring(0, 60) + "..."}
+          {data[1]?.message?.substring(0, 60) + "..."}
         </div>
       </div>
     </>

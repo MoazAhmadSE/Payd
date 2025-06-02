@@ -1,55 +1,73 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Notification.css";
 import * as Icons from "../../../assets/icons/Topbar/index";
-import pusher from "../../../utils/PusherClient";
 import NotificationCard from "./NotificationCard/NotificationCard";
+import {
+  DashboardApi,
+  updateNotificationData,
+} from "../../../api/DashboardApi";
+import moment from "moment";
 
 export default function Notification() {
   const [showNotifications, setShowNotifications] = useState(false);
-
-  const [notification, setNotification] = useState([
-    {
-      id: "203485",
-      title: "New Update",
-      message: "This is a longer notification message...",
-      timeStamp: "2025-05-30T12:00:00Z",
-      isOpen: false,
-    },
-    {
-      id: "2034855",
-      title: "New Update",
-      message: "This is a longer notification message...",
-      timeStamp: "2025-05-30T12:00:00Z",
-      isOpen: true,
-    },
-    {
-      id: "2034sdn85",
-      title: "New Update",
-      message: "This is a longer notification message...",
-      timeStamp: "2025-05-30T12:00:00Z",
-      isOpen: false,
-    },
-  ]);
+  const [notification, setNotification] = useState({});
+  const dropDonwRef = useRef();
+  const handleClickOutside = (e) => {
+    if (dropDonwRef.current && !dropDonwRef.current.contains(e.target)) {
+      setShowNotifications(false);
+    }
+  };
 
   useEffect(() => {
-    const channel = pusher.subscribe("notifications");
-    channel.bind("newNotification", (data) => {
-      setNotification((prev) => [data, ...prev]);
-    });
-    return () => {
-      channel.unbind_all();
-      channel.unsubscribe();
+    const fetchNotification = async () => {
+      try {
+        const data = await DashboardApi("notifications");
+        const notifs = data?.data;
+        if (notifs && typeof notifs === "object") {
+          setNotification(notifs);
+        } else {
+          setNotification({});
+        }
+      } catch (err) {
+        console.error("Failed to fetch notifications", err);
+        setNotification({});
+      }
     };
+    fetchNotification();
+  }, []);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const sortedNotification = notification.sort(
-    (b, a) => new Date(b.timeStamp) - new Date(a.timeStamp)
+  const currentdate = moment();
+  const todays = Object.entries(notification).filter((data) => {
+    const timestamp = moment(data[1]?.timeStamp);
+    const diff = currentdate.diff(timestamp, "hours");
+    return diff <= 24;
+  });
+
+  const sortedNotification = todays.sort((a, b) => {
+    return new Date(b[1]?.timeStamp) - new Date(a[1]?.timeStamp);
+  });
+
+  const unreadNotifications = sortedNotification.some(
+    ([, value]) => !value?.isOpen
   );
 
-  const unreadNotifications = sortedNotification.some((n) => !n.isOpen);
+  const handleClick = (index) => {
+    setNotification((prev) => ({
+      ...prev,
+      [index]: {
+        ...prev[index],
+        isOpen: true,
+      },
+    }));
+    updateNotificationData("upadateNofData", index);
+  };
 
   return (
-    <div className="bellIconContainer">
+    <div className="bellIconContainer" ref={dropDonwRef}>
       <div className="box">
         <div
           className="bellIcon"
@@ -57,13 +75,15 @@ export default function Notification() {
         >
           <Icons.BellIcon className="Icon" />
         </div>
-        {unreadNotifications && (
-          <div className={`${notification ? "notification" : ""}`}></div>
-        )}
+        {unreadNotifications && <div className="notification"></div>}
         {showNotifications && (
           <div className="notificationsContainer">
-            {sortedNotification.map((data, index) => (
-              <NotificationCard key={index} data={data} />
+            {sortedNotification.map(([key, value]) => (
+              <NotificationCard
+                key={key}
+                data={[key, value]}
+                onClick={handleClick}
+              />
             ))}
           </div>
         )}

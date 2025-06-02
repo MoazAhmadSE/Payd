@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Chatbar.css";
 import Card from "./Card/Card";
 import { useUser } from "../../context/UserInfo";
 import * as Icons from "../../assets/icons/Card/index";
+import { DashboardApi } from "../../api/DashboardApi";
 
 export const Chatbar = () => {
-  const { messages } = useUser();
-  const sotedMessages = messages.sort((a,b) => new Date(b.timeStamp) - new Date(a.timeStamp));
+  // const { messages } = useUser();
+  const [messages, setMessages] = useState([]);
+  const sotedMessages = messages.sort(
+    (a, b) => new Date(b.timeStamp) - new Date(a.timeStamp)
+  );
   const stats = [];
 
   const [active, setActive] = useState({
@@ -19,6 +23,15 @@ export const Chatbar = () => {
       messageStatus: tab === "messageStatus",
     });
   };
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      const data = await DashboardApi("messages");
+      setMessages(data?.data);
+    };
+    fetchMessages();
+  }, []);
+
   return (
     <>
       <div className="chatbarContainer">
@@ -49,7 +62,7 @@ export const Chatbar = () => {
               ))
             ) : (
               <>
-                <Icons.Empty style={{width: "50%"}} />
+                <Icons.Empty style={{ width: "50%" }} />
                 <p className="empty">No messages to show.</p>
               </>
             )}
@@ -67,7 +80,7 @@ export const Chatbar = () => {
               ))
             ) : (
               <>
-                <Icons.Empty style={{width: "50%"}} />
+                <Icons.Empty style={{ width: "50%" }} />
                 <p className="empty">No messages to show.</p>
               </>
             )}
