@@ -10,12 +10,22 @@ function getColorFromFirstLetter(letter) {
   });
 }
 
-export default function Card({ userName, message, timeStamp }) {
+export default function Card({
+  messageid,
+  userName,
+  message,
+  timeStamp,
+  isOpen,
+  handleClick,
+}) {
   const bgColor = getColorFromFirstLetter(userName[0].toUpperCase());
 
   return (
     <>
-      <div className="cardContainer">
+      <div
+        className={`cardContainer ${isOpen ? "" : "unread"}`}
+        onClick={() => handleClick(messageid)}
+      >
         <div className="cardTop">
           <div className="cardNameIcon" style={{ backgroundColor: bgColor }}>
             {userName[0].toUpperCase()}

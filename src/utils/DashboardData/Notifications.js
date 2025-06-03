@@ -2,186 +2,373 @@ export const Notification = {
   "status": "success",
   "data": {
     "notif_000": {
-      title: "New Update",
-      message: "Notification message number 1 with some unique content.",
-      timeStamp: "2025-06-01T23:03:00Z",
-      isOpen: true,
+      "title": "Alert Notification",
+      "message": "Notification message number 1: Task assigned to you was updated.",
+      "timeStamp": "2025-05-12T15:02:00Z",
+      "isOpen": true
     },
     "notif_001": {
-      title: "New Update",
-      message: "Notification message number 2 with some unique content.",
-      timeStamp: "2025-06-01T23:48:00Z",
-      isOpen: false,
+      "title": "Update Notification",
+      "message": "Notification message number 2: Unexpected error occurred. Please check logs.",
+      "timeStamp": "2025-05-11T16:28:00Z",
+      "isOpen": false
     },
     "notif_002": {
-      title: "New Update",
-      message: "Notification message number 3 with some unique content.",
-      timeStamp: "2025-05-05T10:13:00Z",
-      isOpen: false,
+      "title": "Alert Notification",
+      "message": "Notification message number 3: You have a new message in your inbox.",
+      "timeStamp": "2025-05-13T16:57:00Z",
+      "isOpen": true
     },
     "notif_003": {
-      title: "New Update",
-      message: "Notification message number 4 with some unique content.",
-      timeStamp: "2025-06-01T22:54:00Z",
-      isOpen: true,
+      "title": "Warning Notification",
+      "message": "Notification message number 4: Server reboot scheduled for tonight.",
+      "timeStamp": "2025-05-28T23:34:00Z",
+      "isOpen": false
     },
     "notif_004": {
-      title: "New Update",
-      message: "Notification message number 5 with some unique content.",
-      timeStamp: "2025-05-03T06:25:00Z",
-      isOpen: false,
+      "title": "Warning Notification",
+      "message": "Notification message number 5: Subscription has been renewed.",
+      "timeStamp": "2025-05-09T19:48:00Z",
+      "isOpen": true
     },
     "notif_005": {
-      title: "New Update",
-      message: "Notification message number 6 with some unique content.",
-      timeStamp: "2025-05-11T10:13:00Z",
-      isOpen: true,
+      "title": "Message Notification",
+      "message": "Notification message number 6: Task assigned to you was updated.",
+      "timeStamp": "2025-06-01T03:45:00Z",
+      "isOpen": true
     },
     "notif_006": {
-      title: "New Update",
-      message: "Notification message number 7 with some unique content.",
-      timeStamp: "2025-05-22T09:55:00Z",
-      isOpen: false,
+      "title": "Alert Notification",
+      "message": "Notification message number 7: Subscription has been renewed.",
+      "timeStamp": "2025-05-28T03:48:00Z",
+      "isOpen": true
     },
     "notif_007": {
-      title: "New Update",
-      message: "Notification message number 8 with some unique content.",
-      timeStamp: "2025-05-26T21:45:00Z",
-      isOpen: true,
+      "title": "Update Notification",
+      "message": "Notification message number 8: New comment on your post.",
+      "timeStamp": "2025-05-12T19:02:00Z",
+      "isOpen": true
     },
     "notif_008": {
-      title: "New Update",
-      message: "Notification message number 9 with some unique content.",
-      timeStamp: "2025-05-08T04:39:00Z",
-      isOpen: false,
+      "title": "Alert Notification",
+      "message": "Notification message number 9: Don't forget your upcoming meeting.",
+      "timeStamp": "2025-05-05T22:01:00Z",
+      "isOpen": true
     },
     "notif_009": {
-      title: "New Update",
-      message: "Notification message number 10 with some unique content.",
-      timeStamp: "2025-06-01T17:52:00Z",
-      isOpen: false,
+      "title": "Success Notification",
+      "message": "Notification message number 10: You have a new message in your inbox.",
+      "timeStamp": "2025-05-21T17:11:00Z",
+      "isOpen": false
     },
     "notif_010": {
-      title: "New Update",
-      message: "Notification message number 11 with some unique content.",
-      timeStamp: "2025-06-01T11:48:00Z",
-      isOpen: false,
+      "title": "Message Notification",
+      "message": "Notification message number 11: Subscription has been renewed.",
+      "timeStamp": "2025-05-08T08:37:00Z",
+      "isOpen": true
     },
     "notif_011": {
-      title: "New Update",
-      message: "Notification message number 12 with some unique content.",
-      timeStamp: "2025-05-28T02:22:00Z",
-      isOpen: false,
+      "title": "Reminder Notification",
+      "message": "Notification message number 12: New comment on your post.",
+      "timeStamp": "2025-05-11T09:30:00Z",
+      "isOpen": false
+    },
+    "notif_012": {
+      "title": "System Notice Notification",
+      "message": "Notification message number 13: Task assigned to you was updated.",
+      "timeStamp": "2025-05-25T01:30:00Z",
+      "isOpen": false
+    },
+    "notif_013": {
+      "title": "Alert Notification",
+      "message": "Notification message number 14: Server reboot scheduled for tonight.",
+      "timeStamp": "2025-05-11T05:16:00Z",
+      "isOpen": false
+    },
+    "notif_014": {
+      "title": "Update Notification",
+      "message": "Notification message number 15: System update completed successfully.",
+      "timeStamp": "2025-06-02T17:59:00Z",
+      "isOpen": true
+    },
+    "notif_015": {
+      "title": "Warning Notification",
+      "message": "Notification message number 16: Subscription has been renewed.",
+      "timeStamp": "2025-05-26T22:51:00Z",
+      "isOpen": false
+    },
+    "notif_016": {
+      "title": "Alert Notification",
+      "message": "Notification message number 17: Server reboot scheduled for tonight.",
+      "timeStamp": "2025-05-08T05:36:00Z",
+      "isOpen": false
+    },
+    "notif_017": {
+      "title": "Information Notification",
+      "message": "Notification message number 18: Your password will expire soon.",
+      "timeStamp": "2025-05-17T10:55:00Z",
+      "isOpen": false
+    },
+    "notif_018": {
+      "title": "Success Notification",
+      "message": "Notification message number 19: Server reboot scheduled for tonight.",
+      "timeStamp": "2025-05-06T20:46:00Z",
+      "isOpen": false
     },
     "notif_019": {
-      title: "New Update",
-      message: "Notification message number 20 with some unique content.",
-      timeStamp: "2025-05-21T05:14:00Z",
-      isOpen: false,
+      "title": "Message Notification",
+      "message": "Notification message number 20: Your password will expire soon.",
+      "timeStamp": "2025-05-26T22:32:00Z",
+      "isOpen": false
+    },
+    "notif_020": {
+      "title": "Update Notification",
+      "message": "Notification message number 21: System update completed successfully.",
+      "timeStamp": "2025-05-18T06:05:00Z",
+      "isOpen": false
+    },
+    "notif_021": {
+      "title": "Success Notification",
+      "message": "Notification message number 22: You have a new message in your inbox.",
+      "timeStamp": "2025-05-29T13:26:00Z",
+      "isOpen": true
+    },
+    "notif_022": {
+      "title": "Message Notification",
+      "message": "Notification message number 23: Subscription has been renewed.",
+      "timeStamp": "2025-05-16T19:49:00Z",
+      "isOpen": false
     },
     "notif_023": {
-      title: "New Update",
-      message: "Notification message number 24 with some unique content.",
-      timeStamp: "2025-05-23T04:19:00Z",
-      isOpen: true,
+      "title": "Success Notification",
+      "message": "Notification message number 24: Unexpected error occurred. Please check logs.",
+      "timeStamp": "2025-05-08T14:28:00Z",
+      "isOpen": true
     },
     "notif_024": {
-      title: "New Update",
-      message: "Notification message number 25 with some unique content.",
-      timeStamp: "2025-05-02T05:20:00Z",
-      isOpen: true,
+      "title": "Alert Notification",
+      "message": "Notification message number 25: Server reboot scheduled for tonight.",
+      "timeStamp": "2025-05-07T02:42:00Z",
+      "isOpen": false
+    },
+    "notif_025": {
+      "title": "System Notice Notification",
+      "message": "Notification message number 26: Backup completed without issues.",
+      "timeStamp": "2025-05-11T07:16:00Z",
+      "isOpen": true
     },
     "notif_026": {
-      title: "New Update",
-      message: "Notification message number 27 with some unique content.",
-      timeStamp: "2025-05-21T00:19:00Z",
-      isOpen: false,
+      "title": "Success Notification",
+      "message": "Notification message number 27: Subscription has been renewed.",
+      "timeStamp": "2025-05-26T09:19:00Z",
+      "isOpen": false
+    },
+    "notif_027": {
+      "title": "Update Notification",
+      "message": "Notification message number 28: Don't forget your upcoming meeting.",
+      "timeStamp": "2025-05-22T14:53:00Z",
+      "isOpen": false
+    },
+    "notif_028": {
+      "title": "Message Notification",
+      "message": "Notification message number 29: Task assigned to you was updated.",
+      "timeStamp": "2025-06-02T10:05:00Z",
+      "isOpen": true
+    },
+    "notif_029": {
+      "title": "Information Notification",
+      "message": "Notification message number 30: Subscription has been renewed.",
+      "timeStamp": "2025-05-24T19:59:00Z",
+      "isOpen": false
     },
     "notif_030": {
-      title: "New Update",
-      message: "Notification message number 31 with some unique content.",
-      timeStamp: "2025-05-19T19:44:00Z",
-      isOpen: false,
+      "title": "Success Notification",
+      "message": "Notification message number 31: Task assigned to you was updated.",
+      "timeStamp": "2025-05-08T07:33:00Z",
+      "isOpen": false
+    },
+    "notif_031": {
+      "title": "Message Notification",
+      "message": "Notification message number 32: System update completed successfully.",
+      "timeStamp": "2025-05-16T11:28:00Z",
+      "isOpen": true
+    },
+    "notif_032": {
+      "title": "Warning Notification",
+      "message": "Notification message number 33: Subscription has been renewed.",
+      "timeStamp": "2025-05-22T12:04:00Z",
+      "isOpen": false
     },
     "notif_033": {
-      title: "New Update",
-      message: "Notification message number 34 with some unique content.",
-      timeStamp: "2025-05-11T10:42:00Z",
-      isOpen: false,
+      "title": "System Notice Notification",
+      "message": "Notification message number 34: Don't forget your upcoming meeting.",
+      "timeStamp": "2025-05-27T21:12:00Z",
+      "isOpen": true
     },
     "notif_034": {
-      title: "New Update",
-      message: "Notification message number 35 with some unique content.",
-      timeStamp: "2025-05-18T04:54:00Z",
-      isOpen: false,
+      "title": "Warning Notification",
+      "message": "Notification message number 35: Unexpected error occurred. Please check logs.",
+      "timeStamp": "2025-05-27T16:38:00Z",
+      "isOpen": false
     },
     "notif_035": {
-      title: "New Update",
-      message: "Notification message number 36 with some unique content.",
-      timeStamp: "2025-05-12T23:11:00Z",
-      isOpen: true,
+      "title": "Update Notification",
+      "message": "Notification message number 36: System update completed successfully.",
+      "timeStamp": "2025-05-16T11:44:00Z",
+      "isOpen": false
     },
     "notif_036": {
-      title: "New Update",
-      message: "Notification message number 37 with some unique content.",
-      timeStamp: "2025-05-12T11:27:00Z",
-      isOpen: true,
+      "title": "Alert Notification",
+      "message": "Notification message number 37: Task assigned to you was updated.",
+      "timeStamp": "2025-05-24T06:15:00Z",
+      "isOpen": true
+    },
+    "notif_037": {
+      "title": "System Notice Notification",
+      "message": "Notification message number 38: You have a new message in your inbox.",
+      "timeStamp": "2025-05-09T20:54:00Z",
+      "isOpen": false
     },
     "notif_038": {
-      title: "New Update",
-      message: "Notification message number 39 with some unique content.",
-      timeStamp: "2025-05-27T02:23:00Z",
-      isOpen: false,
+      "title": "Information Notification",
+      "message": "Notification message number 39: Subscription has been renewed.",
+      "timeStamp": "2025-05-21T09:20:00Z",
+      "isOpen": false
     },
     "notif_039": {
-      title: "New Update",
-      message: "Notification message number 40 with some unique content.",
-      timeStamp: "2025-05-16T19:33:00Z",
-      isOpen: true,
+      "title": "Update Notification",
+      "message": "Notification message number 40: Don't forget your upcoming meeting.",
+      "timeStamp": "2025-05-05T05:04:00Z",
+      "isOpen": false
     },
     "notif_040": {
-      title: "New Update",
-      message: "Notification message number 41 with some unique content.",
-      timeStamp: "2025-05-12T13:09:00Z",
-      isOpen: true,
+      "title": "Alert Notification",
+      "message": "Notification message number 41: Backup completed without issues.",
+      "timeStamp": "2025-05-06T08:12:00Z",
+      "isOpen": false
     },
     "notif_041": {
-      title: "New Update",
-      message: "Notification message number 42 with some unique content.",
-      timeStamp: "2025-05-23T12:47:00Z",
-      isOpen: false,
+      "title": "Information Notification",
+      "message": "Notification message number 42: Task assigned to you was updated.",
+      "timeStamp": "2025-05-03T20:07:00Z",
+      "isOpen": true
     },
     "notif_042": {
-      title: "New Update",
-      message: "Notification message number 43 with some unique content.",
-      timeStamp: "2025-05-28T16:17:00Z",
-      isOpen: false,
+      "title": "Reminder Notification",
+      "message": "Notification message number 43: Backup completed without issues.",
+      "timeStamp": "2025-05-24T11:22:00Z",
+      "isOpen": true
+    },
+    "notif_043": {
+      "title": "Success Notification",
+      "message": "Notification message number 44: Backup completed without issues.",
+      "timeStamp": "2025-05-26T12:51:00Z",
+      "isOpen": true
     },
     "notif_044": {
-      title: "New Update",
-      message: "Notification message number 45 with some unique content.",
-      timeStamp: "2025-05-19T04:58:00Z",
-      isOpen: false,
+      "title": "Message Notification",
+      "message": "Notification message number 45: System update completed successfully.",
+      "timeStamp": "2025-05-17T13:53:00Z",
+      "isOpen": false
+    },
+    "notif_045": {
+      "title": "Reminder Notification",
+      "message": "Notification message number 46: New comment on your post.",
+      "timeStamp": "2025-05-24T00:38:00Z",
+      "isOpen": false
+    },
+    "notif_046": {
+      "title": "Success Notification",
+      "message": "Notification message number 47: Unexpected error occurred. Please check logs.",
+      "timeStamp": "2025-05-09T03:09:00Z",
+      "isOpen": true
     },
     "notif_047": {
-      title: "New Update",
-      message: "Notification message number 48 with some unique content.",
-      timeStamp: "2025-05-02T11:32:00Z",
-      isOpen: false,
+      "title": "Success Notification",
+      "message": "Notification message number 48: Unexpected error occurred. Please check logs.",
+      "timeStamp": "2025-05-24T05:34:00Z",
+      "isOpen": true
+    },
+    "notif_048": {
+      "title": "Reminder Notification",
+      "message": "Notification message number 49: Task assigned to you was updated.",
+      "timeStamp": "2025-05-25T15:48:00Z",
+      "isOpen": true
     },
     "notif_049": {
-      title: "New Update",
-      message: "Notification message number 50 with some unique content.",
-      timeStamp: "2025-05-08T03:03:00Z",
-      isOpen: false,
+      "title": "Alert Notification",
+      "message": "Notification message number 50: Server reboot scheduled for tonight.",
+      "timeStamp": "2025-05-11T04:15:00Z",
+      "isOpen": false
+    },
+    "notif_200": {
+      "title": "Daily Briefing",
+      "message": "Your morning digest is ready.",
+      "timeStamp": "2025-06-03T07:30:00Z", // 12:30 PM PKT
+      "isOpen": false,
+    },
+    "notif_201": {
+      "title": "Server Sync Complete",
+      "message": "Backup completed at 5:15 AM.",
+      "timeStamp": "2025-06-03T00:15:00Z", // 5:15 AM PKT
+      "isOpen": false,
+    },
+    "notif_202": {
+      "title": "Meeting Reminder",
+      "message": "Team stand-up starts at 11:30 AM.",
+      "timeStamp": "2025-06-03T06:30:00Z", // 11:30 AM PKT
+      "isOpen": false,
+    },
+    "notif_203": {
+      "title": "System Alert",
+      "message": "High memory usage detected.",
+      "timeStamp": "2025-06-03T03:00:00Z", // 8:00 AM PKT
+      "isOpen": false,
+    },
+    "notif_204": {
+      "title": "Feedback Request",
+      "message": "Rate your experience with the new dashboard.",
+      "timeStamp": "2025-06-03T06:00:00Z", // 11:00 AM PKT
+      "isOpen": false,
+    },
+    "notif_205": {
+      "title": "Account Change",
+      "message": "Your email was updated successfully.",
+      "timeStamp": "2025-06-03T01:45:00Z", // 6:45 AM PKT
+      "isOpen": false,
+    },
+    "notif_206": {
+      "title": "Security Check",
+      "message": "New device login detected from Chrome.",
+      "timeStamp": "2025-06-03T04:45:00Z", // 9:45 AM PKT
+      "isOpen": true,
+    },
+    "notif_207": {
+      "title": "Schedule Update",
+      "message": "AI model training rescheduled to 4 PM.",
+      "timeStamp": "2025-06-03T05:15:00Z", // 10:15 AM PKT
+      "isOpen": true,
+    },
+    "notif_208": {
+      "title": "Version Update",
+      "message": "Your client app was updated to v2.3.1.",
+      "timeStamp": "2025-06-03T02:15:00Z", // 7:15 AM PKT
+      "isOpen": false,
+    },
+    "notif_209": {
+      "title": "API Usage Notice",
+      "message": "You've reached 80% of your usage quota.",
+      "timeStamp": "2025-06-03T05:55:00Z", // 10:55 AM PKT
+      "isOpen": true,
     },
   }
-};
+}
 
 
 
 export const upadateNofData = (id) => {
   if (Notification.data[id]) {
     Notification.data[id].isOpen = true;
+    console.log("Notification Updated: ", Notification.data[id]);
   }
 } 

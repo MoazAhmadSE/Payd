@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./Notification.css";
 import * as Icons from "../../../assets/icons/Topbar/index";
 import NotificationCard from "./NotificationCard/NotificationCard";
@@ -40,30 +40,39 @@ export default function Notification() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const currentdate = moment();
-  const todays = Object.entries(notification).filter((data) => {
-    const timestamp = moment(data[1]?.timeStamp);
-    const diff = currentdate.diff(timestamp, "hours");
-    return diff <= 24;
-  });
+  // const todays = Object.entries(notification).filter((data) => {
+  //   const timestamp = moment(data[1]?.timeStamp);
+  //   const diff = moment().diff(timestamp, "hours");
+  //   return diff <= 24;
+  // });
 
-  const sortedNotification = todays.sort((a, b) => {
-    return new Date(b[1]?.timeStamp) - new Date(a[1]?.timeStamp);
-  });
+  const todaysNotification = useMemo(() => {
+    return Object.entries(notification).filter((data) => {
+      return moment().diff(moment(data[1]?.timeStamp), "hours") > 24;
+    });
+  }, [notification]);
+
+  const sortedNotification = useMemo(() => {
+    return [...todaysNotification].sort(
+      (a, b) => new Date(b[1]?.timeStamp) - new Date(a[1]?.timeStamp)
+    );
+  }, [todaysNotification]);
 
   const unreadNotifications = sortedNotification.some(
     ([, value]) => !value?.isOpen
   );
 
   const handleClick = (index) => {
-    setNotification((prev) => ({
-      ...prev,
-      [index]: {
-        ...prev[index],
-        isOpen: true,
-      },
-    }));
-    updateNotificationData("upadateNofData", index);
+    if (!notification[index].isOpen) {
+      setNotification((prev) => ({
+        ...prev,
+        [index]: {
+          ...prev[index],
+          isOpen: true,
+        },
+      }));
+      updateNotificationData("upadateNofData", index);
+    }
   };
 
   return (

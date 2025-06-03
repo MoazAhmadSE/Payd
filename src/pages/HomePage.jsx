@@ -1,12 +1,11 @@
+import "../css/HomePage.css";
 import { useEffect, useState } from "react";
+import { fetchHomePageData } from "../api/HomePageApi";
 import Earning from "../components/HomePage/Earning/Earning";
 import EarningGraph from "../components/HomePage/EarningGraph/EarningGraph";
 import Greeting from "../components/HomePage/Greeting/Greeting";
 import PaymentIssues from "../components/HomePage/PaymentIssues/PaymentIssues";
 import SucessRate from "../components/HomePage/SucessRate/SucessRate";
-import "../css/HomePage.css";
-import { fetchHomePageData } from "../api/HomePageApi";
-import Loading from "../components/Loading";
 
 export default function HomePage() {
   const [homeData, setHomeData] = useState();

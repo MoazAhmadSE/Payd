@@ -28,22 +28,14 @@
     gap: 1rem;
 }
 
-
-
-/* @media (min-width: 500px) and (max-width: 768px) {
-    .bottomRow{
-        flex-direction: column;
-        width: 70%;
-    }
-} */
-@media (max-width: 1200px) {
-    .bottomRow{
-        flex-direction: column;
-        /* width: 50%; */
-    }
-}
 @media (max-width: 1440px) {
     .homeContainer {
         width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bottomRow {
+        flex-direction: column;
     }
 }
