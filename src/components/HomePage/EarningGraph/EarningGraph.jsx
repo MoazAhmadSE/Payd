@@ -25,7 +25,7 @@ export default function EarningGraph({ earningsData }) {
     "This Year": "MMM",
     Lifetime: "yyyy",
   };
-  const pattern = formatMap[selectedRange] || "Pp";
+  const pattern = formatMap[selectedRange];
 
   const chartData = (sortedEarnings || [])?.map((entry) => ({
     name: format(parseISO(entry.timestamp), pattern),
@@ -41,7 +41,9 @@ export default function EarningGraph({ earningsData }) {
 
       <div className="GraphContiner">
         {chartData.length == 0 ? (
-          <div className="timelineError">No Data Found between this Timeline...</div>
+          <div className="timelineError">
+            No Data Found between this Timeline...
+          </div>
         ) : (
           <>
             <ResponsiveContainer>

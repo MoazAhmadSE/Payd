@@ -66,13 +66,11 @@ body {
 }
 
 .chatButton,
+.slider,
 .showChat {
   display: none;
 }
 
-.slider {
-  display: none;
-}
 
 @media (max-width: 768px) {
   .main {
@@ -130,6 +128,12 @@ body {
     display: block;
     flex: 2;
   }
+
+  .chatButton,
+  .slider,
+  .showChat {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -153,6 +157,7 @@ body {
   .chat {
     flex: 2;
   }
+
 }
 
 @media (min-width: 2001px) {

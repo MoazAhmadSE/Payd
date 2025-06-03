@@ -5,7 +5,6 @@ import { Chatbar } from "../components/Chatbar/Chatbar";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const ChatBarMotion = () => {
-  const [isNotification, setIsNotification] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   const showChat = () => {
@@ -34,7 +33,6 @@ export const ChatBarMotion = () => {
         <div className="chatIcon" onClick={showChat}>
           <Icon.Message />
         </div>
-        <div className={`${isNotification ? "chatNotification" : ""}`}></div>
       </div>
     </>
   );

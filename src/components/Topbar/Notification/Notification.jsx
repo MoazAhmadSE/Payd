@@ -40,15 +40,9 @@ export default function Notification() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // const todays = Object.entries(notification).filter((data) => {
-  //   const timestamp = moment(data[1]?.timeStamp);
-  //   const diff = moment().diff(timestamp, "hours");
-  //   return diff <= 24;
-  // });
-
   const todaysNotification = useMemo(() => {
-    return Object.entries(notification).filter((data) => {
-      return moment().diff(moment(data[1]?.timeStamp), "hours") > 24;
+    return Object.entries(notification).filter(([, notification]) => {
+      return moment().diff(moment(notification.timeStamp), "hours") < 24;
     });
   }, [notification]);
 
