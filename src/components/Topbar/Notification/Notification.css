@@ -24,6 +24,12 @@
     display: none;
 }
 
+.empty {
+    font-weight: 800;
+    color: rgba(72, 74, 79, 1);
+    font-size: clamp(12px, 1.2vw, 36px);
+}
+
 @media (max-width: 1024px) {
     .bellIconContainer {
         flex: 0 1 10%;

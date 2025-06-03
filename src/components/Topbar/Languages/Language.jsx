@@ -8,6 +8,7 @@ export default function Language() {
     selectedLanguage: "English",
     isLanguageSelecterOpen: false,
   });
+  
   const dropdownRef = useRef();
   const handleClickOutside = (e) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -22,6 +23,7 @@ export default function Language() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
   return (
     <div className="languageContainer" ref={dropdownRef}>
       <div

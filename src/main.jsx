@@ -9,7 +9,9 @@ createRoot(document.getElementById("root")).render(
   // <StrictMode>
   <BrowserRouter>
     <UserProvider>
-      <App />
+      <div className="mianroot">
+        <App />
+      </div>
     </UserProvider>
   </BrowserRouter>
   // </StrictMode>

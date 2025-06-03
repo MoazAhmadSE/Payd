@@ -31,7 +31,7 @@ export default function Card({
             {userName[0].toUpperCase()}
           </div>
           <div className="cardTime">
-            {moment(timeStamp).calendar(null, {
+            {moment(timeStamp).calendar(moment(), {
               sameDay: "[Today], h:mma",
               lastDay: "[Yesterday], h:mma",
               lastWeek: "ddd, h:mma",

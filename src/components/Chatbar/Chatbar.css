@@ -5,7 +5,7 @@ button {
 
 .chatbarContainer {
     display: flex;
-    height: 85%;
+    height: 100%;
     width: 100%;
     border-top-left-radius: 75px;
     background-color: rgba(249, 249, 249, 1);
@@ -15,7 +15,7 @@ button {
 }
 
 .chatTabs {
-    height: 15%;
+    height: 10vmin;
     display: flex;
     justify-content: space-around;
     align-items: end;
