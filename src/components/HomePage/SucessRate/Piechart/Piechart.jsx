@@ -29,7 +29,7 @@ export default function Piechart({ sucessRate }) {
           <Cell fill="rgba(166, 217, 151, 1)" />
         </Pie>
       </PieChart>
-      <div className="sucessRate">{Math.round(sucessRate)}%</div>
+      <div className="sucessRate">{sucessRate ? (Math.round(sucessRate)) : 0 }%</div>
     </div>
   );
 }

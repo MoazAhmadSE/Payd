@@ -1,6 +1,7 @@
 
-export const PaymentPlan = () => {
+const PaymentPlan = () => {
     return(
         <div> This is PaymentPlan. </div>
     )
 }
+export default PaymentPlan;

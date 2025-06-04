@@ -15,7 +15,7 @@ button {
 }
 
 .chatTabs {
-    height: 10vmin;
+    min-height: 12vmin;
     display: flex;
     justify-content: space-around;
     align-items: end;
@@ -28,11 +28,11 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 85%;
+    /* height: 85%; */
     width: 95%;
-    padding-top: 1rem;
+    padding-block: 1.5rem;
     gap: 1.5rem;
-    margin-block: 1rem;
+    margin-top: 1rem;
     overflow-y: auto;
 }
 
@@ -66,12 +66,17 @@ button {
 }
 
 @media (max-width: 767px) {
+    .chatTabs {
+        min-height: 12vh;
+    }
+
     .chatbarContainer {
         height: 100%;
         border-radius: 0;
     }
 
     .messageBox {
-        height: 100%;
+        /* height: 100%; */
+        padding-bottom: 5rem;
     }
 }

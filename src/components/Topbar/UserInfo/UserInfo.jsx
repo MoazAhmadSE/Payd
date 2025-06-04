@@ -37,8 +37,8 @@ export default function UserInfo({ userData }) {
           />
           {showDropdown && (
             <div className="dropdownContent">
-              <div className="userName">{userData.name}</div>
-              <div className="UserId">ID: {userData.id}</div>
+              <div className="userName">{userData?.name}</div>
+              <div className="UserId">ID: {userData?.id}</div>
             </div>
           )}
         </>

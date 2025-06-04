@@ -12,10 +12,10 @@ export default function NotificationCard({ data, onClick }) {
           <div className="notificationCardName">{data[1]?.title}</div>
           <div className="notificationCardTime">
             {moment(data[1]?.timeStamp).calendar(moment(), {
-              sameDay: "[Today], h:mma",
-              lastDay: "[Yesterday], h:mma",
-              lastWeek: "ddd, h:mma",
-              sameElse: "MMM D, h:mma",
+              sameDay: "[Today], h:mmA",
+              lastDay: "[Yesterday], h:mmA",
+              lastWeek: "ddd, h:mmA",
+              sameElse: "MMM D, h:mmA",
             })}
           </div>
         </div>

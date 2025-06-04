@@ -2,7 +2,7 @@
 export const SucessRatio = {
     "status": "success",
     "data": {
-        sucessfull: 1500,
-        unsucessfull: 1000,
+        sucessfull: 10,
+        unsucessfull: 3,
     }
 }

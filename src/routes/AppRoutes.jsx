@@ -4,15 +4,15 @@ import Loading from "../components/Loading";
 
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 const Transactions = lazy(() => import("../pages/payments/Transactions"));
-const { Customers } = lazy(() => import("../pages/payments/Customers"));
-const { Payouts } = lazy(() => import("../pages/payments/Payouts"));
-const { Balances } = lazy(() => import("../pages/payments/Balances"));
-const { Subscriptions } = lazy(() => import("../pages/payments/Subscriptions"));
-const { PaymentPlan } = lazy(() => import("../pages/payments/PaymentPlan"));
-const { Referrals } = lazy(() => import("../pages/others/Referrals"));
-const { AuditLogs } = lazy(() => import("../pages/others/AuditLogs"));
-const { Settings } = lazy(() => import("../pages/others/Settings"));
-const { NotFound } = lazy(() => import("../pages/others/NotFound"));
+const Customers = lazy(() => import("../pages/payments/Customers"));
+const Payouts = lazy(() => import("../pages/payments/Payouts"));
+const Balances = lazy(() => import("../pages/payments/Balances"));
+const Subscriptions = lazy(() => import("../pages/payments/Subscriptions"));
+const PaymentPlan = lazy(() => import("../pages/payments/PaymentPlan"));
+const Referrals = lazy(() => import("../pages/others/Referrals"));
+const AuditLogs = lazy(() => import("../pages/others/AuditLogs"));
+const Settings = lazy(() => import("../pages/others/Settings"));
+const NotFound = lazy(() => import("../pages/others/NotFound"));
 const HomePage = lazy(() => import("../pages/HomePage"));
 
 export default function AppRouters() {

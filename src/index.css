@@ -1,11 +1,8 @@
 .mianroot {
-    background-color: rgba(255, 255, 255, 1);
-    /* padding-bottom: 150px;
-    padding-inline: 25px; */
-    /* padding-top: 10px; */
-    max-width: 95dvw;
-    max-height: 95dvh;
+    width: 95dvw;
+    height: 95dvh;
     margin-inline: auto;
     border-radius: 40px;
     overflow: hidden;
+    background-color: rgba(255, 255, 255, 1);
 }

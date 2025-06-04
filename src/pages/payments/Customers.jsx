@@ -1,6 +1,7 @@
 
-export const Customers = () => {
+const Customers = () => {
     return(
         <div> This is Customers. </div>
     )
 }
+export default Customers;

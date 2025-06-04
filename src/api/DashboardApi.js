@@ -1,7 +1,6 @@
 import { UserData } from "../utils/DashboardData/UserData";
 import { Messages, upadateMessData } from "../utils/DashboardData/Messages";
 import { Notification, upadateNofData } from "../utils/DashboardData/Notifications";
-import { data } from "react-router-dom";
 
 const functions = {
     user: UserData,
@@ -17,7 +16,7 @@ const updateMessage = {
 }
 
 const DashboardApi = async (data) => {
-    return await functions[data];
+    return Promise.resolve(functions[data]);
 };
 const updateNotificationData = async (data, index) => {
     return await updateNotification[data](index);
