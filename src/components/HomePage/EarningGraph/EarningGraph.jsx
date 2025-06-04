@@ -9,7 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import Timeline from "./TimeLine/Timeline";
+import Timeline from "./timeline/Timeline";
 import "./EarningGraph.css";
 
 export default function EarningGraph({ earningsData }) {
