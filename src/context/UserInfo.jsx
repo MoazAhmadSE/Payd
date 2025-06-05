@@ -20,7 +20,6 @@ export const UserProvider = ({ children }) => {
         }, 1000);
       }
     };
-
     fetchData();
   }, []);
 

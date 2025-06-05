@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "../components/Loading";
 
-const Dashboard = lazy(() => import("../pages/Dashboard"));
+import Dashboard from "../pages/Dashboard";
 const Transactions = lazy(() => import("../pages/payments/Transactions"));
 const Customers = lazy(() => import("../pages/payments/Customers"));
 const Payouts = lazy(() => import("../pages/payments/Payouts"));
