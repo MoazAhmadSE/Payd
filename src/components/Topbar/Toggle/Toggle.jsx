@@ -1,8 +1,13 @@
 import "./Toggle.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ToggleBtnAPI } from "../../../api/Topbar";
 
 export default function Toggle() {
   const [toggled, setToggled] = useState(false);
+  useEffect(() => {
+    ToggleBtnAPI(toggled);
+  }, [toggled]);
+
   return (
     <div className="toggleButtonContainer">
       <button

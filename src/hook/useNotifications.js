@@ -39,7 +39,7 @@ export const useNotifications = () => {
 
   const sortedNotification = useMemo(() => {
     return [...todaysNotification].sort(
-      (a, b) => new Date(b[1]?.timeStamp) - new Date(a[1]?.timeStamp)
+      (a, b) => new Date(b[1]?.timeStamp).getTime() - new Date(a[1]?.timeStamp).getTime()
     );
   }, [todaysNotification]);
 

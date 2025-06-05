@@ -2,13 +2,14 @@ import "./Language.css";
 import languages from "./Languages";
 import * as Icons from "../../../assets/icons/Topbar/index";
 import { useEffect, useRef, useState } from "react";
+import { LanguageAPI } from "../../../api/Topbar";
 
 export default function Language() {
   const [dropDown, setDropDown] = useState({
     selectedLanguage: "English",
     isLanguageSelecterOpen: false,
   });
-  
+
   const dropdownRef = useRef();
   const handleClickOutside = (e) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -23,6 +24,10 @@ export default function Language() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    LanguageAPI(dropDown.selectedLanguage);
+  }, [dropDown.selectedLanguage]);
 
   return (
     <div className="languageContainer" ref={dropdownRef}>

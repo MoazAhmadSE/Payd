@@ -28,7 +28,7 @@ export const useChatbar = () => {
 
   const sortedMessages = useMemo(() => {
     return [...todaysChat].sort(
-      (a, b) => new Date(b[1]?.timeStamp) - new Date(a[1]?.timeStamp)
+      (a, b) => new Date(b[1]?.timeStamp).getTime() - new Date(a[1]?.timeStamp).getTime()
     );
   }, [todaysChat]);
 
