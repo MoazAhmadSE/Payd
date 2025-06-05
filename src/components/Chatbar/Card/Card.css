@@ -86,7 +86,7 @@
 /* Media Queries */
 @media (max-width: 767px) {
     .cardContainer {
-        width: 60%;
+        width: 80%;
     }
 }
 

@@ -7,6 +7,7 @@ import { Topbar } from "../components/Topbar/Topbar";
 import { useUser } from "../context/UserInfo";
 import { ChatBarMotion } from "../components/ChatBarMotion";
 import Loading from "../components/Loading";
+import { Suspense } from "react";
 
 const Dashboard = () => {
   const { user, loading } = useUser();
@@ -26,7 +27,9 @@ const Dashboard = () => {
           </div>
           <div className="lower">
             <div className="main">
-              <Outlet />
+              <Suspense fallback={<Loading />}>
+                <Outlet />
+              </Suspense>
             </div>
             <ChatBarMotion />
           </div>

@@ -17,22 +17,22 @@ const HomePage = lazy(() => import("../pages/HomePage"));
 
 export default function AppRouters() {
   return (
-    <Suspense fallback={<Loading />}>
-      <Routes>
-        <Route path="/" element={<Dashboard />}>
-          <Route index element={<HomePage />} />
-          <Route path="payments/transactions" element={<Transactions />} />
-          <Route path="payments/customers" element={<Customers />} />
-          <Route path="payments/payouts" element={<Payouts />} />
-          <Route path="payments/balances" element={<Balances />} />
-          <Route path="payments/subscription" element={<Subscriptions />} />
-          <Route path="payments/paymentplans" element={<PaymentPlan />} />
-          <Route path="referrals" element={<Referrals />} />
-          <Route path="auditlogs" element={<AuditLogs />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Suspense>
+    // <Suspense fallback={<Loading />}>
+    <Routes>
+      <Route path="/" element={<Dashboard />}>
+        <Route index element={<HomePage />} />
+        <Route path="payments/transactions" element={<Transactions />} />
+        <Route path="payments/customers" element={<Customers />} />
+        <Route path="payments/payouts" element={<Payouts />} />
+        <Route path="payments/balances" element={<Balances />} />
+        <Route path="payments/subscription" element={<Subscriptions />} />
+        <Route path="payments/paymentplans" element={<PaymentPlan />} />
+        <Route path="referrals" element={<Referrals />} />
+        <Route path="auditlogs" element={<AuditLogs />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+    // </Suspense>
   );
 }
