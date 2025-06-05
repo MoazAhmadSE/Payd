@@ -58,7 +58,13 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
         >
           <div className="links_Container">
             {paymentLinks.map(({ to, Icon, label }) => (
-              <NavbarLink key={to} to={to} IconComponent={Icon} label={label} />
+              <NavbarLink
+                key={to}
+                to={to}
+                IconComponent={Icon}
+                label={label}
+                setShowNavbar={setShowNavbar}
+              />
             ))}
           </div>
         </div>
@@ -86,7 +92,13 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
         >
           <div className="links_Container">
             {paymentLinks.map(({ to, Icon, label }) => (
-              <NavbarLink key={to} to={to} IconComponent={Icon} label={label} />
+              <NavbarLink
+                key={to}
+                to={to}
+                IconComponent={Icon}
+                label={label}
+                setShowNavbar={setShowNavbar}
+              />
             ))}
           </div>
         </div>
@@ -94,7 +106,13 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
         <div className="navbar-links-container">
           <div className="links_Container">
             {otherLinks.map(({ to, Icon, label }) => (
-              <NavbarLink key={to} to={to} IconComponent={Icon} label={label} />
+              <NavbarLink
+                key={to}
+                to={to}
+                IconComponent={Icon}
+                label={label}
+                setShowNavbar={setShowNavbar}
+              />
             ))}
           </div>
         </div>

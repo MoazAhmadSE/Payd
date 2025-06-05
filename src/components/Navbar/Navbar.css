@@ -33,10 +33,12 @@ h3 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .navbarSvgdropdown {
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .navbarSvgdropdown.rotate {
