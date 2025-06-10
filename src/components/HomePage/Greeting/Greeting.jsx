@@ -8,7 +8,7 @@ export default function Greeting() {
   if (!user) return null;
   return (
     <div className="greeting">
-      <img src={greeting} className="greetingImage" alt="Greeting" />
+      <img src={greeting} className="greetingImage wave" alt="Greeting" />
       <h2 className="name">Hey {user.name.split(" ")[0]}!</h2>
     </div>
   );
