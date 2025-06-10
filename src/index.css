@@ -1,8 +1,8 @@
 .mianroot {
-    width: 95dvw;
-    height: 95dvh;
-    margin-inline: auto;
-    border-radius: 40px;
+    width: 100dvw;
+    height: 100dvh;
+    /* margin-inline: auto;
+    border-radius: 40px; */
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 1);
+    /* background-color: rgba(255, 255, 255, 1); */
 }

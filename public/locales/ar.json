@@ -1,0 +1,103 @@
+{
+    "appName": "Pyad",
+    "navbarLinks": {
+        "Payments": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "المعاملات"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "العملاء"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "المدفوعات"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "الأرصدة"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "الاشتراكات"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "خطط الدفع"
+            }
+        },
+        "Commerce": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "المعاملات"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "العملاء"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "المدفوعات"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "الأرصدة"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "الاشتراكات"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "خطط الدفع"
+            }
+        },
+        "": {
+            "referrals": {
+                "to": "/referrals",
+                "icon": "referrals",
+                "label": "الإحالات"
+            },
+            "auditLogs": {
+                "to": "/auditlogs",
+                "icon": "auditlogs",
+                "label": "سجلات التدقيق"
+            },
+            "settings": {
+                "to": "/settings",
+                "icon": "settings",
+                "label": "الإعدادات"
+            }
+        }
+    },
+    "languages": {
+        "en": "الإنجليزية",
+        "sp": "الإسبانية",
+        "in": "الهندية",
+        "ch": "الصينية",
+        "ar": "العربية"
+    },
+    "greeting": "مرحباً {{name}}",
+    "totalEarning": "لقد كسبت NGN {{total}} هذا الشهر.",
+    "timeLines": {
+        "today": "اليوم",
+        "thisWeek": "هذا الأسبوع",
+        "last2Weeks": "آخر أسبوعين",
+        "thisMonth": "هذا الشهر",
+        "thisYear": "هذا العام",
+        "lifetime": "مدى الحياة"
+    }
+}

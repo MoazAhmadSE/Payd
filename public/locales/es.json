@@ -1,0 +1,103 @@
+{
+    "appName": "Pyad",
+    "navbarLinks": {
+        "Payments": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "Transacciones"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "Clientes"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "Pagos"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "Balances"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "Suscripciones"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "Planes de pago"
+            }
+        },
+        "Commerce": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "Transacciones"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "Clientes"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "Pagos"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "Balances"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "Suscripciones"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "Planes de pago"
+            }
+        },
+        "": {
+            "referrals": {
+                "to": "/referrals",
+                "icon": "referrals",
+                "label": "Referencias"
+            },
+            "auditLogs": {
+                "to": "/auditlogs",
+                "icon": "auditlogs",
+                "label": "Registros de auditoría"
+            },
+            "settings": {
+                "to": "/settings",
+                "icon": "settings",
+                "label": "Configuración"
+            }
+        }
+    },
+    "languages": {
+        "en": "Inglés",
+        "sp": "Español",
+        "in": "Hindi",
+        "ch": "Chino",
+        "ar": "Árabe"
+    },
+    "greeting": "Hola {{name}}",
+    "totalEarning": "Has ganado NGN {{total}} este mes.",
+    "timeLines": {
+        "today": "Hoy",
+        "thisWeek": "Esta semana",
+        "last2Weeks": "Últimas 2 semanas",
+        "thisMonth": "Este mes",
+        "thisYear": "Este año",
+        "lifetime": "Toda la vida"
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "appName": "Pyad",
+    "navbarLinks": {
+        "Payments": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "लेन-देन"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "ग्राहक"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "भुगतान"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "बैलेंस"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "सदस्यताएँ"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "भुगतान योजनाएँ"
+            }
+        },
+        "Commerce": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "लेन-देन"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "ग्राहक"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "भुगतान"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "बैलेंस"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "सदस्यताएँ"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "भुगतान योजनाएँ"
+            }
+        },
+        "": {
+            "referrals": {
+                "to": "/referrals",
+                "icon": "referrals",
+                "label": "सिफ़ारिशें"
+            },
+            "auditLogs": {
+                "to": "/auditlogs",
+                "icon": "auditlogs",
+                "label": "ऑडिट लॉग"
+            },
+            "settings": {
+                "to": "/settings",
+                "icon": "settings",
+                "label": "सेटिंग्स"
+            }
+        }
+    },
+    "languages": {
+        "en": "अंग्रेज़ी",
+        "sp": "स्पेनिश",
+        "in": "हिन्दी",
+        "ch": "चीनी",
+        "ar": "अरबी"
+    },
+    "greeting": "नमस्ते {{name}}",
+    "totalEarning": "इस महीने आपने NGN {{total}} कमाए हैं।",
+    "timeLines": {
+        "today": "आज",
+        "thisWeek": "इस सप्ताह",
+        "last2Weeks": "पिछले 2 सप्ताह",
+        "thisMonth": "इस महीने",
+        "thisYear": "इस वर्ष",
+        "lifetime": "जीवन भर"
+    }
+}

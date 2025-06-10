@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    padding-left: 12px;
+}
+
 h1,
 h2,
 h3 {
@@ -11,13 +15,20 @@ h3 {
     display: block;
 }
 
+.appNameContainer {
+    margin-bottom: 10px;
+}
+
+.linksContainer {
+    margin-top: 30px;
+}
+
 .montserrat-appname {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     color: rgba(72, 74, 79, 1);
-    font-size: clamp(24px, 6vw, 32px);
-    padding-left: 12px;
+    font-size: 32px;
 }
 
 .navbar-catagory {
@@ -25,8 +36,7 @@ h3 {
     align-items: center;
     justify-content: space-between;
     color: rgba(130, 130, 130, 1);
-    /* width: 180px; */
-    padding-left: 12px;
+    width: 90%;
 }
 
 .navbar-catagory-name {
@@ -58,21 +68,16 @@ h3 {
     max-height: 0;
 }
 
-.navbar-links-container {
-    padding-left: 12px;
-}
-
 .links_Container {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .navbar_Links {
     display: flex;
     align-items: center;
-    color: gray;
     text-decoration: none;
     gap: 20px;
 }
@@ -81,27 +86,35 @@ h3 {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
+    color: rgba(130, 130, 130, 1);
 }
 
-.navbar_Svg_Link_Icon {
-    width: 1.5rem;
-    height: 1.5rem;
+.navbar_Links:hover {
+    background-color: rgba(221, 231, 241, 0.5);
+    padding: 10px 5px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+.selected-link {
+    background-color: rgba(221, 231, 241, 0.5);
+    border-radius: 6px;
+    padding: 10px 5px;
 }
 
 .line {
-    width: 100%;
-    height: 1px;
+    height: 0.8px;
     background-color: rgba(221, 231, 241, 1);
-    border: none;
-    margin-block: 20px;
+    border: 1px;
+    margin-block: 25px;
 }
+
 
 .line1 {
     width: 100%;
-    height: 1px;
+    height: 0.8px;
     background-color: rgba(221, 231, 241, 1);
-    border: none;
-    margin-block: 20px;
+    border: 1px;
 }
 
 .navbar-close-btn {
@@ -111,20 +124,20 @@ h3 {
 }
 
 .TopbarComponents {
-    /* height: 120px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 6px;
+    /* border-radius: 6px;
     padding: 6px;
-    margin-top: 15px;
+    margin-top: 15px; */
+    margin-block: 0px;
 }
 
 .TopbarComponents .Inner {
     display: flex;
     flex-direction: row;
-    /* padding: 6px; */
 }
+
 
 @media (max-width: 768px) {
     .navbar-close-btn {
@@ -136,56 +149,15 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    .TopbarComponents {
+        display: none;
+    }
+
     .navbar-close-btn {
         display: block;
         position: absolute;
         right: 9%;
         top: 2%;
-    }
-
-    .montserrat-appname {
-        font-size: clamp(25px, 1.4rem, 40px);
-        padding-left: 1rem;
-    }
-
-
-    .navbar-catagory {
-        width: 90%;
-        padding-left: 1rem;
-    }
-
-    .navbar-catagory-name {
-        font-size: clamp(15px, 0.9rem, 20px);
-    }
-
-    .navbar-links-container {
-        padding-left: 1rem;
-    }
-
-    .links_Container {
-        margin-top: 1.5rem;
-        gap: 1.3rem;
-    }
-
-    .navbar_Links {
-        gap: 1rem;
-    }
-
-    .navbar_Links_Name {
-        font-size: clamp(10px, 0.8rem, 14px);
-    }
-
-    .navbar_Svg_Link_Icon {
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-
-    .line {
-        margin-block: 1rem;
-    }
-
-    .line1 {
-        margin-block: 1rem;
     }
 }
 
@@ -194,80 +166,14 @@ h3 {
         display: none;
     }
 
-    .montserrat-appname {
-        font-size: clamp(25px, 1.9rem, 40px);
-        padding-left: 1rem;
-    }
-
-    .navbar-catagory {
-        width: 100%;
-        padding-left: 1rem;
-    }
-
-    .navbar-catagory-name {
-        font-size: clamp(15px, 1rem, 22px);
-    }
-
-    .navbar-links-container {
-        padding-left: 1rem;
-    }
-
-    .links_Container {
-        margin-top: 1.5rem;
-        gap: 1rem;
-    }
-
-    .navbar_Links {
-        gap: 0.8rem;
-    }
-
-    .navbar_Links_Name {
-        font-size: clamp(10px, 0.8rem, 14px);
-    }
-
-    .navbar_Svg_Link_Icon {
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-
-    .line {
-        margin-block: 1rem;
-    }
-
-    .line1 {
-        margin-block: 1rem;
-    }
-
     .navbar-close-btn {
         display: none;
     }
 }
 
 @media (min-width: 2001px) {
-    .montserrat-appname {
-        font-size: clamp(25px, 3rem, 40px);
-    }
-
-    .navbar-catagory {
-        width: 70%;
-    }
-
-    .links_Container {
-        margin-top: 2.5rem;
-        gap: 1.6rem;
-    }
-
-    .navbar-catagory-name {
-        font-size: clamp(15px, 2rem, 25px);
-    }
-
-    .navbar_Links_Name {
-        font-size: clamp(15px, 1.2rem, 25px);
-    }
-
-    .navbar_Svg_Link_Icon {
-        width: 1.6rem;
-        height: 1.6rem;
+    .TopbarComponents {
+        display: none;
     }
 
     .navbar-close-btn {

@@ -22,7 +22,8 @@ body {
   height: 100%;
   overflow-y: auto;
   background-color: rgba(252, 252, 252, 1);
-  padding: 20px;
+  padding-top: 26px;
+  padding-left: 20px;
 }
 
 .left::-webkit-scrollbar {

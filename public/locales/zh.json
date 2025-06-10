@@ -1,0 +1,103 @@
+{
+    "appName": "Pyad",
+    "navbarLinks": {
+        "Payments": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "交易"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "客户"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "支付"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "余额"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "订阅"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "付款计划"
+            }
+        },
+        "Commerce": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "交易"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "客户"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "支付"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "余额"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "订阅"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "付款计划"
+            }
+        },
+        "": {
+            "referrals": {
+                "to": "/referrals",
+                "icon": "referrals",
+                "label": "推荐"
+            },
+            "auditLogs": {
+                "to": "/auditlogs",
+                "icon": "auditlogs",
+                "label": "审计日志"
+            },
+            "settings": {
+                "to": "/settings",
+                "icon": "settings",
+                "label": "设置"
+            }
+        }
+    },
+    "languages": {
+        "en": "英语",
+        "sp": "西班牙语",
+        "in": "印地语",
+        "ch": "中文",
+        "ar": "阿拉伯语"
+    },
+    "greeting": "嗨 {{name}}",
+    "totalEarning": "您本月赚取了 NGN {{total}}。",
+    "timeLines": {
+        "today": "今天",
+        "thisWeek": "本周",
+        "last2Weeks": "过去两周",
+        "thisMonth": "本月",
+        "thisYear": "今年",
+        "lifetime": "累积"
+    }
+}

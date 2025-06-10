@@ -1,0 +1,103 @@
+{
+    "appName": "Pyad",
+    "navbarLinks": {
+        "Payments": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "Transactions"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "Customers"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "Payouts"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "Balances"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "Subscriptions"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "Payment Plans"
+            }
+        },
+        "Commerce": {
+            "transactions": {
+                "to": "/payments/transactions",
+                "icon": "transactions",
+                "label": "Transactions"
+            },
+            "customers": {
+                "to": "/payments/customers",
+                "icon": "customers",
+                "label": "Customers"
+            },
+            "payouts": {
+                "to": "/payments/payouts",
+                "icon": "payouts",
+                "label": "Payouts"
+            },
+            "balances": {
+                "to": "/payments/balances",
+                "icon": "balances",
+                "label": "Balances"
+            },
+            "subscriptions": {
+                "to": "/payments/subscription",
+                "icon": "subscriptions",
+                "label": "Subscriptions"
+            },
+            "paymentPlans": {
+                "to": "/payments/paymentplans",
+                "icon": "paymentPlans",
+                "label": "Payment Plans"
+            }
+        },
+        "": {
+            "referrals": {
+                "to": "/referrals",
+                "icon": "referrals",
+                "label": "Referrals"
+            },
+            "auditLogs": {
+                "to": "/auditlogs",
+                "icon": "auditlogs",
+                "label": "Audit Logs"
+            },
+            "settings": {
+                "to": "/settings",
+                "icon": "settings",
+                "label": "Settings"
+            }
+        }
+    },
+    "languages": {
+        "en": "English",
+        "sp": "Spanish",
+        "in": "Hindi",
+        "ch": "Chinese",
+        "ar": "Arabic"
+    },
+    "greeting": "`Hi ${name}`",
+    "totalEarning": "`You earned NGN ${total} this month.`",
+    "timeLines": {
+        "today": "Today",
+        "thisWeek": "This Week",
+        "last2Weeks": "Last 2 Weeks",
+        "thisMonth": "This Month",
+        "thisYear": "This Year",
+        "lifetime": "Lifetime"
+    }
+}

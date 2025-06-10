@@ -1,121 +1,100 @@
-import { Link } from "react-router-dom";
 import "./Navbar.css";
 import * as Icons from "../../assets/icons/Navbar/index";
-import { useState } from "react";
 import NavbarLink from "./NavbarLink";
-import { otherLinks, paymentLinks } from "../../utils/NavbarLinks";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { SVGIcons } from "../../assets/icons/SVGIcons";
 
 export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
+  const { t } = useTranslation();
   const [dropDown, setDropDown] = useState({
-    isPaymentsOpen: true,
-    isCommerceOpen: false,
+    Payments: true,
+    Commerce: false,
   });
+  const [selectedKey, setSelectedKey] = useState(null);
+
+  const navbarLinks = t("navbarLinks", { returnObjects: true });
+
+  const toggleCategory = (category) => {
+    setDropDown((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
+
+  const selected = (key) => {
+    setSelectedKey(key);
+  };
 
   return (
     <div className="navbar">
-      <Link to={"/"} className="montserrat-appname">
-        Payd
-      </Link>
+      <div className="appNameContainer">
+        <Link to="/" className="montserrat-appname">
+          {t("appName")}
+        </Link>
+      </div>
       <div className="navbar-close-btn" onClick={() => setShowNavbar(false)}>
         ✕
       </div>
+      <div className="TopbarComponents">
+        <hr className="line1" />
+        {Search}
+        <hr className="line1" />
+        <div className="Inner">
+          {Language}
+          {Toggle}
+        </div>
+        <hr className="line1" />
+      </div>
 
-      {window.innerWidth <= 767 && (
-        <div className="TopbarComponents">
-          <hr className="line1" style={{ marginBlock: "0px" }} />
-          {Search}
-          <hr className="line1" style={{ marginBlock: "0px" }} />
-          <div className="Inner">
-            {Language}
-            {Toggle}
-          </div>
-          <hr className="line1" style={{ marginBlock: "0px" }} />
-        </div>
-      )}
+      <div className="linksContainer">
+        {Object.entries(navbarLinks).map(([category, links], index, arr) => {
+          const isLastCategory = index === arr.length - 1;
+          const hasCategoryTitle = category.trim() !== "";
 
-      <div>
-        <div
-          className="navbar-catagory"
-          style={{ marginTop: "30px" }}
-          onClick={() =>
-            setDropDown((prev) => ({
-              ...prev,
-              isPaymentsOpen: !prev.isPaymentsOpen,
-            }))
-          }
-        >
-          <h2 className="navbar-catagory-name">Payments</h2>
-          <Icons.Dropdown
-            className={`navbarSvgdropdown ${
-              dropDown.isPaymentsOpen ? "" : "rotate"
-            } `}
-          />
-        </div>
-        <div
-          className={`navbar-links-container slide ${
-            dropDown.isPaymentsOpen ? "open" : "closed"
-          }`}
-        >
-          <div className="links_Container">
-            {paymentLinks.map(({ to, Icon, label }) => (
-              <NavbarLink
-                key={to}
-                to={to}
-                IconComponent={Icon}
-                label={label}
-                setShowNavbar={setShowNavbar}
-              />
-            ))}
-          </div>
-        </div>
-        <hr className="line" />
-        <div
-          className="navbar-catagory"
-          onClick={() =>
-            setDropDown((prev) => ({
-              ...prev,
-              isCommerceOpen: !prev.isCommerceOpen,
-            }))
-          }
-        >
-          <h2 className="navbar-catagory-name">Commerce</h2>
-          <Icons.Dropdown
-            className={`navbarSvgdropdown ${
-              dropDown.isCommerceOpen ? "" : "rotate"
-            } `}
-          />
-        </div>
-        <div
-          className={`navbar-links-container slide ${
-            dropDown.isCommerceOpen ? "open" : "closed"
-          }`}
-        >
-          <div className="links_Container">
-            {paymentLinks.map(({ to, Icon, label }) => (
-              <NavbarLink
-                key={to}
-                to={to}
-                IconComponent={Icon}
-                label={label}
-                setShowNavbar={setShowNavbar}
-              />
-            ))}
-          </div>
-        </div>
-        <hr className="line" />
-        <div className="navbar-links-container">
-          <div className="links_Container">
-            {otherLinks.map(({ to, Icon, label }) => (
-              <NavbarLink
-                key={to}
-                to={to}
-                IconComponent={Icon}
-                label={label}
-                setShowNavbar={setShowNavbar}
-              />
-            ))}
-          </div>
-        </div>
+          return (
+            <>
+              <div key={category || `category-${index}`}>
+                {hasCategoryTitle && (
+                  <div
+                    className="navbar-catagory"
+                    // style={{ marginTop: "30px" }}
+                    onClick={() => toggleCategory(category)}
+                  >
+                    <h2 className="navbar-catagory-name">{category}</h2>
+                    <SVGIcons.dropDown
+                      className={`navbarSvgdropdown ${
+                        dropDown[category] ? "" : "rotate"
+                      }`}
+                    />
+                  </div>
+                )}
+
+                <div
+                  className={`navbar-links-container slide ${
+                    dropDown[category] || !hasCategoryTitle ? "open" : "closed"
+                  }`}
+                >
+                  <div className="links_Container">
+                    {Object.entries(links).map(([key, item]) => (
+                      <NavbarLink
+                        key={key}
+                        to={item.to}
+                        IconComponent={SVGIcons[item.icon]}
+                        label={item.label}
+                        setShowNavbar={setShowNavbar}
+                        isSelected={selectedKey === key}
+                        onClick={() => selected(key)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {!isLastCategory && hasCategoryTitle && <hr className="line" />}
+            </>
+          );
+        })}
       </div>
     </div>
   );

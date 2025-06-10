@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./UserInfo.css";
 import * as Icons from "../../../assets/icons/Topbar/index";
 import userImage from "../../../assets/Images/user1.png";
+import LogoutBtn from "./Logout/LogoutBtn";
 
 export default function UserInfo({ userData }) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -20,12 +21,36 @@ export default function UserInfo({ userData }) {
     <div className={`userContainer ${showDropdown ? "dropdown" : ""}`}>
       {isDesktop ? (
         <>
-          <img src={userImage} className="userImage" alt="User" />
-          <div className="userNameandId">
-            <div className="userName">{userData?.name}</div>
-            <div className="UserId">ID: {userData?.id}</div>
-          </div>
-          <Icons.Dropdown />
+          {!showDropdown && (
+            <>
+              <img src={userImage} className="userImage" alt="User" />
+              <div className="userNameandId">
+                <div className="userName">{userData?.name}</div>
+                <div className="UserId">ID: {userData?.id}</div>
+              </div>
+              <Icons.Dropdown
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setShowDropdown(!showDropdown);
+                }}
+              />
+            </>
+          )}
+          {showDropdown && (
+            <div className="logoutcontainer">
+              <div className="logoutBtn">
+                <LogoutBtn />
+              </div>
+              <div
+                className="cross"
+                onClick={() => {
+                  setShowDropdown(!showDropdown);
+                }}
+              >
+                ✕
+              </div>
+            </div>
+          )}
         </>
       ) : (
         <>
@@ -39,6 +64,8 @@ export default function UserInfo({ userData }) {
             <div className="dropdownContent">
               <div className="userName">{userData?.name}</div>
               <div className="UserId">ID: {userData?.id}</div>
+              <hr />
+              <LogoutBtn />
             </div>
           )}
         </>
