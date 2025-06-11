@@ -1,5 +1,5 @@
-import * as Icon from "../assets/icons/Dashboard/index";
 import "../css/Dashboard.css";
+import * as Icon from "../assets/icons/Dashboard/index";
 import { useState } from "react";
 import { Chatbar } from "../components/Chatbar/Chatbar";
 import { motion, AnimatePresence } from "framer-motion";

@@ -1,4 +1,4 @@
-.AppName {
+.app-name {
   display: block;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
@@ -14,12 +14,24 @@
   background-color: violet;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-
+/* 
+.ser-tog-lan-container {
+  display: none;
+} */
 
 @media (min-width: 768px) {
-  .AppName {
+  .app-name {
     display: none;
   }
+
+  /* .ser-tog-lan-container {
+    height: 100%;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: tomato;
+  } */
 }

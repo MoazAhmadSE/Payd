@@ -2,354 +2,95 @@
     display: none;
 }
 
-@media (max-width: 768px) {
-    .languageContainer {
-        margin-block: 10px;
-        flex: 1 1 2;
-        min-width: 120px;
-        max-width: 157px;
-        height: 55%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .languageSelector {
-        width: 90%;
-        height: 30px;
-        border-radius: 50px;
-        border: 1px solid rgba(189, 189, 189, 0.2);
-        background-color: white;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 0.9rem;
-        color: rgba(130, 130, 130, 1);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 10px;
-        cursor: pointer;
-        transition: box-shadow 0.2s ease;
-    }
-
-    .languageSelector:hover {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .languageSelector svg {
-        width: 0.7rem;
-        transition: transform 0.3s ease;
-    }
-
-    .languageSelector.open svg {
-        transform: rotate(180deg);
-    }
-
-    .otherLanguagesContainer {
-        position: absolute;
-        top: 100%;
-        width: 90%;
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-top: 8px;
-        z-index: 2;
-    }
-
-    .slide {
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 0;
-        max-height: 0;
-    }
-
-    .slide.open {
-        max-height: 500px;
-        opacity: 1;
-    }
-
-    .language {
-        padding: 8px 12px;
-        cursor: pointer;
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.9rem;
-        color: rgba(130, 130, 130, 1);
-        transition: background-color 0.2s ease;
-    }
-
-    .language:hover {
-        background-color: rgba(110, 160, 95, 0.1);
-    }
-
-    .languageDevider {
-        height: 1px;
-        background-color: rgba(221, 231, 241, 1);
-        margin: 0 8px;
-        border: none;
-    }
+.languageContainer {
+    width: 166px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .languageContainer {
-        flex: 0 1 20%;
-        min-width: 150px;
-        max-width: 200px;
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-    }
-
-    .languageSelector {
-        width: 90%;
-        height: 100%;
-        border-radius: 50px;
-        border: 1px solid rgba(189, 189, 189, 0.2);
-        background-color: white;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 0.9rem;
-        color: rgba(130, 130, 130, 1);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 10px;
-        cursor: pointer;
-        transition: box-shadow 0.2s ease;
-    }
-
-    .languageSelector:hover {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .languageSelector svg {
-        width: 0.7rem;
-        transition: transform 0.3s ease;
-    }
-
-    .languageSelector.open svg {
-        transform: rotate(180deg);
-    }
-
-    .otherLanguagesContainer {
-        position: absolute;
-        top: 100%;
-        width: 90%;
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-top: 8px;
-        z-index: 2;
-    }
-
-    .slide {
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 0;
-        max-height: 0;
-    }
-
-    .slide.open {
-        max-height: 500px;
-        opacity: 1;
-    }
-
-    .language {
-        padding: 8px 12px;
-        cursor: pointer;
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.9rem;
-        color: rgba(130, 130, 130, 1);
-        transition: background-color 0.2s ease;
-    }
-
-    .language:hover {
-        background-color: rgba(110, 160, 95, 0.1);
-    }
-
-    .languageDevider {
-        height: 1px;
-        background-color: rgba(221, 231, 241, 1);
-        margin: 0 8px;
-        border: none;
-    }
+.languageSelector {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: 1px solid rgba(189, 189, 189, 0.2);
+    /* background-color: white; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(130, 130, 130, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
 }
 
-
-@media (min-width: 1024px) and (max-width: 2001px) {
-    .languageContainer {
-        flex: 0 1 15%;
-        min-width: 150px;
-        max-width: 180px;
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .languageSelector {
-        width: 90%;
-        height: 100%;
-        border-radius: 50px;
-        border: 1px solid rgba(189, 189, 189, 0.2);
-        background-color: white;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 1rem;
-        color: rgba(130, 130, 130, 1);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 16px;
-        cursor: pointer;
-        transition: box-shadow 0.2s ease;
-    }
-
-    .languageSelector:hover {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .languageSelector svg {
-        transition: transform 0.3s ease;
-    }
-
-    .languageSelector.open svg {
-        transform: rotate(180deg);
-    }
-
-    .otherLanguagesContainer {
-        position: absolute;
-        top: 100%;
-        width: 90%;
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-top: 8px;
-        z-index: 2;
-    }
-
-    .slide {
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 0;
-        max-height: 0;
-    }
-
-    .slide.open {
-        max-height: 500px;
-        opacity: 1;
-    }
-
-    .language {
-        padding: 10px 16px;
-        cursor: pointer;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1rem;
-        color: rgba(130, 130, 130, 1);
-        transition: background-color 0.2s ease;
-    }
-
-    .language:hover {
-        background-color: rgba(110, 160, 95, 0.1);
-    }
-
-    .languageDevider {
-        height: 1px;
-        background-color: rgba(221, 231, 241, 1);
-        margin: 0 8px;
-        border: none;
-    }
+.languageSelector:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 2001px) {
-    .languageContainer {
-        flex: 0 1 20%;
-        min-width: 220px;
-        max-width: 290px;
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
+.languageSelector svg {
+    transition: transform 0.3s ease;
+}
 
-    .languageSelector {
-        width: 90%;
-        height: 100%;
-        border-radius: 50px;
-        border: 1px solid rgba(189, 189, 189, 0.2);
-        background-color: white;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 1.3rem;
-        color: rgba(130, 130, 130, 1);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 20px;
-        cursor: pointer;
-        transition: box-shadow 0.2s ease;
-    }
+.languageSelector.open svg {
+    transform: rotate(180deg);
+}
 
-    .languageSelector:hover {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
+.otherLanguagesContainer {
+    position: absolute;
+    top: 100%;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 8px;
+    z-index: 2;
+}
 
-    .languageSelector svg {
-        transition: transform 0.3s ease;
-    }
+.slide {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+}
 
-    .languageSelector.open svg {
-        transform: rotate(180deg);
-    }
+.slide.open {
+    max-height: 500px;
+    opacity: 1;
+}
 
-    .otherLanguagesContainer {
-        position: absolute;
-        top: 100%;
-        width: 90%;
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-top: 8px;
-        z-index: 2;
-    }
+.language {
+    padding: 8px 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: rgba(130, 130, 130, 1);
+    transition: background-color 0.2s ease;
+}
 
-    .slide {
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 0;
-        max-height: 0;
-    }
+.language:hover {
+    background-color: rgba(221, 231, 241, 0.5);
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, padding 0.2s ease;
+}
 
-    .slide.open {
-        max-height: 500px;
-        opacity: 1;
-    }
+.languageDevider {
+    height: 0.8px;
+    background-color: rgba(221, 231, 241, 1);
+    margin: 0 8px;
+    border: none;
+}
 
-    .language {
-        padding: 14px 18px;
-        cursor: pointer;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.2rem;
-        color: rgba(130, 130, 130, 1);
-        transition: background-color 0.3s ease;
-    }
-
-    .language:hover {
-        background-color: rgba(110, 160, 95, 0.1);
-    }
-
-    .languageDevider {
-        height: 1px;
-        background-color: rgba(221, 231, 241, 1);
-        margin: 0 8px;
-        border: none;
-    }
+.selected-language {
+    background-color: rgba(221, 231, 241, 0.5);
+    border-radius: 6px;
+    padding: 10px 20px;
 }

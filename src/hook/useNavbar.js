@@ -20,7 +20,7 @@ export const useNavbar = () => {
     }
 
     function selectedPage() {
-        for (const [category, links] of Object.entries(navbarLinks)) {
+        for (const [, links] of Object.entries(navbarLinks)) {
             for (const [key, item] of Object.entries(links)) {
                 if (item.to === location.pathname) {
                     setSelectedKey(key);

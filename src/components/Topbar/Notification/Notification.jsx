@@ -1,8 +1,10 @@
 import "./Notification.css";
 import * as Icons from "../../../assets/icons/Topbar/index";
 import * as Icon from "../../../assets/icons/Card/index";
+import { SVGIcons } from "../../../assets/icons/SVGIcons";
 import NotificationCard from "./NotificationCard/NotificationCard";
 import { useNotifications } from "../../../hook/useNotifications";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Notification() {
   const {
@@ -16,16 +18,25 @@ export default function Notification() {
 
   return (
     <div className="bellIconContainer" ref={dropdownRef}>
-      <div className="box">
-        <div
-          className="bellIcon"
-          onClick={() => setShowNotifications(!showNotifications)}
-        >
-          <Icons.BellIcon className="Icon" />
-        </div>
-        {unreadNotifications && <div className="notification"></div>}
+      <div
+        className="bellIcon"
+        onClick={() => setShowNotifications(!showNotifications)}
+      >
+        <SVGIcons.bell />
+      </div>
+      {unreadNotifications && <div className="notification"></div>}
+
+      {/* AnimatePresence enables mount/unmount animations */}
+      <AnimatePresence>
         {showNotifications && (
-          <div className="notificationsContainer">
+          <motion.div
+            key="notification-dropdown"
+            className="notificationsContainer"
+            initial={{ y: "-20%", opacity: 0 }}
+            animate={{ y: "0%", opacity: 1 }}
+            exit={{ y: "-20%", opacity: 0 }}
+            transition={{ type: "spring", stiffness: 100, damping: 12 }}
+          >
             {sortedNotification.length > 0 ? (
               <>
                 {sortedNotification.map(([key, value]) => (
@@ -42,9 +53,9 @@ export default function Notification() {
                 <p className="empty">No Notification to show.</p>
               </>
             )}
-          </div>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </div>
   );
 }

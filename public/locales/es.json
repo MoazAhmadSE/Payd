@@ -1,5 +1,7 @@
 {
     "appName": "Pyad",
+    "search-placeholder": "Buscar",
+    "toggle-text": "En vivo",
     "navbarLinks": {
         "Payments": {
             "transactions": {
@@ -85,9 +87,9 @@
     },
     "languages": {
         "en": "Inglés",
-        "sp": "Español",
-        "in": "Hindi",
-        "ch": "Chino",
+        "es": "Español",
+        "hi": "Hindi",
+        "zh": "Chino",
         "ar": "Árabe"
     },
     "greeting": "Hola {{name}}",

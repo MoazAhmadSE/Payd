@@ -4,8 +4,8 @@ export const Notification = {
     "notif_000": {
       "title": "Alert Notification",
       "message": "Notification message number 1: Task assigned to you was updated.",
-      "timeStamp": "2025-06-04T00:02:00",
-      "isOpen": true
+      "timeStamp": "2025-06-11T00:02:00",
+      "isOpen": false
     },
     "notif_001": {
       "title": "Update Notification",
@@ -16,20 +16,20 @@ export const Notification = {
     "notif_002": {
       "title": "Alert Notification",
       "message": "Notification message number 3: You have a new message in your inbox.",
-      "timeStamp": "2025-06-05T05:02:00",
-      "isOpen": true
+      "timeStamp": "2025-06-11T00:02:00",
+      "isOpen": false
     },
     "notif_003": {
       "title": "Warning Notification",
       "message": "Notification message number 4: Server reboot scheduled for tonight.",
-      "timeStamp": "2025-06-03T23:02:00",
+      "timeStamp": "2025-06-11T00:02:00",
       "isOpen": false
     },
     "notif_004": {
       "title": "Warning Notification",
       "message": "Notification message number 5: Subscription has been renewed.",
-      "timeStamp": "2025-06-05T10:02:00",
-      "isOpen": true
+      "timeStamp": "2025-06-11T00:02:00",
+      "isOpen": false
     },
     "notif_005": {
       "title": "Message Notification",
@@ -40,8 +40,8 @@ export const Notification = {
     "notif_006": {
       "title": "Alert Notification",
       "message": "Notification message number 7: Subscription has been renewed.",
-      "timeStamp": "2025-05-28T03:48:00",
-      "isOpen": true
+      "timeStamp": "2025-06-11T00:02:00",
+      "isOpen": false
     },
     "notif_007": {
       "title": "Update Notification",

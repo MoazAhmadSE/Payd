@@ -1,33 +1,9 @@
 import "./Language.css";
-import languages from "./Languages";
-import * as Icons from "../../../assets/icons/Topbar/index";
-import { useEffect, useRef, useState } from "react";
-import { LanguageAPI } from "../../../api/Topbar";
+import { SVGIcons } from "../../../assets/icons/SVGIcons";
+import { useLanguage } from "../../../hook/useLanguage";
 
 export default function Language() {
-  const [dropDown, setDropDown] = useState({
-    selectedLanguage: "English",
-    isLanguageSelecterOpen: false,
-  });
-
-  const dropdownRef = useRef();
-  const handleClickOutside = (e) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-      setDropDown((prev) => ({
-        ...prev,
-        isLanguageSelecterOpen: false,
-      }));
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
-    LanguageAPI(dropDown.selectedLanguage);
-  }, [dropDown.selectedLanguage]);
+  const { dropdownRef, dropDown, setDropDown, languages } = useLanguage();
 
   return (
     <div className="languageContainer" ref={dropdownRef}>
@@ -42,22 +18,26 @@ export default function Language() {
           }))
         }
       >
-        <div>{dropDown.selectedLanguage}</div>
-        <Icons.Dropdown />
+        <div>{languages[dropDown.selectedLanguage]}</div>
+        <SVGIcons.polygon />
       </div>
       <div
         className={`otherLanguagesContainer slide ${
           dropDown.isLanguageSelecterOpen ? "open" : "closed"
         }`}
       >
-        {languages.map(({ language }) => (
-          <div key={language}>
+        {Object.entries(languages).map(([key, language]) => (
+          <div key={key}>
             <div
-              className="language"
+              className={`language ${
+                dropDown.selectedLanguage === language
+                  ? "selected-language"
+                  : ""
+              }`}
               onClick={() =>
                 setDropDown((prev) => ({
                   ...prev,
-                  selectedLanguage: language,
+                  selectedLanguage: key,
                   isLanguageSelecterOpen: false,
                 }))
               }

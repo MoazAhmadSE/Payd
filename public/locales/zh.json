@@ -1,5 +1,7 @@
 {
     "appName": "Pyad",
+    "search-placeholder": "搜索",
+    "toggle-text": "直播",
     "navbarLinks": {
         "Payments": {
             "transactions": {
@@ -85,9 +87,9 @@
     },
     "languages": {
         "en": "英语",
-        "sp": "西班牙语",
-        "in": "印地语",
-        "ch": "中文",
+        "es": "西班牙语",
+        "hi": "印地语",
+        "zh": "中文",
         "ar": "阿拉伯语"
     },
     "greeting": "嗨 {{name}}",
