@@ -25,7 +25,7 @@ export default function AppRouters() {
         <Route path="payments/customers" element={<Customers />} />
         <Route path="payments/payouts" element={<Payouts />} />
         <Route path="payments/balances" element={<Balances />} />
-        <Route path="payments/subscription" element={<Subscriptions />} />
+        <Route path="payments/subscriptions" element={<Subscriptions />} />
         <Route path="payments/paymentplans" element={<PaymentPlan />} />
         <Route path="referrals" element={<Referrals />} />
         <Route path="auditlogs" element={<AuditLogs />} />

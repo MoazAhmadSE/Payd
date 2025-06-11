@@ -23,7 +23,7 @@
                 "label": "बैलेंस"
             },
             "subscriptions": {
-                "to": "/payments/subscription",
+                "to": "/payments/subscriptions",
                 "icon": "subscriptions",
                 "label": "सदस्यताएँ"
             },
@@ -55,7 +55,7 @@
                 "label": "बैलेंस"
             },
             "subscriptions": {
-                "to": "/payments/subscription",
+                "to": "/payments/subscriptions",
                 "icon": "subscriptions",
                 "label": "सदस्यताएँ"
             },

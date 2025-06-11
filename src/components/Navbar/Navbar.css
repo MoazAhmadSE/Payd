@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-.navbar {
+.navbar-container {
     padding-left: 12px;
+    margin-bottom: 50px;
 }
 
 h1,
@@ -15,15 +16,18 @@ h3 {
     display: block;
 }
 
-.appNameContainer {
+.app-name-container {
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.linksContainer {
+.main-links-container {
     margin-top: 30px;
 }
 
-.montserrat-appname {
+.appname {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
@@ -31,7 +35,7 @@ h3 {
     font-size: 32px;
 }
 
-.navbar-catagory {
+.link-catagory {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,19 +43,19 @@ h3 {
     width: 90%;
 }
 
-.navbar-catagory-name {
+.link-catagory-name {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
 }
 
-.navbarSvgdropdown {
+.navbar-dropdown-svg {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
-.navbarSvgdropdown.rotate {
+.navbar-dropdown-svg.rotate {
     transform: rotate(180deg);
 }
 
@@ -68,7 +72,7 @@ h3 {
     max-height: 0;
 }
 
-.links_Container {
+.links-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -110,7 +114,7 @@ h3 {
 }
 
 
-.line1 {
+.ser-togg-lang-line {
     width: 100%;
     height: 0.8px;
     background-color: rgba(221, 231, 241, 1);
@@ -118,64 +122,30 @@ h3 {
 }
 
 .navbar-close-btn {
-    display: none;
+    display: block;
     font-size: 15px;
     cursor: pointer;
 }
 
-.TopbarComponents {
+.search-toggle-language-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border-radius: 6px;
-    padding: 6px;
-    margin-top: 15px; */
     margin-block: 0px;
 }
 
-.TopbarComponents .Inner {
+.search-toggle-language-container .language-toggle-container {
     display: flex;
     flex-direction: row;
 }
 
-
-@media (max-width: 768px) {
-    .navbar-close-btn {
-        display: block;
-        position: absolute;
-        right: 9%;
-        top: 25px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .TopbarComponents {
-        display: none;
-    }
-
-    .navbar-close-btn {
-        display: block;
-        position: absolute;
-        right: 9%;
-        top: 2%;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 2000px) {
-    .TopbarComponents {
-        display: none;
-    }
-
-    .navbar-close-btn {
+@media (min-width: 768px) {
+    .search-toggle-language-container {
         display: none;
     }
 }
 
-@media (min-width: 2001px) {
-    .TopbarComponents {
-        display: none;
-    }
-
+@media (min-width: 1024px) {
     .navbar-close-btn {
         display: none;
     }

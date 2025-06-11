@@ -149,7 +149,7 @@ body {
 
   .left {
     display: block;
-    flex: 1;
+    flex: 1.5;
   }
 
   .right {

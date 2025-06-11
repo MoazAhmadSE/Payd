@@ -23,7 +23,7 @@
                 "label": "Balances"
             },
             "subscriptions": {
-                "to": "/payments/subscription",
+                "to": "/payments/subscriptions",
                 "icon": "subscriptions",
                 "label": "Subscriptions"
             },
@@ -55,7 +55,7 @@
                 "label": "Balances"
             },
             "subscriptions": {
-                "to": "/payments/subscription",
+                "to": "/payments/subscriptions",
                 "icon": "subscriptions",
                 "label": "Subscriptions"
             },

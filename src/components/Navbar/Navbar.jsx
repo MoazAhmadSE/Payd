@@ -1,70 +1,49 @@
 import "./Navbar.css";
-import * as Icons from "../../assets/icons/Navbar/index";
 import NavbarLink from "./NavbarLink";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { SVGIcons } from "../../assets/icons/SVGIcons";
+import { useNavbar } from "../../hook/useNavbar";
 
 export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
-  const { t } = useTranslation();
-  const [dropDown, setDropDown] = useState({
-    Payments: true,
-    Commerce: false,
-  });
-  const [selectedKey, setSelectedKey] = useState(null);
-
-  const navbarLinks = t("navbarLinks", { returnObjects: true });
-
-  const toggleCategory = (category) => {
-    setDropDown((prev) => ({
-      ...prev,
-      [category]: !prev[category],
-    }));
-  };
-
-  const selected = (key) => {
-    setSelectedKey(key);
-  };
+  const { t, dropDown, navbarLinks, selectedKey, toggleCategory } = useNavbar();
 
   return (
-    <div className="navbar">
-      <div className="appNameContainer">
-        <Link to="/" className="montserrat-appname">
+    <div className="navbar-container">
+      <div className="app-name-container">
+        <Link to="/" className="appname">
           {t("appName")}
         </Link>
+        <SVGIcons.closeButton
+          className="navbar-close-btn"
+          onClick={() => setShowNavbar(false)}
+        />
       </div>
-      <div className="navbar-close-btn" onClick={() => setShowNavbar(false)}>
-        ✕
-      </div>
-      <div className="TopbarComponents">
-        <hr className="line1" />
+      <div className="search-toggle-language-container">
+        <hr className="ser-togg-lang-line" />
         {Search}
-        <hr className="line1" />
-        <div className="Inner">
+        <hr className="ser-togg-lang-line" />
+        <div className="language-toggle-container">
           {Language}
           {Toggle}
         </div>
-        <hr className="line1" />
+        <hr className="ser-togg-lang-line" />
       </div>
 
-      <div className="linksContainer">
+      <div className="main-links-container">
         {Object.entries(navbarLinks).map(([category, links], index, arr) => {
           const isLastCategory = index === arr.length - 1;
           const hasCategoryTitle = category.trim() !== "";
-
           return (
-            <>
+            <div key={index}>
               <div key={category || `category-${index}`}>
                 {hasCategoryTitle && (
                   <div
-                    className="navbar-catagory"
-                    // style={{ marginTop: "30px" }}
+                    className="link-catagory"
                     onClick={() => toggleCategory(category)}
                   >
-                    <h2 className="navbar-catagory-name">{category}</h2>
+                    <h2 className="link-catagory-name">{category}</h2>
                     <SVGIcons.dropDown
-                      className={`navbarSvgdropdown ${
+                      className={`navbar-dropdown-svg ${
                         dropDown[category] ? "" : "rotate"
                       }`}
                     />
@@ -72,11 +51,11 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
                 )}
 
                 <div
-                  className={`navbar-links-container slide ${
+                  className={`slide ${
                     dropDown[category] || !hasCategoryTitle ? "open" : "closed"
                   }`}
                 >
-                  <div className="links_Container">
+                  <div className="links-container">
                     {Object.entries(links).map(([key, item]) => (
                       <NavbarLink
                         key={key}
@@ -85,14 +64,13 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
                         label={item.label}
                         setShowNavbar={setShowNavbar}
                         isSelected={selectedKey === key}
-                        onClick={() => selected(key)}
                       />
                     ))}
                   </div>
                 </div>
               </div>
               {!isLastCategory && hasCategoryTitle && <hr className="line" />}
-            </>
+            </div>
           );
         })}
       </div>

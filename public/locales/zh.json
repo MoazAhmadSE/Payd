@@ -23,7 +23,7 @@
                 "label": "余额"
             },
             "subscriptions": {
-                "to": "/payments/subscription",
+                "to": "/payments/subscriptions",
                 "icon": "subscriptions",
                 "label": "订阅"
             },
@@ -55,7 +55,7 @@
                 "label": "余额"
             },
             "subscriptions": {
-                "to": "/payments/subscription",
+                "to": "/payments/subscriptions",
                 "icon": "subscriptions",
                 "label": "订阅"
             },
