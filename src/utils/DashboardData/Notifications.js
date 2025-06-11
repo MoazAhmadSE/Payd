@@ -4,8 +4,8 @@ export const Notification = {
     "notif_000": {
       "title": "Alert Notification",
       "message": "Notification message number 1: Task assigned to you was updated.",
-      "timeStamp": "2025-06-04T00:02:00",
-      "isOpen": true
+      "timeStamp": "2025-06-11T00:02:00",
+      "isOpen": false
     },
     "notif_001": {
       "title": "Update Notification",
