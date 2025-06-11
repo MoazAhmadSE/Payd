@@ -40,10 +40,13 @@ body {
 }
 
 .upper {
-  height: 70px;
+  height: 94px;
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  padding-block: 15px;
+  padding-inline: 35px;
+  background-color: wheat;
 }
 
 .lower {
@@ -169,9 +172,5 @@ body {
 @media (min-width: 2001px) {
   .left {
     padding: 2%;
-  }
-
-  .upper {
-    height: 100px;
   }
 }

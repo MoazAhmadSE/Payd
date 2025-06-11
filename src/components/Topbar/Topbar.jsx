@@ -1,45 +1,30 @@
+import "./Topbar.css";
 import Search from "./Search/Search";
 import Toggle from "./Toggle/Toggle";
 import Languages from "./Languages/Language";
 import Notification from "./Notification/Notification";
 import UserInfo from "./UserInfo/UserInfo";
-import "./Topbar.css";
 import SidebarLayout from "../Navbar/Slideout/SidebarLayout";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Topbar = ({ userData }) => {
-  const [isDesktop, setIsDesktop] = useState();
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    const updateIsDesktop = (e) => setIsDesktop(e.matches);
-
-    updateIsDesktop(mediaQuery);
-    mediaQuery.addEventListener("change", updateIsDesktop);
-    return () => mediaQuery.removeEventListener("change", updateIsDesktop);
-  }, []);
-
+  const { t } = useTranslation();
   return (
-    <div className="topbar">
+    <div className="topbar-container">
       <SidebarLayout
         Search={<Search />}
         Toggle={<Toggle />}
         Language={<Languages />}
       />
-      {!isDesktop && (
-        <Link to={"/"} className="AppName">
-          Payd
-        </Link>
-      )}
 
-      {isDesktop && (
-        <>
-          <Search />
-          <Toggle />
-          <Languages />
-        </>
-      )}
+      <Link to={"/"} className="app-name">
+        {t("appName")}
+      </Link>
+
+      <Search />
+      <Toggle />
+      <Languages />
 
       <Notification />
       <UserInfo userData={userData} />
