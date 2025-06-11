@@ -24,16 +24,18 @@ export default function UserInfo({ userData }) {
           {!showDropdown && (
             <>
               <img src={userImage} className="userImage" alt="User" />
-              <div className="userNameandId">
-                <div className="userName">{userData?.name}</div>
-                <div className="UserId">ID: {userData?.id}</div>
+              <div className="username-id-container">
+                <div className="userNameandId">
+                  <div className="userName">{userData?.name}</div>
+                  <div className="UserId">ID: {userData?.id}</div>
+                </div>
+                <Icons.Dropdown
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setShowDropdown(!showDropdown);
+                  }}
+                />
               </div>
-              <Icons.Dropdown
-                style={{ cursor: "pointer" }}
-                onClick={() => {
-                  setShowDropdown(!showDropdown);
-                }}
-              />
             </>
           )}
           {showDropdown && (

@@ -190,7 +190,7 @@ export const SVGIcons = {
     </svg>
   ),
 
-  empty: ({ width = "24", height = "24", fill = "none" }) => (
+  empty: ({ width = "150", height = "150", fill = "black" }) => (
     <svg
       width={width}
       height={height}

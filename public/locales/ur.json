@@ -1,106 +1,106 @@
 {
-    "appName": "Pyad",
-    "search-placeholder": "Search",
-    "toggle-text": "Live",
+    "appName": "پیاد",
+    "search-placeholder": "تلاش کریں",
+    "toggle-text": "لائیو",
     "navbarLinks": {
-        "Payments": {
+        "ادائیگیاں": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
-                "label": "Transactions"
+                "label": "ٹرانزیکشنز"
             },
             "customers": {
                 "to": "/payments/customers",
                 "icon": "customers",
-                "label": "Customers"
+                "label": "گاہک"
             },
             "payouts": {
                 "to": "/payments/payouts",
                 "icon": "payouts",
-                "label": "Payouts"
+                "label": "ادائیگیاں"
             },
             "balances": {
                 "to": "/payments/balances",
                 "icon": "balances",
-                "label": "Balances"
+                "label": "بیلنس"
             },
             "subscriptions": {
                 "to": "/payments/subscriptions",
                 "icon": "subscriptions",
-                "label": "Subscriptions"
+                "label": "سبسکرپشنز"
             },
             "paymentPlans": {
                 "to": "/payments/paymentplans",
                 "icon": "paymentPlans",
-                "label": "Payment Plans"
+                "label": "ادائیگی کے منصوبے"
             }
         },
-        "Commerce": {
+        "تجارت": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
-                "label": "Transactions"
+                "label": "ٹرانزیکشنز"
             },
             "customers": {
                 "to": "/payments/customers",
                 "icon": "customers",
-                "label": "Customers"
+                "label": "گاہک"
             },
             "payouts": {
                 "to": "/payments/payouts",
                 "icon": "payouts",
-                "label": "Payouts"
+                "label": "ادائیگیاں"
             },
             "balances": {
                 "to": "/payments/balances",
                 "icon": "balances",
-                "label": "Balances"
+                "label": "بیلنس"
             },
             "subscriptions": {
                 "to": "/payments/subscriptions",
                 "icon": "subscriptions",
-                "label": "Subscriptions"
+                "label": "سبسکرپشنز"
             },
             "paymentPlans": {
                 "to": "/payments/paymentplans",
                 "icon": "paymentPlans",
-                "label": "Payment Plans"
+                "label": "ادائیگی کے منصوبے"
             }
         },
         "": {
             "referrals": {
                 "to": "/referrals",
                 "icon": "referrals",
-                "label": "Referrals"
+                "label": "ریفرلز"
             },
             "auditLogs": {
                 "to": "/auditlogs",
                 "icon": "auditlogs",
-                "label": "Audit Logs"
+                "label": "آڈٹ لاگز"
             },
             "settings": {
                 "to": "/settings",
                 "icon": "settings",
-                "label": "Settings"
+                "label": "سیٹنگز"
             }
         }
     },
     "languages": {
-        "en": "English",
-        "es": "Spanish",
-        "hi": "Hindi",
-        "zh": "Chinese",
-        "ar": "Arabic",
-        "ur": "Urdu"
+        "en": "انگریزی",
+        "es": "ہسپانوی",
+        "hi": "ہندی",
+        "zh": "چینی",
+        "ar": "عربی",
+        "ur": "اردو"
     },
-    "greeting": "`Hi ${name}`",
-    "totalEarning": "`You earned NGN ${total} this month.`",
+    "greeting": "`سلام ${name}`",
+    "totalEarning": "`آپ نے اس مہینے NGN ${total} کمائے۔`",
     "timeLines": {
-        "today": "Today",
-        "thisWeek": "This Week",
-        "last2Weeks": "Last 2 Weeks",
-        "thisMonth": "This Month",
-        "thisYear": "This Year",
-        "lifetime": "Lifetime"
+        "today": "آج",
+        "thisWeek": "اس ہفتے",
+        "last2Weeks": "گزشتہ 2 ہفتے",
+        "thisMonth": "اس مہینے",
+        "thisYear": "اس سال",
+        "lifetime": "مکمل وقت"
     }
 }

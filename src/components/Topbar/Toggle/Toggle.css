@@ -5,7 +5,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 11px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .toggle-btn {

@@ -1,6 +1,4 @@
 import "./Notification.css";
-import * as Icons from "../../../assets/icons/Topbar/index";
-import * as Icon from "../../../assets/icons/Card/index";
 import { SVGIcons } from "../../../assets/icons/SVGIcons";
 import NotificationCard from "./NotificationCard/NotificationCard";
 import { useNotifications } from "../../../hook/useNotifications";
@@ -25,8 +23,6 @@ export default function Notification() {
         <SVGIcons.bell />
       </div>
       {unreadNotifications && <div className="notification"></div>}
-
-      {/* AnimatePresence enables mount/unmount animations */}
       <AnimatePresence>
         {showNotifications && (
           <motion.div
@@ -49,7 +45,7 @@ export default function Notification() {
               </>
             ) : (
               <>
-                <Icon.Empty style={{ width: "50%" }} />
+                <SVGIcons.empty />
                 <p className="empty">No Notification to show.</p>
               </>
             )}

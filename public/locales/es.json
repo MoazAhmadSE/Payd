@@ -90,7 +90,8 @@
         "es": "Español",
         "hi": "Hindi",
         "zh": "Chino",
-        "ar": "Árabe"
+        "ar": "Árabe",
+        "ur": "Urdú"
     },
     "greeting": "Hola {{name}}",
     "totalEarning": "Has ganado NGN {{total}} este mes.",

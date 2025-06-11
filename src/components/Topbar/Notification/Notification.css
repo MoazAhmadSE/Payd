@@ -32,8 +32,9 @@
     position: absolute;
     z-index: 10;
     top: 65px;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%; */
+    /* margin-right: 50%; */
+    /* transform: translateX(-50%); */
     width: min(75vw, 300px);
     display: flex;
     flex-direction: column;
