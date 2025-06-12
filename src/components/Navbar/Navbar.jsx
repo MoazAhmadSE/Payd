@@ -20,7 +20,9 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
       </div>
       <div className="search-toggle-language-container">
         <hr className="ser-togg-lang-line" />
-        {Search}
+        <div className="search">
+          {Search}
+        </div>
         <hr className="ser-togg-lang-line" />
         <div className="language-toggle-container">
           {Language}

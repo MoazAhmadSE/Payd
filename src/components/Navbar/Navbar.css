@@ -7,6 +7,8 @@
 .navbar-container {
     padding-left: 12px;
     margin-bottom: 50px;
+    /* width: 100%; */
+    width: 214px;
 }
 
 h1,
@@ -131,12 +133,28 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-block: 0px;
+    padding: 0px;
+    /* height: 30px; */
+    /* width: 90%; */
+}
+.search{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search-toggle-language-container .language-toggle-container {
+.language-toggle-container {
+    width: 100%;
+    height: 68px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
 }
 
 @media (min-width: 768px) {

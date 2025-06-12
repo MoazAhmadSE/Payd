@@ -1,9 +1,9 @@
 {
-    "appName": "Pyad",
+    "appName": "派亚德",
     "search-placeholder": "搜索",
     "toggle-text": "直播",
     "navbarLinks": {
-        "Payments": {
+        "支付": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -35,7 +35,7 @@
                 "label": "付款计划"
             }
         },
-        "Commerce": {
+        "商业": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -93,7 +93,7 @@
         "ar": "阿拉伯语",
         "ur": "乌尔都语"
     },
-    "greeting": "嗨 {{name}}",
+    "greeting": "嗨 {{name}}!",
     "totalEarning": "您本月赚取了 NGN {{total}}。",
     "timeLines": {
         "today": "今天",

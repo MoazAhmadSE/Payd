@@ -93,8 +93,8 @@
         "ar": "عربی",
         "ur": "اردو"
     },
-    "greeting": "`سلام ${name}`",
-    "totalEarning": "`آپ نے اس مہینے NGN ${total} کمائے۔`",
+    "greeting": "سلام {{name}}!",
+    "totalEarning": "کمائے۔ NGN {{total}} آپ نے اس مہینے",
     "timeLines": {
         "today": "آج",
         "thisWeek": "اس ہفتے",

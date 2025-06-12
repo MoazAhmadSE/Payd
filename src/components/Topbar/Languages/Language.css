@@ -28,6 +28,7 @@
     padding: 0 16px;
     cursor: pointer;
     transition: box-shadow 0.2s ease;
+    gap: 10px;
 }
 
 .languageSelector:hover {
@@ -45,7 +46,7 @@
 .otherLanguagesContainer {
     position: absolute;
     top: 100%;
-    width: 90%;
+    width: 160px;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;

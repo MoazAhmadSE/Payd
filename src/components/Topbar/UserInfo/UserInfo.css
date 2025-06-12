@@ -1,4 +1,17 @@
+.logout-button {
+    display: none;
+}
+
+
 @media (max-width: 1024px) {
+    .desktop-userinfo-container {
+        display: none;
+    }
+
+    .mobile-userinfo-container {
+        display: block;
+    }
+
     .userContainer {
         flex: 0 0 10%;
         position: relative;
@@ -60,36 +73,30 @@
 
 
 @media (min-width: 1024px) {
-    .dropdownContent {
-        display: none;
-    }
-
     .userContainer {
-        width: 235px;
-        height: 56px;
         border-radius: 10px;
         border: 1px solid rgba(224, 224, 224, 1);
         display: flex;
         align-items: center;
+        width: 235px;
+        height: 56px;
     }
 
-    .logoutcontainer {
-        width: 100%;
+    .desktop-userinfo-container {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .mobile-userinfo-container {
+        display: none;
+    }
+
+    .userinfo-content-container {
+        display: flex;
         align-items: center;
     }
 
-    .logoutBtn {
-        width: 70%;
-    }
-
-    .cross {
-        width: 20%;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-    }
 
     .userImage {
         width: 56px;
@@ -131,5 +138,38 @@
     .UserId {
         font-weight: 500;
         color: rgba(189, 189, 189, 1);
+    }
+
+    .logout-button {
+        display: block;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        z-index: 20;
+        position: absolute;
+        width: 90%;
+        padding: 20px;
+        background-color: rgba(252, 252, 252, 1);
+        top: 110%;
+        border: 1px solid rgba(224, 224, 224, 1);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logout-button.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+
+    .dropdown-svg {
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .dropdown-svg.rotate {
+        transform: rotate(180deg);
     }
 }

@@ -1,15 +1,12 @@
 .earnings {
+  width: 495px;
+  height: 29px;
+
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  /* font-size: 1rem; */
-  font-size: clamp(0.8rem, 1.5vmax, 2rem);
+  font-size: 24px;
   color: rgba(31, 31, 31, 1);
   margin-block: 1rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-@media (min-width: 1800px) {
-  .earnings{
-    margin-block: 1.5rem;
-  }
 }

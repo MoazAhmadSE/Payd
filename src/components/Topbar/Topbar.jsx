@@ -22,11 +22,11 @@ export const Topbar = ({ userData }) => {
         {t("appName")}
       </Link>
 
-      {/* <div className="ser-tog-lan-container"> */}
+      <div className="ser-tog-lan-container">
         <Search />
         <Toggle />
         <Languages />
-      {/* </div> */}
+      </div>
 
       <Notification />
       <UserInfo userData={userData} />

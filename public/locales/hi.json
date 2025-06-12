@@ -1,9 +1,9 @@
 {
-    "appName": "Pyad",
+    "appName": "पयाड",
     "search-placeholder": "खोजें",
     "toggle-text": "लाइव",
     "navbarLinks": {
-        "Payments": {
+        "भुगतान": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -35,7 +35,7 @@
                 "label": "भुगतान योजनाएँ"
             }
         },
-        "Commerce": {
+        "वाणिज्य": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -93,7 +93,7 @@
         "ar": "अरबी",
         "ur": "उर्दू"
     },
-    "greeting": "नमस्ते {{name}}",
+    "greeting": "नमस्ते {{name}}!",
     "totalEarning": "इस महीने आपने NGN {{total}} कमाए हैं।",
     "timeLines": {
         "today": "आज",

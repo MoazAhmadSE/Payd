@@ -1,32 +1,23 @@
 .greeting {
     display: flex;
+    justify-content: space-between;
+    width: 141px;
+    height: 22px;
 
 }
 
 .greetingImage {
-    margin-right: 0.7rem;
+    width: 22px;
+    height: 100%;
 }
 
 .name {
     color: rgba(255, 161, 78, 1);
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    /* font-size: 1.2rem; */
-    font-size: clamp(1rem, 1.5vw, 5rem);
-}
-
-@media (min-width: 1800px) {
-    .greeting {
-        margin-block: 1.5rem;
-    }
-
-    img {
-        width: clamp(40px, 2.5vw, 100px);
-    }
-
-    .name {
-        font-size: clamp(2rem, 2vw, 5rem);
-    }
+    font-size: 18px;
+    width: 109px;
+    height: 100%;
 }
 
 .wave {
@@ -45,7 +36,6 @@
         transform: rotate(14.0deg)
     }
 
-    /* The following five values can be played with to make the waving more or less extreme */
     20% {
         transform: rotate(-8.0deg)
     }
@@ -63,10 +53,9 @@
     }
 
     60% {
-        transform: rotate(0.0deg)
+        transform: rotate(-2.0deg)
     }
 
-    /* Reset for the last half to pause */
     100% {
         transform: rotate(0.0deg)
     }

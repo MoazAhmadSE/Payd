@@ -20,6 +20,7 @@ body {
 .left {
   display: none;
   height: 100%;
+  min-width: 230px;
   overflow-y: auto;
   background-color: rgba(252, 252, 252, 1);
   padding-top: 26px;
@@ -31,7 +32,7 @@ body {
 }
 
 .right {
-  flex: 1;
+  width: 100%;
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -41,12 +42,11 @@ body {
 
 .upper {
   height: 94px;
+  width: 100%;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
   padding-block: 15px;
-  padding-inline: 35px;
-  /* background-color: wheat; */
+  padding-inline: 25px;
 }
 
 .lower {
@@ -79,9 +79,9 @@ body {
 
 
 @media (max-width: 768px) {
-  .main {
+  /* .main {
     flex: 1;
-  }
+  } */
 
   .slider {
     display: block;
@@ -129,13 +129,13 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .main {
+  /* .main {
     flex: 4;
-  }
+  } */
 
   .chat {
     display: block;
-    flex: 2;
+    /* flex: 2; */
   }
 
   .chatButton,
@@ -152,25 +152,25 @@ body {
 
   .left {
     display: block;
-    flex: 1.5;
+    /* flex: 1.5; */
   }
 
   .right {
-    flex: 5;
+    /* flex: 5; */
   }
 
-  .main {
+  /* .main {
     flex: 4;
   }
 
   .chat {
     flex: 2;
-  }
+  } */
 
 }
 
 @media (min-width: 2001px) {
-  .left {
+  /* .left {
     padding: 2%;
-  }
+  } */
 }

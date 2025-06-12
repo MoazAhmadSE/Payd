@@ -93,8 +93,8 @@
         "ar": "Arabic",
         "ur": "Urdu"
     },
-    "greeting": "`Hi ${name}`",
-    "totalEarning": "`You earned NGN ${total} this month.`",
+    "greeting": "Hi {{name}}!",
+    "totalEarning": "You earned NGN {{total}} this month.",
     "timeLines": {
         "today": "Today",
         "thisWeek": "This Week",

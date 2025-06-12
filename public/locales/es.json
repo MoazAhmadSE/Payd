@@ -3,7 +3,7 @@
     "search-placeholder": "Buscar",
     "toggle-text": "En vivo",
     "navbarLinks": {
-        "Payments": {
+        "Pagos": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -35,7 +35,7 @@
                 "label": "Planes de pago"
             }
         },
-        "Commerce": {
+        "Comercio": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -93,7 +93,7 @@
         "ar": "Árabe",
         "ur": "Urdú"
     },
-    "greeting": "Hola {{name}}",
+    "greeting": "Hola {{name}}!",
     "totalEarning": "Has ganado NGN {{total}} este mes.",
     "timeLines": {
         "today": "Hoy",

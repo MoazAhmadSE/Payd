@@ -1,9 +1,9 @@
 {
-    "appName": "Pyad",
+    "appName": "بياد",
     "search-placeholder": "بحث",
     "toggle-text": "مباشر",
     "navbarLinks": {
-        "Payments": {
+        "المدفوعات": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -35,7 +35,7 @@
                 "label": "خطط الدفع"
             }
         },
-        "Commerce": {
+        "التجارة": {
             "transactions": {
                 "to": "/payments/transactions",
                 "icon": "transactions",
@@ -93,7 +93,7 @@
         "ar": "العربية",
         "ur": "الأردية"
     },
-    "greeting": "مرحباً {{name}}",
+    "greeting": "مرحباً {{name}}!",
     "totalEarning": "لقد كسبت NGN {{total}} هذا الشهر.",
     "timeLines": {
         "today": "اليوم",

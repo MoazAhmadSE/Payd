@@ -1,5 +1,5 @@
 .searchContainer {
-    width: clamp(100px, 35%, 440px);
+    width: 440px;
     height: 80%;
     position: relative;
     display: flex;
