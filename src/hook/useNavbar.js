@@ -40,11 +40,7 @@ export const useNavbar = () => {
             initialDropdown[key] = index === 0;
         });
         setDropDown(initialDropdown);
-    }, [navbarLinks]);
-
-    useEffect(() => {
-        console.log("DropDown updated:", dropDown);
-    }, [dropDown]);
+    }, [navbarLinks]);  
 
     return { t, dropDown, navbarLinks, selectedKey, setSelectedKey, toggleCategory };
 }

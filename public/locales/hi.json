@@ -102,5 +102,24 @@
         "thisMonth": "इस महीने",
         "thisYear": "इस वर्ष",
         "lifetime": "जीवन भर"
+    },
+    "noNotification": "प्रदर्शित करने के लिए कोई सूचना नहीं है।",
+    "noMessages": "प्रदर्शित करने के लिए कोई संदेश नहीं है।",
+    "chatBox": {
+        "stats": "आँकड़े",
+        "messages": "संदेश"
+    },
+    "sucess": {
+        "successRate": "सफलता दर",
+        "unsuccessful": "असफल",
+        "successful": "सफल"
+    },
+    "issues": {
+        "paymentIssues": "भुगतान से संबंधित समस्याएँ",
+        "totalErrors": "कुल त्रुटियों की संख्या:",
+        "customerErrors": "ग्राहक त्रुटियाँ",
+        "fraudBlocks": "धोखाधड़ी अवरोध",
+        "bankErrors": "बैंक त्रुटियाँ",
+        "systemErrors": "सिस्टम त्रुटियाँ"
     }
 }

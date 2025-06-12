@@ -20,15 +20,10 @@ body {
 .left {
   display: none;
   height: 100%;
-  min-width: 230px;
-  overflow-y: auto;
+  min-width: 250px;
   background-color: rgba(252, 252, 252, 1);
   padding-top: 26px;
   padding-left: 20px;
-}
-
-.left::-webkit-scrollbar {
-  display: none;
 }
 
 .right {
@@ -53,6 +48,7 @@ body {
   display: flex;
   overflow: hidden;
   flex-direction: row;
+  /* position: relative; */
 }
 
 .main {
@@ -67,8 +63,12 @@ body {
 }
 
 .chat {
-  display: block;
-  flex: 1;
+  /* display: block; */
+  /* flex: 1; */
+  /* position: relative; */
+  display: none;
+  /* visibility: hidden; */
+  /* transform: translateX(100%); */
 }
 
 .chatButton,

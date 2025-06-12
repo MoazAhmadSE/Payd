@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Notification() {
   const {
+    t,
     dropdownRef,
     showNotifications,
     setShowNotifications,
@@ -46,7 +47,7 @@ export default function Notification() {
             ) : (
               <>
                 <SVGIcons.empty />
-                <p className="empty">No Notification to show.</p>
+                <p className="empty">{t("noNotification")}</p>
               </>
             )}
           </motion.div>

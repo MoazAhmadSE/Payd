@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import moment from "moment";
 import { DashboardApi, updateNotificationData } from "../api/DashboardApi";
+import { useTranslation } from "react-i18next";
 
 export const useNotifications = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [notification, setNotification] = useState({});
   const dropdownRef = useRef();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchNotification = async () => {
@@ -61,6 +63,7 @@ export const useNotifications = () => {
   };
 
   return {
+    t,
     dropdownRef,
     showNotifications,
     setShowNotifications,

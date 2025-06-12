@@ -4,9 +4,15 @@ button {
 }
 
 .chatbarContainer {
-    display: flex;
+    /* position: absolute; */
+    display: block;
+    right: 0;
+    bottom: 0;
     height: 100%;
-    width: 100%;
+    /* visibility: visible; */
+    /* transform: translateX(-100%); */
+    /* width: 100%; */
+    display: flex;
     border-top-left-radius: 75px;
     background-color: rgba(249, 249, 249, 1);
     flex-direction: column;

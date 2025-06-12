@@ -102,5 +102,24 @@
         "thisMonth": "اس مہینے",
         "thisYear": "اس سال",
         "lifetime": "مکمل وقت"
+    },
+    "noNotification": "دکھانے کے لیے کوئی اطلاع نہیں۔",
+    "noMessages": "دکھانے کے لیے کوئی پیغامات نہیں۔",
+    "chatBox": {
+        "stats": "اعداد و شمار",
+        "messages": "پیغامات"
+    },
+    "sucess": {
+        "successRate": "کامیابی کی شرح",
+        "unsuccessful": "ناکام",
+        "successful": "کامیاب"
+    },
+    "issues": {
+        "paymentIssues": "ادائیگی کے مسائل",
+        "totalErrors": "کل غلطیوں کی تعداد:",
+        "customerErrors": "صارف کی غلطیاں",
+        "fraudBlocks": "فراڈ بلاکس",
+        "bankErrors": "بینک کی غلطیاں",
+        "systemErrors": "سسٹم کی غلطیاں"
     }
 }

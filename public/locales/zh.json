@@ -102,5 +102,24 @@
         "thisMonth": "本月",
         "thisYear": "今年",
         "lifetime": "累积"
+    },
+    "noNotification": "没有通知可显示。",
+    "noMessages": "没有消息可显示。",
+    "chatBox": {
+        "stats": "统计",
+        "messages": "消息"
+    },
+    "sucess": {
+        "successRate": "成功率",
+        "unsuccessful": "不成功",
+        "successful": "成功"
+    },
+    "issues": {
+        "paymentIssues": "支付问题",
+        "totalErrors": "错误总数：",
+        "customerErrors": "客户错误",
+        "fraudBlocks": "欺诈拦截",
+        "bankErrors": "银行错误",
+        "systemErrors": "系统错误"
     }
 }

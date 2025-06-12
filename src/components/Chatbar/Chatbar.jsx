@@ -5,7 +5,10 @@ import Card from "./Card/Card";
 import { useChatbar } from "../../hook/useChatBar";
 
 export const Chatbar = () => {
-  const { chat, active, setTabActive, sortedMessages, handleClick } = useChatbar();
+  const { t, chat, active, setTabActive, sortedMessages, handleClick } =
+    useChatbar();
+
+  const tabNames = Object.keys(active); // dynamically get tab keys like ["Stats", "Messages"]
 
   const renderCards = (items) => {
     return items.length !== 0 ? (
@@ -23,7 +26,7 @@ export const Chatbar = () => {
     ) : (
       <>
         <Icons.Empty style={{ width: "50%" }} />
-        <p className="empty">No messages to show.</p>
+        <p className="empty">{t("noMessages")}</p>
       </>
     );
   };
@@ -31,22 +34,21 @@ export const Chatbar = () => {
   return (
     <div className="chatbarContainer">
       <div className="chatTabs">
-        <button
-          className={`stats ${active.statsStatus ? "activetab" : "tab"}`}
-          onClick={() => setTabActive("statsStatus")}
-        >
-          Stats
-        </button>
-        <button
-          className={`messages ${active.messageStatus ? "activetab" : "tab"}`}
-          onClick={() => setTabActive("messageStatus")}
-        >
-          Messages
-        </button>
+        {tabNames.map((tabName) => (
+          <button
+            key={tabName}
+            className={`${tabName.toLowerCase()} ${
+              active[tabName] ? "activetab" : "tab"
+            }`}
+            onClick={() => setTabActive(tabName)}
+          >
+            {tabName}
+          </button>
+        ))}
       </div>
 
       <div className="messageBox">
-        {active.messageStatus
+        {active["Messages"]
           ? renderCards(sortedMessages)
           : renderCards(Object.entries(chat.stats))}
       </div>

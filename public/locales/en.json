@@ -102,5 +102,24 @@
         "thisMonth": "This Month",
         "thisYear": "This Year",
         "lifetime": "Lifetime"
+    },
+    "noNotification": "No Notification to show.",
+    "noMessages": "No messages to show.",
+    "chatBox": {
+        "statsStatus": "Stats",
+        "messageStatus": "Messages"
+    },
+    "sucess": {
+        "successRate": "Success rate",
+        "unsuccessful": "Unsuccessful",
+        "successful": "Successful"
+    },
+    "issues": {
+        "paymentIssues": "Payment Issues",
+        "totalErrors": "Total number of errors:",
+        "customerErrors": "Customer errors",
+        "fraudBlocks": "Fraud blocks",
+        "bankErrors": "Bank errors",
+        "systemErrors": "System errors"
     }
 }

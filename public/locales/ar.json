@@ -102,5 +102,24 @@
         "thisMonth": "هذا الشهر",
         "thisYear": "هذا العام",
         "lifetime": "مدى الحياة"
+    },
+    "noNotification": "لا توجد إشعارات للعرض.",
+    "noMessages": "لا توجد رسائل للعرض.",
+    "chatBox": {
+        "stats": "الإحصائيات",
+        "messages": "الرسائل"
+    },
+    "sucess": {
+        "successRate": "معدل النجاح",
+        "unsuccessful": "غير ناجح",
+        "successful": "ناجح"
+    },
+    "issues": {
+        "paymentIssues": "مشاكل الدفع",
+        "totalErrors": "إجمالي عدد الأخطاء:",
+        "customerErrors": "أخطاء العملاء",
+        "fraudBlocks": "حظر الاحتيال",
+        "bankErrors": "أخطاء البنك",
+        "systemErrors": "أخطاء النظام"
     }
 }
