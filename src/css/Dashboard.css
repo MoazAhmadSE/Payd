@@ -48,12 +48,13 @@ body {
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  /* position: relative; */
+  /* background-color: aqua; */
 }
 
 .main {
-  flex: 3;
-  padding-inline: 1rem;
+  width: 100%;
+  /* flex: 1; */
+  padding-inline: 36px;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -63,12 +64,8 @@ body {
 }
 
 .chat {
-  /* display: block; */
-  /* flex: 1; */
-  /* position: relative; */
-  display: none;
-  /* visibility: hidden; */
-  /* transform: translateX(100%); */
+  /* display: none; */
+  width: 35%;
 }
 
 .chatButton,
