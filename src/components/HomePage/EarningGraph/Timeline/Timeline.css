@@ -1,49 +1,43 @@
 .timelineContainer {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 156px;
+    height: 36px;
+    border-radius: 10px;
+    color: Gray 3;
     position: relative;
-}
-
-.timeline {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    gap: 1rem;
+    gap: 10px;
 }
 
 .duration {
-    flex: 9;
+    height: 20px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 16px;
     color: rgba(130, 130, 130, 1);
 }
 
 .dropdownIcon {
-    flex: 1;
+    width: 36px;
+    height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.7rem;
-    margin: auto;
     border-radius: 10px;
     background-color: rgba(250, 242, 255, 1);
-    transition: transform 0.3s ease;
 }
 
-.dropdownIcon.rotate {
+.rotate {
+    transition: transform 0.3s ease-in-out;
     transform: rotate(180deg);
 }
 
 .dropdownMenu {
+    position: absolute;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    width: 100%;
+    width: 170px;
     border-radius: 10px;
-    position: absolute;
     top: 100%;
     margin-top: 6px;
     z-index: 100;
@@ -52,16 +46,12 @@
     animation: fadeIn 0.2s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.range:hover {
+    width: 90%;
+    background-color: rgba(221, 231, 241, 0.5);
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, padding 0.2s ease;
 }
 
 .innerDropdownMenu {
@@ -77,12 +67,6 @@
     transition: background-color 0.2s ease;
 }
 
-.range:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
-    width: 90%;
-}
-
 .braker {
     width: 90%;
     border: 0;
@@ -91,20 +75,21 @@
     background-color: rgba(187, 107, 217, 1);
 }
 
+.selected {
+    width: 90%;
+    background-color: rgba(221, 231, 241, 0.5);
+    border-radius: 6px;
+    padding: 10px 20px;
+}
 
-@media (min-width: 2000px) {
-    .timelineContainer {
-        width: 9vw;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
     }
 
-    .duration {
-        font-size: 1.5rem;
-    }
-
-    .dropdownIcon svg{
-        scale: 2;
-    }
-    .dropdownMenu {
-        font-size: 1.5rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

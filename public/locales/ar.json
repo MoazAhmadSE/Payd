@@ -95,6 +95,7 @@
     },
     "greeting": "مرحباً {{name}}!",
     "totalEarning": "لقد كسبت NGN {{total}} هذا الشهر.",
+    "noDataMessage": "لم يتم العثور على بيانات خلال هذه الفترة الزمنية...",
     "timeLines": {
         "today": "اليوم",
         "thisWeek": "هذا الأسبوع",

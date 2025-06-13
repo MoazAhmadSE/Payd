@@ -27,7 +27,7 @@ export default function Notification({ setShowChatbar, showChatbar }) {
         <SVGIcons.bell />
       </div>
       {unreadNotifications && <div className="notification"></div>}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showNotifications && (
           <motion.div
             key="notification-dropdown"
@@ -55,7 +55,7 @@ export default function Notification({ setShowChatbar, showChatbar }) {
             )}
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 }

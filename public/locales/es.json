@@ -105,6 +105,7 @@
     },
     "noNotification": "No hay notificaciones para mostrar.",
     "noMessages": "No hay mensajes para mostrar.",
+    "noDataMessage": "No se encontraron datos entre esta línea de tiempo...",
     "chatBox": {
         "stats": "Estadísticas",
         "messages": "Mensajes"

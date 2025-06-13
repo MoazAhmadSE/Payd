@@ -95,6 +95,7 @@
     },
     "greeting": "嗨 {{name}}!",
     "totalEarning": "您本月赚取了 NGN {{total}}。",
+    "noDataMessage": "在此时间范围内未找到数据...",
     "timeLines": {
         "today": "今天",
         "thisWeek": "本周",

@@ -1,6 +1,6 @@
 export const getEarningsData = (range) => {
     const earnings = {
-        "Today": [
+        "today": [
             { timestamp: "2025-05-27T08:00:00Z", NGN: 25.50 },
             { timestamp: "2025-05-27T10:00:00Z", NGN: 40.00 },
             { timestamp: "2025-05-27T12:00:00Z", NGN: 55.75 },
@@ -8,7 +8,7 @@ export const getEarningsData = (range) => {
             { timestamp: "2025-05-27T17:00:00Z", NGN: 20.00 },
         ],
 
-        "This Week": [
+        "thisWeek": [
             { timestamp: "2025-05-25T00:00:00Z", NGN: 210.00 },
             { timestamp: "2025-05-22T00:00:00Z", NGN: 150.00 },
             { timestamp: "2025-05-21T00:00:00Z", NGN: 120.00 },
@@ -18,7 +18,7 @@ export const getEarningsData = (range) => {
             { timestamp: "2025-05-27T00:00:00Z", NGN: 170.00 },
         ],
 
-        "Last 2 Weeks": [
+        "last2Weeks": [
             { timestamp: "2025-05-14T00:00:00Z", NGN: 80.00 },
             { timestamp: "2025-05-15T00:00:00Z", NGN: 95.00 },
             { timestamp: "2025-05-16T00:00:00Z", NGN: 150.00 },
@@ -35,14 +35,14 @@ export const getEarningsData = (range) => {
             { timestamp: "2025-05-27T00:00:00Z", NGN: 180.00 }
         ],
 
-        "This Month": [
+        "thisMonth": [
             { timestamp: "2025-05-01T00:00:00Z", NGN: 450.00 },
             { timestamp: "2025-05-08T00:00:00Z", NGN: 620.00 },
             { timestamp: "2025-05-15T00:00:00Z", NGN: 710.00 },
             { timestamp: "2025-05-22T00:00:00Z", NGN: 830.00 }
         ],
 
-        // "This Year": [
+        // "thisYear": [
         //     { timestamp: "2025-01-01T00:00:00Z", NGN: 3200.00 },
         //     { timestamp: "2025-02-01T00:00:00Z", NGN: 4100.00 },
         //     { timestamp: "2025-03-01T00:00:00Z", NGN: 3800.00 },
@@ -57,7 +57,7 @@ export const getEarningsData = (range) => {
         //     { timestamp: "2025-12-01T00:00:00Z", NGN: 4500.00 }
         // ],
 
-        "Lifetime": [
+        "lifetime": [
             { timestamp: "2025-01-01T00:00:00Z", NGN: 8700.00 },
             { timestamp: "2024-01-01T00:00:00Z", NGN: 25100.00 },
             { timestamp: "2023-01-01T00:00:00Z", NGN: 20950.00 },

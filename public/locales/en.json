@@ -105,6 +105,7 @@
     },
     "noNotification": "No Notification to show.",
     "noMessages": "No messages to show.",
+    "noDataMessage": "No Data Found between this Timeline...",
     "chatBox": {
         "statsStatus": "Stats",
         "messageStatus": "Messages"

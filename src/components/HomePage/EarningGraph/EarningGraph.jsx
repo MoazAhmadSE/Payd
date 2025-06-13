@@ -11,45 +11,45 @@ import {
 } from "recharts";
 import Timeline from "./timeline/Timeline";
 import "./EarningGraph.css";
+import { useTranslation } from "react-i18next";
 
 export default function EarningGraph({ earningsData }) {
-  const [selectedRange, setSelectedRange] = useState("This Week");
-
-  const sortedEarnings = earningsData?.[selectedRange]?.data;
+  const { t } = useTranslation();
+  const [selectedRangeKey, setSelectedRangeKey] = useState("thisWeek");
 
   const formatMap = {
-    Today: "h a",
-    "This Week": "EEE",
-    "Last 2 Weeks": "d MMM",
-    "This Month": "MMM d",
-    "This Year": "MMM",
-    Lifetime: "yyyy",
+    today: "h a",
+    thisWeek: "EEE",
+    last2Weeks: "d MMM",
+    thisMonth: "MMM d",
+    thisYear: "MMM",
+    lifetime: "yyyy",
   };
-  const pattern = formatMap[selectedRange];
 
-  const chartData = (sortedEarnings || [])?.map((entry) => ({
+  const pattern = formatMap[selectedRangeKey];
+  const sortedEarnings = earningsData?.[selectedRangeKey]?.data || [];
+
+  const chartData = sortedEarnings.map((entry) => ({
     name: format(parseISO(entry.timestamp), pattern),
     NGN: entry.NGN,
   }));
 
   return (
-    <>
+    <div className="timeline-graph-container">
       <Timeline
-        selectedRange={selectedRange}
-        setSelectedRange={setSelectedRange}
+        selectedRangeKey={selectedRangeKey}
+        setSelectedRangeKey={setSelectedRangeKey}
       />
 
       <div className="GraphContiner">
-        {chartData.length == 0 ? (
-          <div className="timelineError">
-            No Data Found between this Timeline...
-          </div>
-        ) : (
-          <>
-            <ResponsiveContainer height={"100%"}>
+        <div className="graph">
+          {chartData.length === 0 ? (
+            <div className="timelineError">{t("noDataMessage")}</div>
+          ) : (
+            <ResponsiveContainer>
               <BarChart
                 data={chartData}
-                margin={{ top: 15, right: 20, left: 1, bottom: 1 }}
+                margin={{ top: 50, right: 50, left: 50, bottom: 50 }}
               >
                 <CartesianGrid
                   strokeDasharray="10 5"
@@ -73,9 +73,9 @@ export default function EarningGraph({ earningsData }) {
                 />
               </BarChart>
             </ResponsiveContainer>
-          </>
-        )}
+          )}
+        </div>
       </div>
-    </>
+    </div>
   );
 }

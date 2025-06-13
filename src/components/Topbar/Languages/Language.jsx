@@ -30,8 +30,7 @@ export default function Language() {
           <div key={key}>
             <div
               className={`language ${
-                dropDown.selectedLanguage === key                  ? "selected-language"
-                  : ""
+                dropDown.selectedLanguage === key ? "selected-language" : ""
               }`}
               onClick={() =>
                 setDropDown((prev) => ({

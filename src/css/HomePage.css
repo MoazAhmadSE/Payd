@@ -1,5 +1,5 @@
 .homeContainer {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-block: 1rem;
@@ -15,10 +15,14 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding-right: 50px;
 }
 
 .earning {
     width: 100%;
+    height: 392px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .bottomRow {

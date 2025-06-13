@@ -1,16 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as Icons from "../../../../assets/icons/Homepage/index";
 import "./Timeline.css";
+import { useTranslation } from "react-i18next";
 
-export default function Timeline({ selectedRange, setSelectedRange }) {
-  const ranges = [
-    "Today",
-    "This Week",
-    "Last 2 Weeks",
-    "This Month",
-    "This Year",
-    "Lifetime",
-  ];
+export default function Timeline({ selectedRangeKey, setSelectedRangeKey }) {
+  const { t } = useTranslation();
+  const ranges = useMemo(() => t("timeLines", { returnObjects: true }), [t]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -18,8 +13,8 @@ export default function Timeline({ selectedRange, setSelectedRange }) {
     setIsDropdownOpen((prev) => !prev);
   };
 
-  const handleRangeSelect = (range) => {
-    setSelectedRange(range);
+  const handleRangeSelect = (key) => {
+    setSelectedRangeKey(key);
     setIsDropdownOpen(false);
   };
 
@@ -29,28 +24,41 @@ export default function Timeline({ selectedRange, setSelectedRange }) {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") setIsDropdownOpen(false);
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   return (
     <div className="timelineContainer" ref={dropdownRef}>
-      <div className="timeline" onClick={toggleDropdown}>
-        <h3 className="duration">{selectedRange}</h3>
-        <div className={`dropdownIcon ${isDropdownOpen ? "rotate" : ""}`}>
-          <Icons.TimelineDropdown />
-        </div>
+      <h3 className="duration">{t(`timeLines.${selectedRangeKey}`)}</h3>
+      <div className="dropdownIcon" onClick={toggleDropdown}>
+        <Icons.TimelineDropdown
+          className={`${isDropdownOpen ? "rotate" : ""}`}
+        />
       </div>
 
       {isDropdownOpen && (
         <div className="dropdownMenu">
-          {ranges.map((range) => (
-            <div className="innerDropdownMenu" key={range}>
-              <div className="range" onClick={() => handleRangeSelect(range)}>
-                {range}
+          {Object.entries(ranges).map(([key, value], index, arr) => (
+            <div className="innerDropdownMenu" key={key}>
+              <div
+                className={`range ${
+                  selectedRangeKey === key ? "selected" : ""
+                }`}
+                onClick={() => handleRangeSelect(key)}
+              >
+                {value}
               </div>
-              <hr className="braker" />
+              {index !== arr.length - 1 && <hr className="braker" />}
             </div>
           ))}
         </div>

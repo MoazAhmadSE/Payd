@@ -8,12 +8,12 @@ export const fetchHomePageData = () => {
         HomePageData: {
             EarnedNGN: EarnedNGN,
             EarningsData: {
-                "Today": getEarningsData("Today"),
-                "This Week": getEarningsData("This Week"),
-                "Last 2 Weeks": getEarningsData("Last 2 Weeks"),
-                "This Month": getEarningsData("This Month"),
-                "This Year": getEarningsData("This Year"),
-                "Lifetime": getEarningsData("Lifetime"),
+                "today": getEarningsData("today"),
+                "thisWeek": getEarningsData("thisWeek"),
+                "last2Weeks": getEarningsData("last2Weeks"),
+                "thisMonth": getEarningsData("thisMonth"),
+                "thisYear": getEarningsData("thisYear"),
+                "lifetime": getEarningsData("lifetime"),
             },
             SucessRatio: SucessRatio,
             Errors: Errors,

@@ -95,6 +95,7 @@
     },
     "greeting": "नमस्ते {{name}}!",
     "totalEarning": "इस महीने आपने NGN {{total}} कमाए हैं।",
+    "noDataMessage": "इस समय सीमा के दौरान कोई डेटा नहीं मिला...",
     "timeLines": {
         "today": "आज",
         "thisWeek": "इस सप्ताह",

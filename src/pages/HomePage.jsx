@@ -10,16 +10,16 @@ import SucessRate from "../components/HomePage/SucessRate/SucessRate";
 export default function HomePage() {
   const [homeData, setHomeData] = useState();
 
+  async function fetchData() {
+    try {
+      const data = await fetchHomePageData();
+      setHomeData(data.HomePageData);
+      console.log("dsfsdfsdfsd", data.HomePageData);
+    } catch (error) {
+      console.error("Error fetching dashboard data:", error);
+    }
+  }
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchHomePageData();
-        setHomeData(data.HomePageData);
-      } catch (error) {
-        console.error("Error fetching dashboard data:", error);
-      }
-    };
-
     fetchData();
   }, []);
 
