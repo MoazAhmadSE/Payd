@@ -46,7 +46,7 @@ export default function EarningGraph({ earningsData }) {
           </div>
         ) : (
           <>
-            <ResponsiveContainer>
+            <ResponsiveContainer height={"100%"}>
               <BarChart
                 data={chartData}
                 margin={{ top: 15, right: 20, left: 1, bottom: 1 }}

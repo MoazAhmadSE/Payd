@@ -6,7 +6,7 @@ const NavbarLink = ({
   IconComponent,
   label,
   setShowNavbar,
-  onClick,
+  // onClick,
   isSelected,
 }) => {
   return (
@@ -15,7 +15,7 @@ const NavbarLink = ({
       className={`navbar_Links ${isSelected ? "selected-link" : ""}`}
       onClick={(e) => {
         if (setShowNavbar) setShowNavbar(false);
-        if (onClick) onClick(e);
+        // if (onClick) onClick(e);
       }}
     >
       <IconComponent className="navbar_Svg_Link_Icon" />

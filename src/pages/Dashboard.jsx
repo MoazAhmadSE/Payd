@@ -6,9 +6,12 @@ import { Topbar } from "../components/Topbar/Topbar";
 import { useUser } from "../context/UserInfo";
 import { ChatBarMotion } from "../components/ChatBarMotion";
 import Loading from "../components/Loading";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 const Dashboard = () => {
+
+  const [ showChatbar, setShowChatbar ] = useState(false);
+
   const { user, loading } = useUser();
   if (loading) {
     return <Loading />;
@@ -22,9 +25,9 @@ const Dashboard = () => {
         </div>
         <div className="right">
           <div className="upper">
-            <Topbar userData={user} />
+            <Topbar userData={user} setShowChatbar={setShowChatbar} showChatbar={showChatbar} />
           </div>
-          <div className="lower">
+          <div className={`lower ${!showChatbar ? "hideChatBar" : ""}`}>
             <div className="main">
               <Suspense fallback={<Loading />}>
                 <Outlet />

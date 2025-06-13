@@ -4,7 +4,7 @@ import NotificationCard from "./NotificationCard/NotificationCard";
 import { useNotifications } from "../../../hook/useNotifications";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Notification() {
+export default function Notification({ setShowChatbar, showChatbar }) {
   const {
     t,
     dropdownRef,
@@ -19,7 +19,10 @@ export default function Notification() {
     <div className="bellIconContainer" ref={dropdownRef}>
       <div
         className="bellIcon"
-        onClick={() => setShowNotifications(!showNotifications)}
+        onClick={() => {
+          setShowNotifications(!showNotifications);
+          setShowChatbar(!showChatbar);
+        }}
       >
         <SVGIcons.bell />
       </div>

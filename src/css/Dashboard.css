@@ -57,6 +57,7 @@ body {
   padding-inline: 36px;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  transition: width 1s ease-in-out;
 }
 
 .main::-webkit-scrollbar {
@@ -66,6 +67,15 @@ body {
 .chat {
   /* display: none; */
   width: 35%;
+  transition: width 1s ease-in-out;
+}
+
+.hideChatBar .main{
+  width: 100%;
+}
+
+.hideChatBar .chat{
+  display: none;
 }
 
 .chatButton,

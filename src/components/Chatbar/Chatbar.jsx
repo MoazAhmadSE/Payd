@@ -8,7 +8,7 @@ export const Chatbar = () => {
   const { t, chat, active, setTabActive, sortedMessages, handleClick } =
     useChatbar();
 
-  const tabNames = Object.keys(active); // dynamically get tab keys like ["Stats", "Messages"]
+  const tabNames = Object.keys(active);
 
   const renderCards = (items) => {
     return items.length !== 0 ? (
