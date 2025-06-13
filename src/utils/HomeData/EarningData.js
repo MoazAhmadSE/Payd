@@ -9,13 +9,13 @@ export const getEarningsData = (range) => {
         ],
 
         "thisWeek": [
-            { timestamp: "2025-05-25T00:00:00Z", NGN: 210.00 },
-            { timestamp: "2025-05-22T00:00:00Z", NGN: 150.00 },
-            { timestamp: "2025-05-21T00:00:00Z", NGN: 120.00 },
-            { timestamp: "2025-05-24T00:00:00Z", NGN: 180.00 },
-            { timestamp: "2025-05-23T00:00:00Z", NGN: 90.00 },
-            { timestamp: "2025-05-26T00:00:00Z", NGN: 130.00 },
-            { timestamp: "2025-05-27T00:00:00Z", NGN: 170.00 },
+            { timestamp: "2025-05-25T00:00:00Z", NGN: 20100.00 },
+            { timestamp: "2025-05-22T00:00:00Z", NGN: 15000.00 },
+            { timestamp: "2025-05-21T00:00:00Z", NGN: 12000.00 },
+            { timestamp: "2025-05-24T00:00:00Z", NGN: 18000.00 },
+            { timestamp: "2025-05-23T00:00:00Z", NGN: 9000.00 },
+            { timestamp: "2025-05-26T00:00:00Z", NGN: 13000.00 },
+            { timestamp: "2025-05-27T00:00:00Z", NGN: 17000.00 },
         ],
 
         "last2Weeks": [

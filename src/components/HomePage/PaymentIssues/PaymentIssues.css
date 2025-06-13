@@ -1,7 +1,10 @@
 .paymentIssueContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
+
+    width: 344px;
+    height: 364px;
     /* min-height: 450px; */
     border: 2px solid rgba(242, 242, 242, 1);
     border-radius: 40px;
