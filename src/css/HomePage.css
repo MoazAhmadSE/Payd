@@ -4,6 +4,7 @@
     flex-direction: column;
     padding-block: 12px;
     margin-bottom: 94px;
+    position: relative;
 }
 
 .headerContainer {
@@ -22,7 +23,7 @@
 
 .earning {
     width: 100%;
-    height: 392px;
+    /* height: 392px; */
     display: flex;
     justify-content: space-between;
 }
@@ -36,10 +37,14 @@
     justify-content: space-evenly;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .bottomRow {
         /* flex-direction: column; */
         /* height: auto; */
         /* align-items: center; */
+    }
+
+    .homeContainer {
+        position: absolute;
     }
 }

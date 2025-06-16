@@ -90,20 +90,20 @@ body {
     flex: 1;
   } */
 
-  .slider {
+  /* .slider {
     display: block;
   }
 
   .chat {
     display: none;
-  }
+  } */
 
-  .showChat {
+  /* .showChat {
     display: block;
     position: absolute;
     height: 100%;
     width: 100%;
-  }
+  } */
 
   /* .chatButton {
     display: block;

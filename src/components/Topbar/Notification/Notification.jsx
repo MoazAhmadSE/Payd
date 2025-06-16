@@ -20,8 +20,9 @@ export default function Notification({ setShowChatbar, showChatbar }) {
       <div
         className="bellIcon"
         onClick={() => {
-          setShowNotifications(!showNotifications);
+          // setShowNotifications(!showNotifications);
           setShowChatbar(!showChatbar);
+          console.log(showChatbar);
         }}
       >
         <SVGIcons.bell />

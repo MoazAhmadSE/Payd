@@ -9,8 +9,7 @@ import Loading from "../components/Loading";
 import { Suspense, useState } from "react";
 
 const Dashboard = () => {
-
-  const [ showChatbar, setShowChatbar ] = useState(false);
+  const [showChatbar, setShowChatbar] = useState(false);
 
   const { user, loading } = useUser();
   if (loading) {
@@ -25,7 +24,11 @@ const Dashboard = () => {
         </div>
         <div className="right">
           <div className="upper">
-            <Topbar userData={user} setShowChatbar={setShowChatbar} showChatbar={showChatbar} />
+            <Topbar
+              userData={user}
+              setShowChatbar={setShowChatbar}
+              showChatbar={showChatbar}
+            />
           </div>
           <div className={`lower ${!showChatbar ? "hideChatBar" : ""}`}>
             <div className="main">

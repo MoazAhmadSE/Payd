@@ -5,14 +5,17 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./context/UserInfo.jsx";
 import "./i18n.js";
+import { ChatbarProvider } from "./context/ChatbarContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   <BrowserRouter>
     <UserProvider>
-      <div className="mianroot">
-        <App />
-      </div>
+      {/* <ChatbarProvider> */}
+        <div className="mianroot">
+          <App />
+        </div>
+      {/* </ChatbarProvider> */}
     </UserProvider>
   </BrowserRouter>
   // </StrictMode>

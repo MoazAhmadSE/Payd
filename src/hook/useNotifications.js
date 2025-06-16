@@ -9,26 +9,26 @@ export const useNotifications = () => {
   const dropdownRef = useRef();
   const { t } = useTranslation();
 
+  const fetchNotification = async () => {
+    try {
+      const data = await DashboardApi("notifications");
+      const notifs = data?.data;
+      setNotification(typeof notifs === "object" ? notifs : {});
+    } catch (err) {
+      console.error("Failed to fetch notifications", err);
+      setNotification({});
+    }
+  };
+  const handleClickOutside = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setShowNotifications(false);
+    }
+  };
   useEffect(() => {
-    const fetchNotification = async () => {
-      try {
-        const data = await DashboardApi("notifications");
-        const notifs = data?.data;
-        setNotification(typeof notifs === "object" ? notifs : {});
-      } catch (err) {
-        console.error("Failed to fetch notifications", err);
-        setNotification({});
-      }
-    };
     fetchNotification();
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setShowNotifications(false);
-      }
-    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
