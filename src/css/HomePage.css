@@ -2,20 +2,22 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-block: 1rem;
+    padding-block: 12px;
+    margin-bottom: 94px;
 }
 
 .headerContainer {
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
 }
 
 .graphContainer {
     width: 100%;
+    /* width: 747px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding-right: 50px;
+    gap: 56px;
+    /* padding-right: 36px; */
 }
 
 .earning {
@@ -28,17 +30,16 @@
 .bottomRow {
     display: flex;
     width: 100%;
-    gap: 1rem;
+    flex-wrap: wrap;
+    /* height: 364px; */
+    gap: 20px;
+    justify-content: space-evenly;
 }
 
-@media (max-width: 1440px) {
-    .homeContainer {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
     .bottomRow {
-        flex-direction: column;
+        /* flex-direction: column; */
+        /* height: auto; */
+        /* align-items: center; */
     }
 }

@@ -1,5 +1,4 @@
 .sucessAnimation {
-    height: 60%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -13,14 +12,14 @@
     margin: auto;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 18px;
     color: rgba(137, 178, 124, 1);
 }
 
-@media (min-width: 2000px) {
+/* @media (min-width: 2000px) {
 
     .sucessAnimation {
         padding-block: 6rem;
         scale: 1.5;
     }
-}
+} */

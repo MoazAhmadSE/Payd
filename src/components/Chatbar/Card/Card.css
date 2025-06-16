@@ -1,16 +1,17 @@
 .cardContainer {
-    min-height: 130px;
-    padding-inline: 14px;
-    padding-bottom: 16px;
+    width: 218px;
+    height: 126px;
+    padding-inline: 20px;
+    padding-block: 17px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    width: 85%;
+    gap: 10px;
 }
 
-.unread{
+.unread {
     border: 1px solid rgba(162, 0, 255, 0.423);
 }
 
@@ -20,7 +21,6 @@
 }
 
 .cardTop {
-    flex: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,10 +28,10 @@
 }
 
 .cardNameIcon {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     font-size: 1rem;
-    border-radius: 12px;
+    border-radius: 10.77px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     display: flex;
@@ -43,48 +43,50 @@
 .cardTime {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    font-size: 8px;
     color: rgba(189, 189, 189, 1);
-    display: flex;
-    align-items: center;
-    font-size: 0.6rem;
 }
 
 .cardButtom {
-    flex: 1;
     display: flex;
     align-items: center;
 }
 
 .cardNameAndMessage {
-    flex: 9;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0.3rem;
+    gap: 5px;
 }
 
-.cardName {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    color: rgba(51, 51, 51, 1);
-    font-size: clamp(0.8rem, 0.9vw, 1rem);
-}
-
+.cardName,
 .CardMessage {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+}
+
+.cardName {
+    font-size: 12px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.CardMessage {
+    width: 130px;
+    font-size: 10px;
     color: rgba(189, 189, 189, 1);
-    font-size: 0.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .CardIcon {
-    flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
 /* Media Queries */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .cardContainer {
         width: 80%;
     }
@@ -138,4 +140,4 @@
     .CardMessage {
         font-size: clamp(0.9rem, 0.8vw, 1.5rem);
     }
-}
+} */

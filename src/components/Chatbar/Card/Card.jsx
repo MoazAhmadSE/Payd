@@ -43,7 +43,7 @@ export default function Card({
           <div className="cardNameAndMessage">
             <div className="cardName">{userName}</div>
             <div className="CardMessage">
-              {message.substring(0, 30) + "..."}
+              {message}
             </div>
           </div>
           <div className="CardIcon">

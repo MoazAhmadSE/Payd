@@ -1,87 +1,85 @@
 .paymentIssueContainer {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
-
+    justify-content: space-evenly;
     width: 344px;
     height: 364px;
-    /* min-height: 450px; */
     border: 2px solid rgba(242, 242, 242, 1);
     border-radius: 40px;
-    gap: 1rem;
-    padding: 2rem;
+    padding-inline: 40px;
 }
 
 .issuetitle {
-    /* height: 10%; */
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 16px;
     color: rgba(51, 51, 51, 1);
 }
 
 .issueChart {
-    height: 40%;
-    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    width: 264px;
 }
 
 .xaxis,
 .lable {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    font-size: 12px;
 }
 
 .totalErrors {
-    /* height: 10%; */
     font-family: "Montserrat", sans-serif;
     color: rgba(255, 161, 78, 1);
     display: flex;
     align-items: end;
-    padding-block: 2px;
 }
 
 .err {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 14px;
 }
 
 .errorCount {
     font-weight: 700;
-    font-size: 1.5rem;
-    transform: translateY(3px);
+    font-size: 18px;
+    transform: translateY(2px);
 }
 
 .errorInfoContainer {
-    /* height: 40%; */
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    padding-block: 1rem;
+    gap: 8px;
+    /* padding-block: 1rem; */
 }
 
 .error {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 16px;
 }
 
 .symbol {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 22px;
+    width: 22px;
+    line-height: 22px;
+    text-align: center;
     border-radius: 8px;
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 11px;
 }
 
 .errorTitle {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 12px;
     color: rgba(130, 130, 130, 1);
 }
 
-@media (max-width: 340px) {
+/* @media (max-width: 340px) {
     .err {
         font-size: 0.9rem;
     }
@@ -123,4 +121,4 @@
     .errorTitle {
         font-size: 1.5rem;
     }
-}
+} */

@@ -18,10 +18,10 @@ export default function PaymentIssues({ paymentErrors }) {
       <div className="issuetitle">Payment Issues</div>
 
       <div className="issueChart">
-        <ResponsiveContainer width="100%" height={150}>
+        <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={issueData}
-            margin={{ top: 15, right: 0, left: -60, bottom: 0 }}
+            margin={{ top: 6, right: 0, left: -60, bottom: 0 }}
           >
             <XAxis
               dataKey="symbol"
@@ -32,15 +32,12 @@ export default function PaymentIssues({ paymentErrors }) {
             />
             <YAxis axisLine={false} tick={false} />
             <Tooltip />
-            <Bar dataKey="errorCount" radius={[15, 15, 0, 0]}>
+            <Bar dataKey="errorCount" radius={[8, 8, 0, 0]}>
               <LabelList
                 dataKey="errorCount"
                 position="top"
                 className="lable"
-                style={{
-                  fill: "rgba(130, 130, 130, 1)",
-                  fontSize: "0.8rem",
-                }}
+                fill="rgba(130, 130, 130, 1)"
               />
             </Bar>
           </BarChart>
@@ -56,7 +53,7 @@ export default function PaymentIssues({ paymentErrors }) {
         {Object.entries(issue).map(([key, error], index) => (
           <div key={index} className="error">
             <div className="symbol" style={{ backgroundColor: error.color }}>
-              {error.symbol}
+              {error.symbol}  
             </div>
             <div className="errorTitle">{key}</div>
           </div>

@@ -6,6 +6,7 @@ button {
 .chatbarContainer {
     display: none;
     height: 100%;
+    width: 324px;
     display: flex;
     border-top-left-radius: 75px;
     background-color: rgba(249, 249, 249, 1);
