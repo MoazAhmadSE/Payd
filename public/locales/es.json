@@ -118,9 +118,11 @@
     "issues": {
         "paymentIssues": "Problemas de pago",
         "totalErrors": "Número total de errores:",
-        "customerErrors": "Errores de clientes",
-        "fraudBlocks": "Bloqueos por fraude",
-        "bankErrors": "Errores bancarios",
-        "systemErrors": "Errores del sistema"
+        "errors": {
+            "customerErrors": "Errores de clientes",
+            "fraudBlocks": "Bloqueos por fraude",
+            "bankErrors": "Errores bancarios",
+            "systemErrors": "Errores del sistema"
+        }
     }
 }

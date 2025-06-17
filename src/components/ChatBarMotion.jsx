@@ -4,12 +4,8 @@ import { useState } from "react";
 import { Chatbar } from "../components/Chatbar/Chatbar";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const ChatBarMotion = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-
-  const showChat = () => {
-    setIsChatOpen(!isChatOpen);
-  };
+export const ChatBarMotion = ({ setShowChatbar, showChatbar }) => {
+  console.log("sdbhasbhdas", showChatbar);
 
   return (
     <>
@@ -17,7 +13,7 @@ export const ChatBarMotion = () => {
         <Chatbar />
       </div>
       <AnimatePresence className="slider">
-        {isChatOpen && (
+        {showChatbar && (
           <motion.div
             className="chat showChat"
             initial={{ y: "100%", opacity: 0 }}
@@ -29,11 +25,6 @@ export const ChatBarMotion = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="chatButton">
-        <div className="chatIcon" onClick={showChat}>
-          <Icon.Message />
-        </div>
-      </div>
     </>
   );
 };

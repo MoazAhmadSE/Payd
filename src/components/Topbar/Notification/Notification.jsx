@@ -1,62 +1,25 @@
 import "./Notification.css";
 import { SVGIcons } from "../../../assets/icons/SVGIcons";
-import NotificationCard from "./NotificationCard/NotificationCard";
-import { useNotifications } from "../../../hook/useNotifications";
-import { motion, AnimatePresence } from "framer-motion";
+import { useChatbar } from "../../../hook/useChatBar";
 
 export default function Notification({ setShowChatbar, showChatbar }) {
-  const {
-    t,
-    dropdownRef,
-    showNotifications,
-    setShowNotifications,
-    sortedNotification,
-    unreadNotifications,
-    handleClick,
-  } = useNotifications();
+  const { chat } = useChatbar();
+
+  const hasUnreadMessages = Object.values(chat.messages).some(
+    (message) => !message?.isOpen
+  );
 
   return (
-    <div className="bellIconContainer" ref={dropdownRef}>
+    <div className="bellIconContainer">
       <div
         className="bellIcon"
         onClick={() => {
-          // setShowNotifications(!showNotifications);
           setShowChatbar(!showChatbar);
-          console.log(showChatbar);
         }}
       >
         <SVGIcons.bell />
       </div>
-      {unreadNotifications && <div className="notification"></div>}
-      {/* <AnimatePresence>
-        {showNotifications && (
-          <motion.div
-            key="notification-dropdown"
-            className="notificationsContainer"
-            initial={{ y: "-20%", opacity: 0 }}
-            animate={{ y: "0%", opacity: 1 }}
-            exit={{ y: "-20%", opacity: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 12 }}
-          >
-            {sortedNotification.length > 0 ? (
-              <>
-                {sortedNotification.map(([key, value]) => (
-                  <NotificationCard
-                    key={key}
-                    data={[key, value]}
-                    onClick={handleClick}
-                  />
-                ))}
-              </>
-            ) : (
-              <>
-                <SVGIcons.empty />
-                <p className="empty">{t("noNotification")}</p>
-              </>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence> */}
+      {hasUnreadMessages && <div className="notification"></div>}
     </div>
   );
 }

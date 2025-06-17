@@ -118,9 +118,11 @@
     "issues": {
         "paymentIssues": "ادائیگی کے مسائل",
         "totalErrors": "کل غلطیوں کی تعداد:",
-        "customerErrors": "صارف کی غلطیاں",
-        "fraudBlocks": "فراڈ بلاکس",
-        "bankErrors": "بینک کی غلطیاں",
-        "systemErrors": "سسٹم کی غلطیاں"
+        "errors": {
+            "customerErrors": "صارف کی غلطیاں",
+            "fraudBlocks": "فراڈ بلاکس",
+            "bankErrors": "بینک کی غلطیاں",
+            "systemErrors": "سسٹم کی غلطیاں"
+        }
     }
 }

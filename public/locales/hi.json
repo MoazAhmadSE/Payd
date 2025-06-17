@@ -118,9 +118,11 @@
     "issues": {
         "paymentIssues": "भुगतान से संबंधित समस्याएँ",
         "totalErrors": "कुल त्रुटियों की संख्या:",
-        "customerErrors": "ग्राहक त्रुटियाँ",
-        "fraudBlocks": "धोखाधड़ी अवरोध",
-        "bankErrors": "बैंक त्रुटियाँ",
-        "systemErrors": "सिस्टम त्रुटियाँ"
+        "errors": {
+            "customerErrors": "ग्राहक त्रुटियाँ",
+            "fraudBlocks": "धोखाधड़ी अवरोध",
+            "bankErrors": "बैंक त्रुटियाँ",
+            "systemErrors": "सिस्टम त्रुटियाँ"
+        }
     }
 }

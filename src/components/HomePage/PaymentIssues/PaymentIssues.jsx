@@ -9,13 +9,20 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { usePaymentIssues } from "../../../hook/usePaymentIssues";
+import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 
 export default function PaymentIssues({ paymentErrors }) {
+  const { t } = useTranslation();
+  const PaymentIssues = useMemo(
+    () => t("issues", { returnObjects: true }),
+    [t]
+  );
   const { issueData, totalErrors, issue } = usePaymentIssues(paymentErrors);
 
   return (
     <div className="paymentIssueContainer">
-      <div className="issuetitle">Payment Issues</div>
+      <div className="issuetitle">{PaymentIssues?.paymentIssues}</div>
 
       <div className="issueChart">
         <ResponsiveContainer width="100%" height="100%">
@@ -45,19 +52,22 @@ export default function PaymentIssues({ paymentErrors }) {
       </div>
 
       <div className="totalErrors">
-        <div className="err">Total number of errors:&nbsp;&nbsp;</div>
+        <div className="err">{PaymentIssues?.totalErrors}&nbsp;&nbsp;</div>
         <div className="errorCount">{totalErrors}</div>
       </div>
 
       <div className="errorInfoContainer">
-        {Object.entries(issue).map(([key, error], index) => (
-          <div key={index} className="error">
-            <div className="symbol" style={{ backgroundColor: error.color }}>
-              {error.symbol}  
+        {Object.entries(issue).map(([key, error], index) => {
+          const label = PaymentIssues?.errors?.[key] || key; // fallback to key if label not found
+          return (
+            <div key={index} className="error">
+              <div className="symbol" style={{ backgroundColor: error.color }}>
+                {error.symbol}
+              </div>
+              <div className="errorTitle">{label}</div>
             </div>
-            <div className="errorTitle">{key}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

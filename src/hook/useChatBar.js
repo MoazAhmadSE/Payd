@@ -16,8 +16,8 @@ export const useChatbar = () => {
 
   const setTabActive = (tab) => {
     const updated = {};
-    headings.forEach((heading) => {
-      updated[heading] = heading === tab;
+    headings.forEach(([key]) => {
+      updated[key] = key === tab;
     });
     setActive(updated);
   };
@@ -53,6 +53,8 @@ export const useChatbar = () => {
 
   const fetchMessages = async () => {
     const data = await DashboardApi("messages");
+    console.log("THis is t: ", t);
+    console.log("THis is Dta: ", data);
     if (data?.data) {
       setChat((prev) => ({ ...prev, messages: data.data }));
     }
@@ -60,23 +62,25 @@ export const useChatbar = () => {
 
   useEffect(() => {
     fetchMessages();
-  }, []);
+  }, [t]);
 
   useEffect(() => {
-    const newHeadings = Object.values(chatBoxHeadings);
-    setHeadings(newHeadings);
+    const entries = Object.entries(chatBoxHeadings);
+    setHeadings(entries);
 
     const initialActive = {};
-    newHeadings.forEach((heading, index) => {
-      initialActive[heading] = index === 1;
+    entries.forEach(([key], index) => {
+      initialActive[key] = index === 1;
     });
     setActive(initialActive);
   }, [chatBoxHeadings]);
+
 
   return {
     t,
     chat,
     active,
+    headings,
     sortedMessages,
     setTabActive,
     handleClick,

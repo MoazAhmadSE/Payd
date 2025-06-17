@@ -118,9 +118,11 @@
     "issues": {
         "paymentIssues": "支付问题",
         "totalErrors": "错误总数：",
-        "customerErrors": "客户错误",
-        "fraudBlocks": "欺诈拦截",
-        "bankErrors": "银行错误",
-        "systemErrors": "系统错误"
+        "errors": {
+            "customerErrors": "客户错误",
+            "fraudBlocks": "欺诈拦截",
+            "bankErrors": "银行错误",
+            "systemErrors": "系统错误"
+        }
     }
 }

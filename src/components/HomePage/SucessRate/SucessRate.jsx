@@ -6,8 +6,6 @@ import { useMemo } from "react";
 export default function SucessRate({ sucessRatio }) {
   const { t } = useTranslation();
   const sucess = useMemo(() => t("sucess", { returnObjects: true }), [t]);
-  console.log("sadddddddddddddddd", sucess);
-  console.log("sadddddddddddddddd", sucess.successRate);
   const sucessRate =
     (sucessRatio?.sucessfull * 100) /
     (sucessRatio?.sucessfull + sucessRatio?.unsucessfull);

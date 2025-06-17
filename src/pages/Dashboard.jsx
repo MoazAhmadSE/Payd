@@ -36,7 +36,10 @@ const Dashboard = () => {
                 <Outlet />
               </Suspense>
             </div>
-            <ChatBarMotion />
+            <ChatBarMotion
+              setShowChatbar={setShowChatbar}
+              showChatbar={showChatbar}
+            />
           </div>
         </div>
       </div>

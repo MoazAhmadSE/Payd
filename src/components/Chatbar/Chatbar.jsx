@@ -5,10 +5,18 @@ import Card from "./Card/Card";
 import { useChatbar } from "../../hook/useChatBar";
 
 export const Chatbar = () => {
-  const { t, chat, active, setTabActive, sortedMessages, handleClick } =
-    useChatbar();
+  const {
+    t,
+    chat,
+    active,
+    headings,
+    setTabActive,
+    sortedMessages,
+    handleClick,
+  } = useChatbar();
 
-  const tabNames = Object.keys(active);
+  // const tabNames = Object.keys(active);
+  // console.log("Dzsdzs: ", tabNames)
 
   const renderCards = (items) => {
     return items.length !== 0 ? (
@@ -34,21 +42,21 @@ export const Chatbar = () => {
   return (
     <div className="chatbarContainer">
       <div className="chatTabs">
-        {tabNames.map((tabName) => (
+        {headings.map(([key, label]) => (
           <button
-            key={tabName}
-            className={`${tabName.toLowerCase()} ${
-              active[tabName] ? "activetab" : "tab"
+            key={key}
+            className={`${key.toLowerCase()} ${
+              active[key] ? "activetab" : "tab"
             }`}
-            onClick={() => setTabActive(tabName)}
+            onClick={() => setTabActive(key)}
           >
-            {tabName}
+            {label}
           </button>
         ))}
       </div>
 
       <div className="messageBox">
-        {active["Messages"]
+        {active["messages"]
           ? renderCards(sortedMessages)
           : renderCards(Object.entries(chat.stats))}
       </div>

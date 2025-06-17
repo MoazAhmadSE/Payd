@@ -107,8 +107,8 @@
     "noMessages": "No messages to show.",
     "noDataMessage": "No Data Found between this Timeline...",
     "chatBox": {
-        "statsStatus": "Stats",
-        "messageStatus": "Messages"
+        "stats": "Stats",
+        "messages": "Messages"
     },
     "sucess": {
         "successRate": "Success rate",
@@ -118,9 +118,11 @@
     "issues": {
         "paymentIssues": "Payment Issues",
         "totalErrors": "Total number of errors:",
-        "customerErrors": "Customer errors",
-        "fraudBlocks": "Fraud blocks",
-        "bankErrors": "Bank errors",
-        "systemErrors": "System errors"
+        "errors": {
+            "customerErrors": "Customer errors",
+            "fraudBlocks": "Fraud blocks",
+            "bankErrors": "Bank errors",
+            "systemErrors": "System errors"
+        }
     }
 }

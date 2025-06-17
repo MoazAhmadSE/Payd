@@ -118,9 +118,11 @@
     "issues": {
         "paymentIssues": "مشاكل الدفع",
         "totalErrors": "إجمالي عدد الأخطاء:",
-        "customerErrors": "أخطاء العملاء",
-        "fraudBlocks": "حظر الاحتيال",
-        "bankErrors": "أخطاء البنك",
-        "systemErrors": "أخطاء النظام"
+        "errors": {
+            "customerErrors": "أخطاء العملاء",
+            "fraudBlocks": "حظر الاحتيال",
+            "bankErrors": "أخطاء البنك",
+            "systemErrors": "أخطاء النظام"
+        }
     }
 }
