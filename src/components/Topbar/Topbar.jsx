@@ -8,7 +8,12 @@ import SidebarLayout from "../Navbar/Slideout/SidebarLayout";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export const Topbar = ({ userData, setShowChatbar, showChatbar }) => {
+export const Topbar = ({
+  userData,
+  setShowChatbar,
+  showChatbar,
+  hasUnreadMessages,
+}) => {
   const { t } = useTranslation();
   return (
     <div className="topbar-container">
@@ -28,7 +33,11 @@ export const Topbar = ({ userData, setShowChatbar, showChatbar }) => {
         <Languages />
       </div>
 
-      <Notification setShowChatbar={setShowChatbar} showChatbar={showChatbar} />
+      <Notification
+        setShowChatbar={setShowChatbar}
+        showChatbar={showChatbar}
+        hasUnreadMessages={hasUnreadMessages}
+      />
       <UserInfo userData={userData} />
     </div>
   );

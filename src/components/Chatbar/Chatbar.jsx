@@ -2,9 +2,8 @@ import React from "react";
 import "./Chatbar.css";
 import * as Icons from "../../assets/icons/Card/index";
 import Card from "./Card/Card";
-import { useChatbar } from "../../hook/useChatBar";
 
-export const Chatbar = () => {
+export const Chatbar = ({ chatbarData }) => {
   const {
     t,
     chat,
@@ -13,10 +12,7 @@ export const Chatbar = () => {
     setTabActive,
     sortedMessages,
     handleClick,
-  } = useChatbar();
-
-  // const tabNames = Object.keys(active);
-  // console.log("Dzsdzs: ", tabNames)
+  } = chatbarData;
 
   const renderCards = (items) => {
     return items.length !== 0 ? (

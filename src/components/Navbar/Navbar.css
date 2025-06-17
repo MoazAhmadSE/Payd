@@ -4,15 +4,27 @@
     box-sizing: border-box;
 }
 
-.navbar-container {
+.navbar-container{
     padding-left: 12px;
-    margin-bottom: 50px;
-    width: 214px;
-    height: 90%;
-    overflow: auto; 
+    height: 100%;
+    
+}
+.app-name-container {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
 }
 
-.navbar-container::-webkit-scrollbar{
+.links-container {
+    width: 214px;
+    height: 80%;
+    padding-bottom: 30px;
+    overflow-y: auto;
+}
+
+.links-container::-webkit-scrollbar{
     display: none;
 }
 
@@ -23,16 +35,11 @@ h3 {
     display: block;
 }
 
-.app-name-container {
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 
 .main-links-container {
-    margin-top: 30px;
+    /* margin-top: 5px; */
+    padding-block: 10px;
 }
 
 .appname {

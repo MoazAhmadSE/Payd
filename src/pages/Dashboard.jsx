@@ -7,9 +7,12 @@ import { useUser } from "../context/UserInfo";
 import { ChatBarMotion } from "../components/ChatBarMotion";
 import Loading from "../components/Loading";
 import { Suspense, useState } from "react";
+import { useChatbar } from "../hook/useChatBar";
+import { Chatbar } from "../components/Chatbar/Chatbar";
 
 const Dashboard = () => {
   const [showChatbar, setShowChatbar] = useState(false);
+  const chatbar = useChatbar();
 
   const { user, loading } = useUser();
   if (loading) {
@@ -28,6 +31,7 @@ const Dashboard = () => {
               userData={user}
               setShowChatbar={setShowChatbar}
               showChatbar={showChatbar}
+              hasUnreadMessages={chatbar.hasUnreadMessages}
             />
           </div>
           <div className={`lower ${!showChatbar ? "hideChatBar" : ""}`}>
@@ -36,10 +40,7 @@ const Dashboard = () => {
                 <Outlet />
               </Suspense>
             </div>
-            <ChatBarMotion
-              setShowChatbar={setShowChatbar}
-              showChatbar={showChatbar}
-            />
+            <ChatBarMotion chatbarData={chatbar} showChatbar={showChatbar} />
           </div>
         </div>
       </div>

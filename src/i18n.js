@@ -9,7 +9,7 @@ i18n
     .use(initReactI18next)
     .init({
         fallbackLng: "en",
-        debug: true,
+        debug: false,
         backend: {
             loadPath: "/locales/{{lng}}.json",
         },
@@ -18,4 +18,4 @@ i18n
         },
     });
 
-    export default i18n;
+export default i18n;

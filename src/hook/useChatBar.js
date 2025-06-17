@@ -35,26 +35,34 @@ export const useChatbar = () => {
     );
   }, [todaysChat]);
 
+  const hasUnreadMessages = useMemo(() => {
+    const unread = Object.values(chat.messages).some((m) => !m?.isOpen);
+    console.log("from UC (computed): ", unread);
+    return unread;
+  }, [chat.messages]);
+
   const handleClick = (index) => {
-    if (!chat.messages[index]?.isOpen) {
-      setChat((prev) => ({
+    setChat((prev) => {
+      const updatedMessages = { ...prev.messages };
+      if (!updatedMessages[index]?.isOpen) {
+        updatedMessages[index] = {
+          ...updatedMessages[index],
+          isOpen: true,
+        };
+      }
+      return {
         ...prev,
-        messages: {
-          ...prev.messages,
-          [index]: {
-            ...prev.messages[index],
-            isOpen: true,
-          },
-        },
-      }));
-      updateMessageData("upadateMessData", index);
-    }
+        messages: updatedMessages,
+      };
+    });
+
+    updateMessageData("upadateMessData", index);
+    console.log("isOpen after click: ", chat.messages[index]?.isOpen);
   };
+
 
   const fetchMessages = async () => {
     const data = await DashboardApi("messages");
-    console.log("THis is t: ", t);
-    console.log("THis is Dta: ", data);
     if (data?.data) {
       setChat((prev) => ({ ...prev, messages: data.data }));
     }
@@ -75,13 +83,13 @@ export const useChatbar = () => {
     setActive(initialActive);
   }, [chatBoxHeadings]);
 
-
   return {
     t,
     chat,
     active,
     headings,
     sortedMessages,
+    hasUnreadMessages,
     setTabActive,
     handleClick,
   };

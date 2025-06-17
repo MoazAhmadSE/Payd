@@ -14,7 +14,6 @@ export default function HomePage() {
     try {
       const data = await fetchHomePageData();
       setHomeData(data.HomePageData);
-      console.log("dsfsdfsdfsd", data.HomePageData);
     } catch (error) {
       console.error("Error fetching dashboard data:", error);
     }

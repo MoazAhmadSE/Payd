@@ -37,6 +37,8 @@ button {
     gap: 1.5rem;
     /* margin-top: 1rem; */
     overflow-y: auto;
+    padding-bottom: 200px;
+
 }
 
 .messageBox::-webkit-scrollbar {

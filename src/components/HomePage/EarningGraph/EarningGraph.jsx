@@ -49,7 +49,7 @@ export default function EarningGraph({ earningsData }) {
             <ResponsiveContainer>
               <BarChart
                 data={chartData}
-                className="bar-chart"
+                // margin={{ top: 50, right: 30, left: 30, bottom: 20 }}
               >
                 <CartesianGrid
                   strokeDasharray="10 5"

@@ -1,16 +1,12 @@
 import "../css/Dashboard.css";
-import * as Icon from "../assets/icons/Dashboard/index";
-import { useState } from "react";
 import { Chatbar } from "../components/Chatbar/Chatbar";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const ChatBarMotion = ({ setShowChatbar, showChatbar }) => {
-  console.log("sdbhasbhdas", showChatbar);
-
+export const ChatBarMotion = ({ chatbarData, showChatbar }) => {
   return (
     <>
       <div className="chat">
-        <Chatbar />
+        <Chatbar chatbarData={chatbarData} />
       </div>
       <AnimatePresence className="slider">
         {showChatbar && (
@@ -21,7 +17,7 @@ export const ChatBarMotion = ({ setShowChatbar, showChatbar }) => {
             exit={{ y: "100%", opacity: 0 }}
             transition={{ type: "spring", stiffness: 70, damping: 15 }}
           >
-            <Chatbar />
+            <Chatbar chatbarData={chatbarData} />
           </motion.div>
         )}
       </AnimatePresence>
