@@ -31,12 +31,19 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
-.sidebardrawer::-webkit-scrollbar{
+
+.sidebardrawer::-webkit-scrollbar {
     display: none;
 }
 
 .sidebaroverlaywrapper.visible .sidebardrawer {
     transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+    .sidebardrawer .navbar-container {
+        display: block;
+    }
 }
 
 @media (max-width: 1024px) {

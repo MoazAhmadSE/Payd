@@ -13,13 +13,14 @@
 }
 
 .topbar-container {
+  height: 94px;
   width: 100%;
-  height: 63px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   justify-content: space-between;
   gap: 12px;
+  padding-block: 15px;
+  padding-inline: 25px;
 }
 
 
@@ -43,19 +44,19 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px){
+@media (min-width: 1024px) and (max-width: 1200px) {
   .ser-tog-lan-container {
     width: 55%;
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1500px){
+@media (min-width: 1200px) and (max-width: 1500px) {
   .ser-tog-lan-container {
     width: 60%;
   }
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1400px) {
   .ser-tog-lan-container {
     width: 65%;
   }

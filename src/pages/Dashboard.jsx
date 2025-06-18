@@ -21,21 +21,21 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="dashboard">
-        <div className="left">
-          <Navbar />
-        </div>
-        <div className="right">
-          <div className="upper">
-            <Topbar
-              userData={user}
-              setShowChatbar={setShowChatbar}
-              showChatbar={showChatbar}
-              hasUnreadMessages={chatbar.hasUnreadMessages}
-            />
-          </div>
-          <div className={`lower ${!showChatbar ? "hideChatBar" : ""}`}>
-            <div className="main">
+      <div className="app-container">
+        <Navbar />
+        <div className="topbar-homepage-container">
+          <Topbar
+            userData={user}
+            setShowChatbar={setShowChatbar}
+            showChatbar={showChatbar}
+            hasUnreadMessages={chatbar.hasUnreadMessages}
+          />
+          <div
+            className={`homepage-chatbar-container ${
+              !showChatbar ? "hideChatBar" : ""
+            }`}
+          >
+            <div className="homepage-container">
               <Suspense fallback={<Loading />}>
                 <Outlet />
               </Suspense>
