@@ -35,7 +35,7 @@ export default function HomePage() {
         </div>
 
         <div className="bottomRow">
-          <SucessRate sucessRatio={homeData?.SucessRatio?.data}/>
+          <SucessRate sucessRatio={homeData?.SucessRatio?.data} />
           <PaymentIssues paymentErrors={homeData?.Errors?.data} />
         </div>
       </div>

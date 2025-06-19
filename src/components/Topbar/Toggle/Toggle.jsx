@@ -1,10 +1,10 @@
-import "./Toggle.css";
 import { useEffect, useState } from "react";
 import { ToggleBtnAPI } from "../../../api/Topbar";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
+import "./Toggle.css";
 
 export default function Toggle() {
-  const { t } = useTranslation();
+  const t = useT();
   const [toggled, setToggled] = useState(false);
 
   useEffect(() => {

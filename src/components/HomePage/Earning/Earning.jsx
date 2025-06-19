@@ -1,8 +1,8 @@
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
 import "./Earning.css";
 
 export default function Earning({ totalEarning }) {
-  const { t }= useTranslation();
+  const t = useT();
   let displayValue = "0";
   if (typeof totalEarning === "number") {
     displayValue = totalEarning.toLocaleString("en-US");

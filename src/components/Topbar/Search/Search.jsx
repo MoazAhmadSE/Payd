@@ -1,12 +1,11 @@
-import "./Search.css";
-import * as Icons from "../../../assets/icons/Topbar/index";
+import { SVGIcons } from "../../../assets/icons/SVGIcons";
 import { useState } from "react";
 import { SearchAPI } from "../../../api/Topbar";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
+import "./Search.css";
 
-export default function Search() {
-  const { t } = useTranslation();
-
+export const Search = () => {
+  const t = useT();
   const [text, setText] = useState("");
 
   const handleSearch = () => {
@@ -20,8 +19,8 @@ export default function Search() {
   };
 
   return (
-    <div className="searchContainer">
-      <Icons.Search className="searchIcon" />
+    <div className="search-container">
+      <SVGIcons.search className="search-icon" />
       <input
         type="text"
         placeholder={t("search-placeholder")}
@@ -31,4 +30,4 @@ export default function Search() {
       />
     </div>
   );
-}
+};

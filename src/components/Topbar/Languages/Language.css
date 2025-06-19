@@ -1,8 +1,8 @@
-.languageContainer {
+.language-container {
     display: none;
 }
 
-.languageContainer {
+.language-container {
     width: 166px;
     height: 56px;
     display: flex;
@@ -12,12 +12,11 @@
     z-index: 1;
 }
 
-.languageSelector {
+.language-selector {
     width: 100%;
     height: 100%;
     border-radius: 50px;
     border: 1px solid rgba(189, 189, 189, 0.2);
-    /* background-color: white; */
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -31,19 +30,19 @@
     gap: 10px;
 }
 
-.languageSelector:hover {
+.language-selector:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.languageSelector svg {
+.language-selector svg {
     transition: transform 0.3s ease;
 }
 
-.languageSelector.open svg {
+.language-selector.open svg {
     transform: rotate(180deg);
 }
 
-.otherLanguagesContainer {
+.other-languages-container {
     position: absolute;
     top: 100%;
     width: 160px;
@@ -83,7 +82,7 @@
     transition: background-color 0.2s ease, padding 0.2s ease;
 }
 
-.languageDevider {
+.language-devider {
     height: 0.8px;
     background-color: rgba(221, 231, 241, 1);
     margin: 0 8px;

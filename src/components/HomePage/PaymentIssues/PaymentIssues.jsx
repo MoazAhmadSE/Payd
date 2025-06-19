@@ -9,11 +9,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { usePaymentIssues } from "../../../hook/usePaymentIssues";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
 import { useMemo } from "react";
 
 export default function PaymentIssues({ paymentErrors }) {
-  const { t } = useTranslation();
+  const t = useT();
   const PaymentIssues = useMemo(
     () => t("issues", { returnObjects: true }),
     [t]

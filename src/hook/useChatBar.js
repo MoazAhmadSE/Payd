@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { DashboardApi, updateMessageData } from "../api/DashboardApi";
 import moment from "moment";
-import { useTranslation } from "react-i18next";
+import { useT } from "../context/TranslationContext";
 
 export const useChatbar = () => {
   const [chat, setChat] = useState({
@@ -9,7 +9,7 @@ export const useChatbar = () => {
     stats: {},
   });
 
-  const { t } = useTranslation();
+  const t = useT();
   const chatBoxHeadings = useMemo(() => t("chatBox", { returnObjects: true }), [t]);
   const [headings, setHeadings] = useState([]);
   const [active, setActive] = useState({});

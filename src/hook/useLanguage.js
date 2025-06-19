@@ -1,10 +1,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { LanguageAPI } from "../api/Topbar";
+import { useT } from "../context/TranslationContext";
 import { useTranslation } from "react-i18next";
 
 export const useLanguage = () => {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
+    const t = useT();
     const languages = t("languages", { returnObjects: true });
     const dropdownRef = useRef();
 

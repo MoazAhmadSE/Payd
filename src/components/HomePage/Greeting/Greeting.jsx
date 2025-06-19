@@ -1,10 +1,10 @@
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
 import greeting from "../../../assets/Images/greeting.png";
 import { useUser } from "../../../context/UserInfo";
 import "./Greeting.css";
 
 export default function Greeting() {
-  const { t } = useTranslation();
+  const t = useT();
   const { user } = useUser();
 
   if (!user) return null;

@@ -1,8 +1,8 @@
-import "./Navbar.css";
 import NavbarLink from "./NavbarLink";
 import { Link } from "react-router-dom";
 import { SVGIcons } from "../../assets/icons/SVGIcons";
 import { useNavbar } from "../../hook/useNavbar";
+import "./Navbar.css";
 
 export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
   const { t, dropDown, navbarLinks, selectedKey, toggleCategory } = useNavbar();
@@ -18,6 +18,7 @@ export const Navbar = ({ setShowNavbar, Search, Toggle, Language }) => {
           onClick={() => setShowNavbar(false)}
         />
       </div>
+      
       <div className="links-container">
         <div className="search-toggle-language-container">
           <hr className="ser-togg-lang-line" />

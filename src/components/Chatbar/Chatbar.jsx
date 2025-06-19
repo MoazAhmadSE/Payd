@@ -1,4 +1,3 @@
-import React from "react";
 import "./Chatbar.css";
 import * as Icons from "../../assets/icons/Card/index";
 import Card from "./Card/Card";

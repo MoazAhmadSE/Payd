@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as Icons from "../../../../assets/icons/Homepage/index";
 import "./Timeline.css";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../../context/TranslationContext";
 
 export default function Timeline({ selectedRangeKey, setSelectedRangeKey }) {
-  const { t } = useTranslation();
+  const t = useT();
   const ranges = useMemo(() => t("timeLines", { returnObjects: true }), [t]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);

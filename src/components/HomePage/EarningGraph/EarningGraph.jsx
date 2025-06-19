@@ -11,10 +11,10 @@ import {
 } from "recharts";
 import Timeline from "./timeline/Timeline";
 import "./EarningGraph.css";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
 
 export default function EarningGraph({ earningsData }) {
-  const { t } = useTranslation();
+  const t = useT();
   const [selectedRangeKey, setSelectedRangeKey] = useState("thisWeek");
 
   const formatMap = {

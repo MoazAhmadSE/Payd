@@ -1,5 +1,3 @@
-import "../css/Dashboard.css";
-
 import { Outlet } from "react-router-dom";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Topbar } from "../components/Topbar/Topbar";
@@ -8,13 +6,13 @@ import { ChatBarMotion } from "../components/ChatBarMotion";
 import Loading from "../components/Loading";
 import { Suspense, useState } from "react";
 import { useChatbar } from "../hook/useChatBar";
-import { Chatbar } from "../components/Chatbar/Chatbar";
+import "../css/Dashboard.css";
 
 const Dashboard = () => {
   const [showChatbar, setShowChatbar] = useState(false);
   const chatbar = useChatbar();
-
   const { user, loading } = useUser();
+
   if (loading) {
     return <Loading />;
   }
@@ -30,11 +28,7 @@ const Dashboard = () => {
             showChatbar={showChatbar}
             hasUnreadMessages={chatbar.hasUnreadMessages}
           />
-          <div
-            className={`homepage-chatbar-container ${
-              !showChatbar ? "hideChatBar" : ""
-            }`}
-          >
+          <div className={"homepage-chatbar-container"}>
             <div className="homepage-container">
               <Suspense fallback={<Loading />}>
                 <Outlet />

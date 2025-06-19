@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dep:build": "npx depcruise --config .dependency-cruiser.cjs --output-type dot src | dot -T svg -o dependency-graph.svg",
+    "dep:watch": "npx chokidar \"src/**/*.{js,jsx,ts,tsx}\" -c \"npm run dep:build\""
   },
   "dependencies": {
     "date-fns": "^4.1.0",
@@ -31,10 +33,13 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
+    "chokidar-cli": "^3.0.0",
+    "dependency-cruiser": "^16.10.3",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "graphviz": "^0.0.9",
     "vite": "^6.3.5",
     "vite-plugin-svgr": "^4.3.0"
   }

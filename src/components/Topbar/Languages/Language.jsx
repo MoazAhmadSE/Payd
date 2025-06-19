@@ -1,14 +1,14 @@
-import "./Language.css";
 import { SVGIcons } from "../../../assets/icons/SVGIcons";
 import { useLanguage } from "../../../hook/useLanguage";
+import "./Language.css";
 
 export default function Language() {
   const { dropdownRef, dropDown, setDropDown, languages } = useLanguage();
 
   return (
-    <div className="languageContainer" ref={dropdownRef}>
+    <div className="language-container" ref={dropdownRef}>
       <div
-        className={`languageSelector ${
+        className={`language-selector ${
           dropDown.isLanguageSelecterOpen ? "open" : ""
         }`}
         onClick={() =>
@@ -22,7 +22,7 @@ export default function Language() {
         <SVGIcons.polygon />
       </div>
       <div
-        className={`otherLanguagesContainer slide ${
+        className={`other-languages-container slide ${
           dropDown.isLanguageSelecterOpen ? "open" : "closed"
         }`}
       >
@@ -42,7 +42,7 @@ export default function Language() {
             >
               {language}
             </div>
-            <hr className="languageDevider" />
+            <hr className="language-devider" />
           </div>
         ))}
       </div>

@@ -1,12 +1,12 @@
-import "./Topbar.css";
-import Search from "./Search/Search";
+import {Search} from "./Search/Search";
 import Toggle from "./Toggle/Toggle";
 import Languages from "./Languages/Language";
 import Notification from "./Notification/Notification";
 import UserInfo from "./UserInfo/UserInfo";
 import SidebarLayout from "../Navbar/Slideout/SidebarLayout";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../context/TranslationContext";
+import "./Topbar.css";
 
 export const Topbar = ({
   userData,
@@ -14,7 +14,7 @@ export const Topbar = ({
   showChatbar,
   hasUnreadMessages,
 }) => {
-  const { t } = useTranslation();
+  const t = useT();
   return (
     <div className="topbar-container">
       <SidebarLayout

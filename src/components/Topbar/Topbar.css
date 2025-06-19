@@ -28,24 +28,28 @@
   display: none;
 }
 
-@media (min-width: 767px) {
+.ser-tog-lan-container {
+  display: none;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
   .app-name {
     display: none;
   }
 
   .ser-tog-lan-container {
-    height: 100%;
-    width: 70%;
-    /* width: clamp(70%, 55vw ,80%); */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    width: 70%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
   .ser-tog-lan-container {
+    display: flex;
     width: 55%;
   }
 }

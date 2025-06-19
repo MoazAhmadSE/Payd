@@ -1,10 +1,10 @@
 import "./SucessRate.css";
 import Piechart from "./Piechart/Piechart";
-import { useTranslation } from "react-i18next";
+import { useT } from "../../../context/TranslationContext";
 import { useMemo } from "react";
 
 export default function SucessRate({ sucessRatio }) {
-  const { t } = useTranslation();
+  const t = useT();
   const sucess = useMemo(() => t("sucess", { returnObjects: true }), [t]);
   const sucessRate =
     (sucessRatio?.sucessfull * 100) /
